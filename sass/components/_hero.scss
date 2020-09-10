@@ -1,0 +1,52 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Components: _hero.scss
+* 
+***************************/
+
+.hero {
+    // Position
+    grid-column: full-start / full-end;
+    position: relative;
+
+    // Style
+    background-image: url(/img/Homepage/Homepage_Mac.jpg);
+    background-size: cover;
+
+
+    &__heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 3rem;
+        width: 3rem;
+        fill: $color-white;
+
+        animation: scroll-arrow 1.75s infinite;
+    }
+}
+
+// Hero arrow animation
+@keyframes scroll-arrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-.75rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

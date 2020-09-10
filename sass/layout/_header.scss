@@ -1,0 +1,30 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Layout: _header.scss
+* 
+***************************/
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6rem;
+}
+
+.menu {
+    margin-right: 3rem;
+
+    font-family: $font-display;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: $color-white;
+    letter-spacing: -.2rem;
+    transition: all .5s;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-primary;
+        letter-spacing: 0rem;
+    }
+}

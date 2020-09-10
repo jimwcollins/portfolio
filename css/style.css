@@ -5,6 +5,12 @@
 *  main.scss
 * 
 ***************************/
+/*****************************
+* 
+*  JC PORTFOLIO
+*  Abstracts: _variables.scss
+* 
+*****************************/
 /***************************
 * 
 *  JC PORTFOLIO
@@ -24,6 +30,71 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Base: _base.scss
+* 
+***************************/
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5; }
+
+.heading, .heading__main, .heading__sub {
+  font-family: "Josefin Sans", sans-serif;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.25; }
+  .heading__main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: .5rem; }
+  .heading__sub {
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: .35rem; }
+    .heading__sub--slash {
+      position: relative;
+      top: .3rem;
+      color: #B00000;
+      font-size: 5rem; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Components: _hero.scss
+* 
+***************************/
+.hero {
+  grid-column: full-start / full-end;
+  position: relative;
+  background-image: url(/img/Homepage/Homepage_Mac.jpg);
+  background-size: cover; }
+  .hero__heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .hero__arrow {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+    width: 3rem;
+    fill: #FFF;
+    animation: scroll-arrow 1.75s infinite; }
+
+@keyframes scroll-arrow {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0); } }
 
 /***************************
 * 
@@ -48,3 +119,37 @@ html {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(12, [col-start] minmax(min-content, 4.8rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end];
   column-gap: 40px; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Layout: _header.scss
+* 
+***************************/
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 6rem; }
+
+.menu {
+  margin-right: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #FFF;
+  letter-spacing: -.2rem;
+  transition: all .5s;
+  cursor: pointer; }
+  .menu:hover {
+    color: #B00000;
+    letter-spacing: 0rem; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Pages: _home.scss
+* 
+***************************/
+.home {
+  grid-template-rows: 100vh repeat(4, min-content); }

@@ -1,0 +1,41 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Base: _base.scss
+* 
+***************************/
+
+body {
+    font-family: $font-body;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.heading {
+    font-family: $font-display;
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.25;
+
+    &__main {
+        @extend .heading;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: .5rem;
+    }
+
+    &__sub {
+        @extend .heading;
+        font-size: 4rem;
+        font-weight: 200;
+        letter-spacing: .35rem;
+
+        &--slash {
+            position: relative;
+            top: .3rem;
+            color: $color-primary;
+            font-size: 5rem;
+        }
+    }
+}

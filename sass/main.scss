@@ -5,6 +5,14 @@
 * 
 ***************************/
 
+@import "abstracts/variables";
+
 @import "base/base";
+@import "base/typography";
+
+@import "components/hero";
 
 @import "layout/grid";
+@import "layout/header";
+
+@import "pages/home";
