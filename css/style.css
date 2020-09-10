@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/***************************
+* 
+*  JC PORTFOLIO
+*  main.scss
+* 
+***************************/
+/***************************
+* 
+*  JC PORTFOLIO
+*  Base: _base.scss
+* 
+***************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+*:focus {
+  outline: none; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Layout: _grid.scss
+* 
+***************************/
+/**************************************************************************
+*   BASE GRID
+*
+*   ROWS
+*   - Defined by page
+*
+*   COLUMNS
+*   - Total content width • 1140px
+*   - Left margin • 6rem min, 1fr max
+*   - 12 central columns • min-content to 48px (4.8rem) • 40px gutter
+*   - Right margin • 6rem min, 1fr max
+*
+***************************************************************************/
+.grid {
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(12, [col-start] minmax(min-content, 4.8rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end];
+  column-gap: 40px; }

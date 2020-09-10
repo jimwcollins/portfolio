@@ -4,8 +4,8 @@
   "description": "James Collins' Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel devserver",
-    "devserver": "live-server --browser='google chrome'",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "devserver": "live-server --browser='firefox'",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "build": "npm-run-all compile:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css"
