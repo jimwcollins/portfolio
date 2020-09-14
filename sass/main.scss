@@ -10,9 +10,12 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/button";
 @import "components/hero";
 
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
+@import "layout/section";
 
 @import "pages/home";

@@ -1,0 +1,30 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Components: _button.scss
+* 
+***************************/
+
+.button {
+    &:link, &:visited {
+        display: inline-block;
+        border-radius: .3rem;
+        border: 2px solid $color-primary;
+        padding: 1rem 2rem .75rem 2rem;
+        
+        text-decoration: none;
+        color: $color-black;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: .15rem;
+
+        transition: all .4s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+}
+

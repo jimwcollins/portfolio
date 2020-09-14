@@ -27,3 +27,11 @@ html {
     // 10/16 = 62.5%
     font-size: 62.5%;
 }
+
+body {
+    background-color: $color-background;
+}
+
+.spacer {
+    margin-top: 1rem;
+}

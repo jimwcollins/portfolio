@@ -1,25 +1,36 @@
 /***************************
 * 
 *  JC PORTFOLIO
-*  Base: _base.scss
+*  Base: _typography.scss
 * 
 ***************************/
 
 body {
     font-family: $font-body;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 1.5;
 }
 
+.para {
+    &:not(:last-child) { 
+        margin-bottom: 2.2rem; 
+    }
+
+    &--center {
+        text-align: center;
+    }
+}
+
 .heading {
     font-family: $font-display;
-    color: $color-white;
     text-align: center;
     text-transform: uppercase;
     line-height: 1.25;
 
     &__main {
         @extend .heading;
+        color: $color-white;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: .5rem;
@@ -27,6 +38,7 @@ body {
 
     &__sub {
         @extend .heading;
+        color: $color-white;
         font-size: 4rem;
         font-weight: 200;
         letter-spacing: .35rem;
@@ -36,6 +48,24 @@ body {
             top: .3rem;
             color: $color-primary;
             font-size: 5rem;
+        }
+    }
+
+    &__section {
+        @extend .heading;
+        grid-column: content-start / content-end;
+        margin-bottom: 7rem;
+        color: $color-black;
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: .5rem;
+
+        &--slash {
+            position: relative;
+            top: .35rem;
+            color: $color-primary;
+            font-size: 4rem;
+            font-weight: 400;
         }
     }
 }
