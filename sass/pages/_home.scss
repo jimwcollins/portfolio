@@ -8,11 +8,6 @@
 .home {
     // Specifiy CSS Grid row. Columns specified by standard grid
     grid-template-rows: 100vh repeat(4, min-content);
-
-    &__text {
-        grid-column: col-start 2 / col-end 11;
-        text-align: center;
-    }
 }
 
 .home__about-me {

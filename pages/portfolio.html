@@ -1,9 +1,9 @@
-<!------------------------>
-<!--                    -->
-<!--   JC Portfolio     -->
-<!--  portfolio.html    -->
-<!--                    -->
-<!------------------------>
+<!-------------------------
+
+    JC Portfolio
+    portfolio.html
+
+-------------------------->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,12 +20,95 @@
         <title>JC Design Portfolio</title>
     </head>
 
-    <body class="home grid">
+    <body class="portfolio grid">
 
-        <h3 class="heading__section">
-            My portfolio
-        </h3>
+        <!-- Hero Section -->
+        <section class="hero">
 
+            <img src="/img/Portfolio/portfolio_hero.jpg" alt="Design sketches" class="hero__image">
+
+            <!-- Header -->
+            <header class="header">
+                <p class="menu">\\\</p>
+            </header>
+
+            <div class="hero__heading">
+                <h1 class="heading__main">Portfolio</h1>
+                <h2 class="heading__sub">Design <span class="heading__sub--slash">/</span> Development</h2>
+            </div>
+
+            <svg class="hero__arrow">
+                <use xlink:href="/img/portfolio-icons-sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+
+        </section>
+
+        <!-- Design Projects section -->
+        <section class="section grid">
+            <h3 class="heading__section">
+                Design <span class="heading__section--slash">/</span> Projects
+            </h3>
+
+            <div class="text-block--center">
+                <p class="para">
+                    During my design career I have been fortunate to work with a wide range of clients, 
+                    <BR> from Classic FM and XFM to the Ramblers’ Association and Chickenshed Theatre Company. 
+                    <BR> A selection of my work can be viewed below.
+                </p>
+            </div>
+
+            <div class="work-grid">
+
+                <a href="/pages/projects/chickenshed.html" class="work-grid__link">
+                    <figure class="work-grid__item">
+                        <image src="/img/Portfolio/Grid/Chickenshed_grid.jpg" class="work-grid__img work-grid__img--std"></image>
+                    </figure>
+                </a>
+                <a href="/pages/projects/chickenshed.html" class="work-grid__link">
+                    <figure class="work-grid__item">
+                        <image src="/img/Portfolio/Grid/XFM_grid.jpg" class="work-grid__img work-grid__img--std"></image>
+                    </figure>
+                </a>
+                <a href="/pages/projects/chickenshed.html" class="work-grid__link">
+                    <figure class="work-grid__item">
+                        <image src="/img/Portfolio/Grid/Watchful_grid.jpg" class="work-grid__img work-grid__img--std"></image>
+                    </figure>
+                </a>
+                <a href="/pages/projects/chickenshed.html" class="work-grid__link">
+                    <figure class="work-grid__item">
+                        <image src="/img/Portfolio/Grid/Ascent_grid.jpg" class="work-grid__img work-grid__img--std"></image>
+                    </figure>
+                </a>
+                <a href="/pages/projects/chickenshed.html" class="work-grid__link">
+                    <figure class="work-grid__item">
+                        <image src="/img/Portfolio/Grid/Suchet_grid.jpg" class="work-grid__img work-grid__img--std"></image>
+                    </figure>
+                </a>
+                <a href="/pages/projects/chickenshed.html" class="work-grid__link">
+                    <figure class="work-grid__item">
+                        <image src="/img/Portfolio/Grid/WildBrit_grid.jpg" class="work-grid__img work-grid__img--std"></image>
+                    </figure>
+                </a>
+            </div>
+
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <ul class="footer__nav">
+                <li class="footer__nav__item"><a href="/index.html" class="footer__nav__link">Home</a></li>
+                <li class="footer__nav__item"><a href="/index.html" class="footer__nav__link">About</a></li>
+                <li class="footer__nav__item"><a href="/pages/portfolio.html" class="footer__nav__link">Portfolio</a></li>
+                <li class="footer__nav__item"><a href="/pages/experience.html" class="footer__nav__link">Experience</a></li>
+            </ul>
+
+            <div class="footer__logo">/</div>
+
+            <p class="footer__text">© 2020 James Collins. All rights reserved.</p>
+        </footer>
+
+        <script  src="/js/index.js"></script>
     </body>
 
 </html>

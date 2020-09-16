@@ -10,10 +10,11 @@
     grid-column: full-start / full-end;
     position: relative;
 
-    // Style
-    background-image: url(/img/Homepage/Homepage_Mac.jpg);
-    background-size: cover;
-
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 
     &__heading {
         position: absolute;

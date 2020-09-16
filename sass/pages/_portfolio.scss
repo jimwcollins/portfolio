@@ -1,0 +1,39 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Pages: _portfolio.scss
+* 
+***************************/
+
+.portfolio {
+    // Specifiy CSS Grid row. Columns specified by standard grid
+    grid-template-rows: 100vh repeat(4, min-content);
+}
+
+.work-grid {
+    grid-column: content-start / content-end;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $column-gap-master;
+
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+
+    &__item {
+        height: 25vw;
+        cursor: pointer;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: all .5s;
+    }
+
+    &__item:hover > &__img {
+        filter: none;
+    }
+}

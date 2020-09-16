@@ -9,18 +9,52 @@
     grid-column: full-start / full-end;
 
     display: grid;
-    height: 10rem;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    height: 7rem;
     background-color: $color-background-dark;
 
     color: $color-white;
     font-family: $font-body;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 
     &__nav {
-        &__link {
-            color: $color-white;
-            text-decoration: none;
+        justify-self: end;
+
+        display: grid;
+        grid-template-columns: repeat(4, min-content);
+        grid-gap: 2rem;
+        align-items: center;
+
+        list-style: none;
+
+        &__item {
+            align-self: center;
         }
+
+        &__link {
+            &:link,
+            &:visited {
+                color: $color-white;
+                text-decoration: none;
+                transition: color .5s;
+            }
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__logo {
+        position: relative;
+        top: .3rem;
+        color: $color-primary;
+        font-size: 4rem;
+        font-weight: 300;
     }
 }

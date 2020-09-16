@@ -52,7 +52,8 @@ body {
 .para:not(:last-child) {
   margin-bottom: 2.2rem; }
 
-.para--center {
+.text-block--center {
+  grid-column: col-start 2 / col-end 11;
   text-align: center; }
 
 .heading, .heading__main, .heading__sub, .heading__section {
@@ -120,9 +121,11 @@ body {
 ***************************/
 .hero {
   grid-column: full-start / full-end;
-  position: relative;
-  background-image: url(/img/Homepage/Homepage_Mac.jpg);
-  background-size: cover; }
+  position: relative; }
+  .hero__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
   .hero__heading {
     position: absolute;
     top: 50%;
@@ -155,15 +158,37 @@ body {
 .footer {
   grid-column: full-start / full-end;
   display: grid;
-  height: 10rem;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
   background-color: #2B2929;
   color: #FFF;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase; }
-  .footer__nav__link {
-    color: #FFF;
-    text-decoration: none; }
+  .footer__nav {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    grid-gap: 2rem;
+    align-items: center;
+    list-style: none; }
+    .footer__nav__item {
+      align-self: center; }
+    .footer__nav__link:link, .footer__nav__link:visited {
+      color: #FFF;
+      text-decoration: none;
+      transition: color .5s; }
+    .footer__nav__link:hover {
+      color: #B00000; }
+  .footer__logo {
+    position: relative;
+    top: .3rem;
+    color: #B00000;
+    font-size: 4rem;
+    font-weight: 300; }
 
 /***************************
 * 
@@ -187,7 +212,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(12, [col-start] minmax(min-content, 4.8rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end];
-  column-gap: 40px; }
+  column-gap: 4rem; }
 
 /***************************
 * 
@@ -196,10 +221,13 @@ body {
 * 
 ***************************/
 .header {
+  position: absolute;
+  top: 0rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 6rem; }
+  height: 6rem;
+  width: 100%; }
 
 .menu {
   margin-right: 3rem;
@@ -232,9 +260,6 @@ body {
 ***************************/
 .home {
   grid-template-rows: 100vh repeat(4, min-content); }
-  .home__text {
-    grid-column: col-start 2 / col-end 11;
-    text-align: center; }
 
 .home__about-me__image {
   grid-column: content-start / col-end 3;
@@ -283,3 +308,76 @@ body {
 .home__cv {
   background-color: #EBEBEB;
   padding: 8rem; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Pages: _portfolio.scss
+* 
+***************************/
+.portfolio {
+  grid-template-rows: 100vh repeat(4, min-content); }
+
+.work-grid {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem; }
+  .work-grid__item {
+    height: 25vw;
+    cursor: pointer; }
+  .work-grid__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all .5s; }
+  .work-grid__item:hover > .work-grid__img {
+    filter: none; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Pages: _project.scss
+* 
+***************************/
+.project {
+  grid-template-rows: 100vh repeat(4, min-content); }
+  .project__intro__details {
+    grid-column: content-start / col-end 3;
+    text-align: right; }
+    .project__intro__details--head {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #B00000; }
+    .project__intro__details--copy {
+      font-weight: 400;
+      font-size: 1.85rem;
+      margin-bottom: 2rem; }
+  .project__intro__text {
+    grid-column: col-start 5 / content-end; }
+  .project__showcase {
+    grid-column: col-start 1 / col-end 12; }
+  .project__spread {
+    width: 100%;
+    margin-bottom: 10rem; }
+  .project__splash {
+    grid-column: full-start / full-end;
+    height: 60rem;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 95%; }
+    .project__splash--chickenshed-1 {
+      background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Collage.jpg); }
+    .project__splash--chickenshed-2 {
+      background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Crime.jpg); }
+  .project__subsection__head {
+    grid-column: content-start / col-end 3;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #B00000; }
+  .project__subsection__text {
+    grid-column: col-start 5 / content-end; }
