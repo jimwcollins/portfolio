@@ -6,28 +6,91 @@
 ***************************/
 
 .header {
-    position: absolute;
+    position: fixed;
     top: 0rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 6rem;
+    height: 7rem;
     width: 100%;
+    z-index: 100;
+
+    color: $color-white;
+
+    transition: all .5s;
+
+    &--scroll {
+        background-color: rgba($color-white, 0.95);
+        color: $color-black;
+    }
 }
 
-.menu {
+.nav {
     margin-right: 3rem;
-
-    font-family: $font-display;
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: $color-white;
-    letter-spacing: -.2rem;
-    transition: all .5s;
     cursor: pointer;
 
-    &:hover {
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__item {
+        visibility: hidden;
+        opacity: 0;
+        width: 0%;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        transition: all 1s;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            font-family: $font-display;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: $color-grey-light;
+            text-transform: uppercase;
+            text-align: right;
+            text-decoration: none;
+            transition: color .5s;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &--scroll {
+            color: $color-grey-med;
+
+            &:hover {
+                color: $color-black;
+            }
+
+        }
+    }
+
+    &__slash {
+        align-self: center;
+        padding-top: .35rem;
+        font-family: $font-display;
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: inherit;
+        transition: color .75s;
+    }
+
+    &:hover &__slash{
         color: $color-primary;
-        letter-spacing: 0rem;
+    }
+
+    &:hover &__item {
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+        padding-left: .75rem;
+        padding-right: .75rem;
     }
 }

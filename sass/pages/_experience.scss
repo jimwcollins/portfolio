@@ -1,0 +1,11 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Pages: Experience
+* 
+***************************/
+
+.home {
+    // Specifiy CSS Grid row. Columns specified by standard grid
+    grid-template-rows: 100vh repeat(4, min-content);
+}

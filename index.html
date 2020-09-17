@@ -20,17 +20,27 @@
         <title>JC Design Portfolio</title>
     </head>
 
-    <body class="home grid">
+    <body class="home grid" id="top">
+
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#top" class="nav__link">Home</a></li>
+                    <p class="nav__slash">/</p>
+                    <li class="nav__item"><a href="#about-me" class="nav__link" id="menu__about">About</a></li>
+                    <p class="nav__slash">/</p>
+                    <li class="nav__item"><a href="/pages/portfolio.html" class="nav__link">Portfolio</a></li>
+                    <p class="nav__slash">/</p>
+                    <li class="nav__item"><a href="/pages/experience.html" class="nav__link">Experience</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <!-- Hero Section -->
         <section class="hero">
 
             <img src="/img/Homepage/Homepage_Mac.jpg" alt="My office" class="hero__image">
-
-            <!-- Header -->
-            <header class="header">
-                <p class="menu">\\\</p>
-            </header>
 
             <div class="hero__heading">
                 <h1 class="heading__main">James Collins</h1>
@@ -42,6 +52,7 @@
             </svg>
 
         </section>
+        <div id="about-me"></div>
 
         <!-- About Me section -->
         <section class="section home__about-me grid">
@@ -153,6 +164,7 @@
             <p class="footer__text">© 2020 James Collins. All rights reserved.</p>
         </footer>
 
+        <script src="/js/index.js"></script>
     </body>
 
 </html>
