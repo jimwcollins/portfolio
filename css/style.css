@@ -29,6 +29,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-size: 62.5%; }
 
 body {
@@ -74,7 +75,7 @@ body {
     .heading__sub--slash {
       position: relative;
       top: .3rem;
-      color: #B00000;
+      color: #B51D3E;
       font-size: 5rem; }
   .heading__section {
     grid-column: content-start / content-end;
@@ -86,9 +87,18 @@ body {
     .heading__section--slash {
       position: relative;
       top: .35rem;
-      color: #B00000;
+      color: #B51D3E;
       font-size: 4rem;
       font-weight: 400; }
+
+.section__subhead {
+  grid-column: content-start / col-end 3;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #B51D3E; }
+
+.section__text {
+  grid-column: col-start 5 / content-end; }
 
 /***************************
 * 
@@ -99,18 +109,21 @@ body {
 .button:link, .button:visited {
   display: inline-block;
   border-radius: .3rem;
-  border: 2px solid #B00000;
-  padding: 1rem 2rem .75rem 2rem;
+  border: 2px solid #B51D3E;
+  padding: 1.25rem 2.25rem 1rem 2.25rem;
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: .15rem;
   transition: all .4s; }
 
+.button--white:link, .button--white:visited {
+  color: #FFF; }
+
 .button:hover {
-  background-color: #B00000;
+  background-color: #B51D3E;
   color: #FFF; }
 
 /***************************
@@ -131,15 +144,21 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+  .hero__button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%); }
   .hero__arrow {
     position: absolute;
     top: 95%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    height: 3rem;
-    width: 3rem;
-    fill: #FFF;
-    animation: scroll-arrow 1.75s infinite; }
+    transform: translateX(-50%); }
+    .hero__arrow__svg {
+      height: 3rem;
+      width: 3rem;
+      fill: #FFF;
+      animation: scroll-arrow 1.75s infinite; }
 
 @keyframes scroll-arrow {
   0% {
@@ -182,11 +201,11 @@ body {
       text-decoration: none;
       transition: color .5s; }
     .footer__nav__link:hover {
-      color: #B00000; }
+      color: #B51D3E; }
   .footer__logo {
     position: relative;
     top: .3rem;
-    color: #B00000;
+    color: #B51D3E;
     font-size: 4rem;
     font-weight: 300; }
 
@@ -221,26 +240,66 @@ body {
 * 
 ***************************/
 .header {
-  position: absolute;
+  position: fixed;
   top: 0rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 6rem;
-  width: 100%; }
-
-.menu {
-  margin-right: 3rem;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
+  height: 7rem;
+  width: 100%;
+  z-index: 100;
   color: #FFF;
-  letter-spacing: -.2rem;
-  transition: all .5s;
+  transition: all .5s; }
+  .header--scroll {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000; }
+
+.nav {
+  margin-right: 3rem;
   cursor: pointer; }
-  .menu:hover {
-    color: #B00000;
-    letter-spacing: 0rem; }
+  .nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none; }
+  .nav__item {
+    visibility: hidden;
+    opacity: 0;
+    width: 0%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    transition: all 1s; }
+  .nav__link:link, .nav__link:visited {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #A19391;
+    text-transform: uppercase;
+    text-align: right;
+    text-decoration: none;
+    transition: color .5s; }
+  .nav__link:hover {
+    color: #FFF; }
+  .nav__link--scroll {
+    color: #7D7270; }
+    .nav__link--scroll:hover {
+      color: #000; }
+  .nav__slash {
+    align-self: center;
+    padding-top: .35rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: inherit;
+    transition: color .75s; }
+  .nav:hover .nav__slash {
+    color: #B51D3E; }
+  .nav:hover .nav__item {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    padding-left: .75rem;
+    padding-right: .75rem; }
 
 /****************************
 * 
@@ -255,7 +314,27 @@ body {
 /***************************
 * 
 *  JC PORTFOLIO
-*  Pages: _home.scss
+*  Pages: Experience
+* 
+***************************/
+.experience {
+  grid-template-rows: 100vh repeat(4, min-content); }
+  .experience__subsection {
+    grid-column: full-start / full-end;
+    margin-bottom: 5rem; }
+  .experience__design {
+    grid-column: col-start 5 / span 4; }
+  .experience__dev {
+    grid-column: col-start 9 / span 4; }
+  .experience__list {
+    list-style: none; }
+    .experience__list__head {
+      font-weight: 400; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Pages: Home
 * 
 ***************************/
 .home {
@@ -312,7 +391,7 @@ body {
 /***************************
 * 
 *  JC PORTFOLIO
-*  Pages: _portfolio.scss
+*  Pages: Portfolio
 * 
 ***************************/
 .portfolio {
@@ -340,7 +419,7 @@ body {
 /***************************
 * 
 *  JC PORTFOLIO
-*  Pages: _project.scss
+*  Pages: Project
 * 
 ***************************/
 .project {
@@ -352,7 +431,7 @@ body {
       text-transform: uppercase;
       font-size: 1.5rem;
       font-weight: 600;
-      color: #B00000; }
+      color: #B51D3E; }
     .project__intro__details--copy {
       font-weight: 400;
       font-size: 1.85rem;
@@ -374,10 +453,3 @@ body {
       background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Collage.jpg); }
     .project__splash--chickenshed-2 {
       background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Crime.jpg); }
-  .project__subsection__head {
-    grid-column: content-start / col-end 3;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #B00000; }
-  .project__subsection__text {
-    grid-column: col-start 5 / content-end; }

@@ -23,17 +23,26 @@
         transform: translate(-50%, -50%);
     }
 
+    &__button {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     &__arrow {
         position: absolute;
         top: 95%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
 
-        height: 3rem;
-        width: 3rem;
-        fill: $color-white;
+        &__svg {
+            height: 3rem;
+            width: 3rem;
+            fill: $color-white;
 
-        animation: scroll-arrow 1.75s infinite;
+            animation: scroll-arrow 1.75s infinite;
+        }
     }
 }
 

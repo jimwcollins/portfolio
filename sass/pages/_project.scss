@@ -53,19 +53,5 @@
         &--chickenshed-1 { background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Collage.jpg) }
         &--chickenshed-2 { background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Crime.jpg) }
     }
-
-    &__subsection {
-        &__head {
-            grid-column: content-start / col-end 3;
-
-            text-transform: uppercase;
-            font-weight: 400;
-            color: $color-primary;
-        }
-
-        &__text {
-            grid-column: col-start 5 / content-end;
-        }
-    }
 }
 

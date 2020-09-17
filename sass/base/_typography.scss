@@ -72,3 +72,17 @@ body {
         }
     }
 }
+
+.section {
+    &__subhead {
+        grid-column: content-start / col-end 3;
+
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $color-primary;
+    }
+
+    &__text {
+        grid-column: col-start 5 / content-end;
+    }
+}
