@@ -11,7 +11,10 @@
 
     &__subsection {
         grid-column: full-start / full-end;
-        margin-bottom: 5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
     }
 
     &__design {
@@ -22,11 +25,22 @@
         grid-column: col-start 9 / span 4;
     }
 
+    &__head {
+        font: $font-display;
+        font-weight: 400;
+        margin-bottom: 2rem;
+
+        &--main {
+            text-transform: uppercase;
+        }
+    }
+
     &__list {
         list-style: none;
 
         &__head {
             font-weight: 400;
+            margin-bottom: 2rem;
         }
     }
 }

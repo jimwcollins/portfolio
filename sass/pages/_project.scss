@@ -41,11 +41,17 @@
     &__spread {
         width: 100%;
         margin-bottom: 10rem;
+
+        &:last-child {
+            margin-bottom: 5rem;
+        }
     }
 
     &__splash {
         grid-column: full-start / full-end;
         height: 60rem;
+        margin-bottom: 5rem;
+
         background-attachment: fixed;
         background-size: cover;
         opacity: 95%;

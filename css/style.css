@@ -53,10 +53,6 @@ body {
 .para:not(:last-child) {
   margin-bottom: 2.2rem; }
 
-.text-block--center {
-  grid-column: col-start 2 / col-end 11;
-  text-align: center; }
-
 .heading, .heading__main, .heading__sub, .heading__section {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
@@ -94,11 +90,17 @@ body {
 .section__subhead {
   grid-column: content-start / col-end 3;
   text-transform: uppercase;
+  text-align: right;
   font-weight: 400;
   color: #B51D3E; }
 
-.section__text {
-  grid-column: col-start 5 / content-end; }
+.section__text--left {
+  grid-column: col-start 5 / content-end;
+  text-align: left; }
+
+.section__text--center {
+  grid-column: col-start 2 / col-end 11;
+  text-align: center; }
 
 /***************************
 * 
@@ -307,9 +309,18 @@ body {
 *  Layout: _section.scss
 * 
 ****************************/
-.section {
+.section, .section--color {
   grid-column: full-start / full-end;
-  margin-top: 10rem; }
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+  .section--first {
+    margin-top: 10rem; }
+  .section--color {
+    background-color: #EBEBEB;
+    padding-top: 8rem;
+    padding-bottom: 8rem; }
+    .section--color--last {
+      margin-bottom: 10rem; }
 
 /***************************
 * 
@@ -320,16 +331,24 @@ body {
 .experience {
   grid-template-rows: 100vh repeat(4, min-content); }
   .experience__subsection {
-    grid-column: full-start / full-end;
-    margin-bottom: 5rem; }
+    grid-column: full-start / full-end; }
+    .experience__subsection:not(:last-child) {
+      margin-bottom: 5rem; }
   .experience__design {
     grid-column: col-start 5 / span 4; }
   .experience__dev {
     grid-column: col-start 9 / span 4; }
+  .experience__head {
+    font: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    margin-bottom: 2rem; }
+    .experience__head--main {
+      text-transform: uppercase; }
   .experience__list {
     list-style: none; }
     .experience__list__head {
-      font-weight: 400; }
+      font-weight: 400;
+      margin-bottom: 2rem; }
 
 /***************************
 * 
@@ -384,10 +403,6 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.home__cv {
-  background-color: #EBEBEB;
-  padding: 8rem; }
-
 /***************************
 * 
 *  JC PORTFOLIO
@@ -403,7 +418,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
   margin-top: 7rem;
-  margin-bottom: 7rem; }
+  margin-bottom: 5rem; }
   .work-grid__item {
     height: 25vw;
     cursor: pointer; }
@@ -443,9 +458,12 @@ body {
   .project__spread {
     width: 100%;
     margin-bottom: 10rem; }
+    .project__spread:last-child {
+      margin-bottom: 5rem; }
   .project__splash {
     grid-column: full-start / full-end;
     height: 60rem;
+    margin-bottom: 5rem;
     background-attachment: fixed;
     background-size: cover;
     opacity: 95%; }

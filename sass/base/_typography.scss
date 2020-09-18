@@ -18,13 +18,6 @@ body {
     }
 }
 
-.text-block {
-    &--center {
-        grid-column: col-start 2 / col-end 11;
-        text-align: center;
-    }
-}
-
 .heading {
     font-family: $font-display;
     text-align: center;
@@ -78,11 +71,20 @@ body {
         grid-column: content-start / col-end 3;
 
         text-transform: uppercase;
+        text-align: right;
         font-weight: 400;
         color: $color-primary;
     }
 
     &__text {
-        grid-column: col-start 5 / content-end;
+        &--left {
+            grid-column: col-start 5 / content-end;
+            text-align: left;
+        }
+
+        &--center {
+            grid-column: col-start 2 / col-end 11;
+            text-align: center;
+        }
     }
 }
