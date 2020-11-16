@@ -312,7 +312,9 @@ body {
 .section, .section--color {
   grid-column: full-start / full-end;
   margin-top: 5rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  opacity: 1;
+  transition: all 2s; }
   .section--first {
     margin-top: 10rem; }
   .section--color {
@@ -321,6 +323,9 @@ body {
     padding-bottom: 8rem; }
     .section--color--last {
       margin-bottom: 10rem; }
+  .section--hidden {
+    opacity: 0;
+    transform: translateY(-2rem); }
 
 /***************************
 * 

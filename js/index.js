@@ -21,12 +21,12 @@ const stickyNav = (entries) => {
   if (!entry.isIntersecting) {
     header.classList.add('header--scroll');
     navLinks.forEach((navLink) => {
-      item.classList.add('nav__link--scroll');
+      navLink.classList.add('nav__link--scroll');
     });
   } else {
     header.classList.remove('header--scroll');
     navLinks.forEach((navLink) => {
-      item.classList.add('nav__link--scroll');
+      navLink.classList.add('nav__link--scroll');
     });
   }
 };
@@ -37,3 +37,26 @@ const heroObserver = new IntersectionObserver(stickyNav, {
 });
 
 heroObserver.observe(heroSection);
+
+// Sections
+
+const allSections = document.querySelectorAll('.section');
+
+const revealSection = (entries, observer) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserver(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.35,
+});
+
+allSections.forEach((section) => {
+  section.classList.add('section--hidden');
+  sectionObserver.observe(section);
+});

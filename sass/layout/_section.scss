@@ -6,24 +6,32 @@
 ****************************/
 
 .section {
-    grid-column: full-start / full-end;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+  grid-column: full-start / full-end;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  opacity: 1;
 
-    // Add larger margin for first main section after the header image
-    &--first {
-      margin-top: 10rem;  
+  transition: all 2s;
+
+  // Add larger margin for first main section after the header image
+  &--first {
+    margin-top: 10rem;
+  }
+
+  &--color {
+    @extend .section;
+    background-color: $color-background-med;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    // Remove margin for last section before footer
+    &--last {
+      margin-bottom: 10rem;
     }
+  }
 
-    &--color {
-        @extend .section;
-        background-color: $color-background-med;
-        padding-top: 8rem;
-        padding-bottom: 8rem;
-
-        // Remove margin for last section before footer
-        &--last {
-            margin-bottom: 10rem;  
-        }
-    }
+  &--hidden {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
 }
