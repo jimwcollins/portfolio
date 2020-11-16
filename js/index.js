@@ -1,23 +1,39 @@
 /***************************
-* 
-*  JC PORTFOLIO
-*  index.js
-* 
-***************************/
+ *
+ *  JC PORTFOLIO
+ *  index.js
+ *
+ ***************************/
 
 /**************
-* Site-wide JS
-**************/
+ * Site-wide JS
+ **************/
 
-// Header 
+// Header
 
-// Handle header on page scroll
-window.addEventListener('scroll', () => {
-    if (document.body.scrollTop > (window.innerHeight - 1) || document.documentElement.scrollTop > (window.innerHeight - 1)) {
-        document.querySelector('.header').classList.add('header--scroll');
-        document.querySelectorAll('.nav__link').forEach(item => item.classList.add('nav__link--scroll'));
-    } else {
-        document.querySelector('.header').classList.remove('header--scroll');
-        document.querySelectorAll('.nav__link').forEach(item => item.classList.remove('nav__link--scroll'));
-    }
+const heroSection = document.querySelector('.hero');
+const header = document.querySelector('.header');
+const navLinks = document.querySelectorAll('.nav__link');
+
+const stickyNav = (entries) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) {
+    header.classList.add('header--scroll');
+    navLinks.forEach((navLink) => {
+      item.classList.add('nav__link--scroll');
+    });
+  } else {
+    header.classList.remove('header--scroll');
+    navLinks.forEach((navLink) => {
+      item.classList.add('nav__link--scroll');
+    });
+  }
+};
+
+const heroObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
 });
+
+heroObserver.observe(heroSection);
