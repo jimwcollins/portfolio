@@ -7,17 +7,46 @@
 
 .section {
   grid-column: full-start / full-end;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: $section-top;
+  margin-bottom: $section-bottom;
   opacity: 1;
 
   transition: all 2s;
+
+  // Hidden
+  &--hidden {
+    opacity: 0;
+  }
+
+  // Split section
+  &__left {
+    grid-column: content-start / col-end 3;
+
+    transition: all 2s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(3rem);
+    }
+  }
+
+  &__right {
+    grid-column: col-start 5 / content-end;
+
+    transition: all 2s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+  }
 
   // Add larger margin for first main section after the header image
   &--first {
     margin-top: 10rem;
   }
 
+  // Color section
   &--color {
     @extend .section;
     background-color: $color-background-med;
@@ -28,10 +57,5 @@
     &--last {
       margin-bottom: 10rem;
     }
-  }
-
-  &--hidden {
-    opacity: 0;
-    transform: translateY(-2rem);
   }
 }

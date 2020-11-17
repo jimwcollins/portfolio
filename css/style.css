@@ -33,7 +33,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #FAFAFA; }
+  background-color: #fafafa; }
 
 .spacer {
   margin-top: 1rem; }
@@ -59,19 +59,19 @@ body {
   text-transform: uppercase;
   line-height: 1.25; }
   .heading__main {
-    color: #FFF;
+    color: #fff;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: .5rem; }
+    letter-spacing: 0.5rem; }
   .heading__sub {
-    color: #FFF;
+    color: #fff;
     font-size: 4rem;
     font-weight: 200;
-    letter-spacing: .35rem; }
+    letter-spacing: 0.35rem; }
     .heading__sub--slash {
       position: relative;
-      top: .3rem;
-      color: #B51D3E;
+      top: 0.3rem;
+      color: #b51d3e;
       font-size: 5rem; }
   .heading__section {
     grid-column: content-start / content-end;
@@ -79,11 +79,11 @@ body {
     color: #000;
     font-size: 3rem;
     font-weight: 400;
-    letter-spacing: .5rem; }
+    letter-spacing: 0.5rem; }
     .heading__section--slash {
       position: relative;
-      top: .35rem;
-      color: #B51D3E;
+      top: 0.35rem;
+      color: #b51d3e;
       font-size: 4rem;
       font-weight: 400; }
 
@@ -92,10 +92,9 @@ body {
   text-transform: uppercase;
   text-align: right;
   font-weight: 400;
-  color: #B51D3E; }
+  color: #b51d3e; }
 
 .section__text--left {
-  grid-column: col-start 5 / content-end;
   text-align: left; }
 
 .section__text--center {
@@ -111,7 +110,7 @@ body {
 .button:link, .button:visited {
   display: inline-block;
   border-radius: .3rem;
-  border: 2px solid #B51D3E;
+  border: 2px solid #b51d3e;
   padding: 1.25rem 2.25rem 1rem 2.25rem;
   text-decoration: none;
   color: #000;
@@ -122,11 +121,11 @@ body {
   transition: all .4s; }
 
 .button--white:link, .button--white:visited {
-  color: #FFF; }
+  color: #fff; }
 
 .button:hover {
-  background-color: #B51D3E;
-  color: #FFF; }
+  background-color: #b51d3e;
+  color: #fff; }
 
 /***************************
 * 
@@ -159,7 +158,7 @@ body {
     .hero__arrow__svg {
       height: 3rem;
       width: 3rem;
-      fill: #FFF;
+      fill: #fff;
       animation: scroll-arrow 1.75s infinite; }
 
 @keyframes scroll-arrow {
@@ -184,8 +183,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 7rem;
-  background-color: #2B2929;
-  color: #FFF;
+  background-color: #2b2929;
+  color: #fff;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase; }
@@ -199,15 +198,15 @@ body {
     .footer__nav__item {
       align-self: center; }
     .footer__nav__link:link, .footer__nav__link:visited {
-      color: #FFF;
+      color: #fff;
       text-decoration: none;
       transition: color .5s; }
     .footer__nav__link:hover {
-      color: #B51D3E; }
+      color: #b51d3e; }
   .footer__logo {
     position: relative;
     top: .3rem;
-    color: #B51D3E;
+    color: #b51d3e;
     font-size: 4rem;
     font-weight: 300; }
 
@@ -250,7 +249,7 @@ body {
   height: 7rem;
   width: 100%;
   z-index: 100;
-  color: #FFF;
+  color: #fff;
   transition: all .5s; }
   .header--scroll {
     background-color: rgba(255, 255, 255, 0.95);
@@ -275,15 +274,15 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
-    color: #A19391;
+    color: #a19391;
     text-transform: uppercase;
     text-align: right;
     text-decoration: none;
     transition: color .5s; }
   .nav__link:hover {
-    color: #FFF; }
+    color: #fff; }
   .nav__link--scroll {
-    color: #7D7270; }
+    color: #7d7270; }
     .nav__link--scroll:hover {
       color: #000; }
   .nav__slash {
@@ -295,7 +294,7 @@ body {
     color: inherit;
     transition: color .75s; }
   .nav:hover .nav__slash {
-    color: #B51D3E; }
+    color: #b51d3e; }
   .nav:hover .nav__item {
     visibility: visible;
     opacity: 1;
@@ -315,17 +314,28 @@ body {
   margin-bottom: 5rem;
   opacity: 1;
   transition: all 2s; }
+  .section--hidden {
+    opacity: 0; }
+  .section__left {
+    grid-column: content-start / col-end 3;
+    transition: all 2s; }
+    .section__left--hidden {
+      opacity: 0;
+      transform: translateX(3rem); }
+  .section__right {
+    grid-column: col-start 5 / content-end;
+    transition: all 2s; }
+    .section__right--hidden {
+      opacity: 0;
+      transform: translateX(-3rem); }
   .section--first {
     margin-top: 10rem; }
   .section--color {
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
     padding-top: 8rem;
     padding-bottom: 8rem; }
     .section--color--last {
       margin-bottom: 10rem; }
-  .section--hidden {
-    opacity: 0;
-    transform: translateY(-2rem); }
 
 /***************************
 * 
@@ -365,19 +375,15 @@ body {
   grid-template-rows: 100vh repeat(4, min-content); }
 
 .home__about-me__image {
-  grid-column: content-start / col-end 3;
   border-radius: 50%;
   height: 22rem;
   width: 22rem; }
-
-.home__about-me__text {
-  grid-column: col-start 5 / content-end; }
 
 .home__gallery {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(5, 5.5vw);
-  grid-gap: .5rem; }
+  grid-gap: 0.5rem; }
   .home__gallery__box--1 {
     grid-column: 1 / span 2;
     grid-row: 1 / -1; }
@@ -445,26 +451,20 @@ body {
 .project {
   grid-template-rows: 100vh repeat(4, min-content); }
   .project__intro__details {
-    grid-column: content-start / col-end 3;
     text-align: right; }
     .project__intro__details--head {
       text-transform: uppercase;
       font-size: 1.5rem;
       font-weight: 600;
-      color: #B51D3E; }
+      color: #b51d3e; }
     .project__intro__details--copy {
       font-weight: 400;
       font-size: 1.85rem;
       margin-bottom: 2rem; }
-  .project__intro__text {
-    grid-column: col-start 5 / content-end; }
   .project__showcase {
-    grid-column: col-start 1 / col-end 12; }
-  .project__spread {
-    width: 100%;
-    margin-bottom: 10rem; }
-    .project__spread:last-child {
-      margin-bottom: 5rem; }
+    grid-column: col-start 1 / col-end 12;
+    margin-top: 5rem;
+    margin-bottom: 5rem; }
   .project__splash {
     grid-column: full-start / full-end;
     height: 60rem;
@@ -476,3 +476,17 @@ body {
       background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Collage.jpg); }
     .project__splash--chickenshed-2 {
       background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Crime.jpg); }
+
+.spread {
+  width: 100%;
+  margin-bottom: 10rem;
+  opacity: 1;
+  transition: all 1s; }
+  .spread__left--hidden {
+    opacity: 0;
+    transform: translateX(-2rem); }
+  .spread__right--hidden {
+    opacity: 0;
+    transform: translateX(2rem); }
+  .spread:last-child {
+    margin-bottom: 5rem; }

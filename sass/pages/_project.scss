@@ -6,58 +6,71 @@
 ***************************/
 
 .project {
-    // Specifiy CSS Grid row. Columns specified by standard grid
-    grid-template-rows: 100vh repeat(4, min-content);
+  // Specifiy CSS Grid row. Columns specified by standard grid
+  grid-template-rows: 100vh repeat(4, min-content);
 
-    &__intro {
-        &__details {
-            grid-column: content-start / col-end 3;
-    
-            text-align: right;
-    
-            &--head {
-                text-transform: uppercase;
-                font-size: 1.5rem;
-                font-weight: 600;
-                color: $color-primary;
-            }
-    
-            &--copy {
-                font-weight: 400;
-                font-size: 1.85rem;
-                margin-bottom: 2rem;
-            }
-        }
-    
-        &__text {
-            grid-column: col-start 5 / content-end;
-        }
+  &__intro {
+    &__details {
+      text-align: right;
+
+      &--head {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $color-primary;
+      }
+
+      &--copy {
+        font-weight: 400;
+        font-size: 1.85rem;
+        margin-bottom: 2rem;
+      }
     }
+  }
 
-    &__showcase {
-        grid-column: col-start 1 / col-end 12;
+  &__showcase {
+    grid-column: col-start 1 / col-end 12;
+    margin-top: $section-top;
+    margin-bottom: $section-bottom;
+  }
+
+  &__splash {
+    grid-column: full-start / full-end;
+    height: 60rem;
+    margin-bottom: 5rem;
+
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 95%;
+
+    &--chickenshed-1 {
+      background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Collage.jpg);
     }
-
-    &__spread {
-        width: 100%;
-        margin-bottom: 10rem;
-
-        &:last-child {
-            margin-bottom: 5rem;
-        }
+    &--chickenshed-2 {
+      background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Crime.jpg);
     }
-
-    &__splash {
-        grid-column: full-start / full-end;
-        height: 60rem;
-        margin-bottom: 5rem;
-
-        background-attachment: fixed;
-        background-size: cover;
-        opacity: 95%;
-
-        &--chickenshed-1 { background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Collage.jpg) }
-        &--chickenshed-2 { background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Crime.jpg) }
-    }
+  }
 }
 
+.spread {
+  width: 100%;
+  margin-bottom: 10rem;
+
+  opacity: 1;
+
+  transition: all 1s;
+
+  &__left--hidden {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  &__right--hidden {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+
+  &:last-child {
+    margin-bottom: 5rem;
+  }
+}
