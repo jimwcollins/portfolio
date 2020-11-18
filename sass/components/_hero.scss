@@ -6,57 +6,54 @@
 ***************************/
 
 .hero {
-    // Position
-    grid-column: full-start / full-end;
-    position: relative;
+  // Position
+  grid-column: full-start / full-end;
+  position: relative;
 
-    &__image {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__heading {
+    @include centre-content;
+  }
+
+  &__button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__svg {
+      height: 3rem;
+      width: 3rem;
+      fill: $color-white;
+
+      animation: scroll-arrow 1.75s infinite;
     }
-
-    &__heading {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    &__button {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    &__arrow {
-        position: absolute;
-        top: 95%;
-        left: 50%;
-        transform: translateX(-50%);
-
-        &__svg {
-            height: 3rem;
-            width: 3rem;
-            fill: $color-white;
-
-            animation: scroll-arrow 1.75s infinite;
-        }
-    }
+  }
 }
 
 // Hero arrow animation
 @keyframes scroll-arrow {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-.75rem);
-    }
+  50% {
+    transform: translateY(-0.75rem);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }

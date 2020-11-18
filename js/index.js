@@ -6,12 +6,46 @@
  ***************************/
 
 /*******************
- * Sticky navigation
+ * Navigation
+ *******************/
+
+const nav = document.querySelector('.nav__nav');
+const navBG = document.querySelector('.nav__bg');
+const navButton = document.querySelector('.nav__button');
+const navText = document.querySelector('.nav__button__text');
+const navIcon1 = document.querySelector('.nav__button__icon-1');
+const navIcon2 = document.querySelector('.nav__button__icon-2');
+
+navButton.addEventListener('mouseenter', (event) => {
+  if (!nav.classList.contains('nav__nav--active')) {
+    navText.classList.add('nav__button__text--hover');
+    navIcon1.classList.add('nav__button__icon-1--hover');
+    navIcon2.classList.add('nav__button__icon-2--hover');
+  }
+});
+
+navButton.addEventListener('mouseleave', (event) => {
+  if (!nav.classList.contains('nav__nav--active')) {
+    navText.classList.remove('nav__button__text--hover');
+    navIcon1.classList.remove('nav__button__icon-1--hover');
+    navIcon2.classList.remove('nav__button__icon-2--hover');
+  }
+});
+
+navButton.addEventListener('click', (event) => {
+  navBG.classList.toggle('nav__bg--anim');
+  nav.classList.toggle('nav__nav--active');
+  navText.classList.remove('nav__button__text--hover');
+  navIcon1.classList.toggle('nav__button__icon-1--cross');
+  navIcon2.classList.toggle('nav__button__icon-2--cross');
+});
+
+/*******************
+ * Sticky Header
  *******************/
 
 const heroSection = document.querySelector('.hero');
 const header = document.querySelector('.header');
-const navLinks = document.querySelectorAll('.nav__link');
 
 const stickyNav = (entries) => {
   const [entry] = entries;
@@ -23,9 +57,6 @@ const stickyNav = (entries) => {
     });
   } else {
     header.classList.remove('header--scroll');
-    navLinks.forEach((navLink) => {
-      navLink.classList.add('nav__link--scroll');
-    });
   }
 };
 

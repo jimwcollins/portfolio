@@ -1,0 +1,178 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Layout: _nav.scss
+* 
+***************************/
+
+// NAV
+
+.nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  height: 7rem;
+  width: 100%;
+  z-index: 1000;
+
+  &__button {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    width: 7.5rem;
+    height: 2.5rem;
+    z-index: 2000;
+
+    display: flex;
+    justify-content: flex-end;
+    color: $color-white;
+    cursor: pointer;
+
+    &__text {
+      align-self: center;
+      overflow: hidden;
+
+      width: 0;
+      opacity: 0;
+      padding-right: 1rem;
+      font-family: $font-display;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+      transition: all 0.5s;
+
+      &--hover {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    // Nav button icon
+
+    &__icon {
+      position: absolute;
+      display: block;
+      width: 0.3rem;
+      height: 2.25rem;
+
+      background-color: $color-white;
+      transform: rotate(10deg);
+      transition: all 0.25s;
+
+      &-1 {
+        @extend .nav__button__icon;
+        margin-right: 1.1rem;
+
+        &--hover {
+          margin-right: 1.2rem;
+          background-color: $color-primary;
+        }
+
+        &--cross {
+          background-color: $color-white;
+          transform: translateX(0.6rem) rotate(-225deg);
+        }
+      }
+
+      &-2 {
+        @extend .nav__button__icon;
+
+        &--hover {
+          background-color: $color-primary;
+        }
+
+        &--cross {
+          background-color: $color-white;
+          transform: translateX(-0.6rem) rotate(225deg);
+        }
+      }
+    }
+  }
+
+  &__bg {
+    justify-content: flex-end;
+    top: 0;
+    right: 0;
+    height: 7rem;
+    width: 100%;
+    opacity: 0;
+    background-color: $color-primary;
+
+    transition: opacity 0.1s;
+
+    &--anim {
+      opacity: 1;
+      animation: bg-anim 0.75s forwards;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    bottom: 0;
+    height: 0;
+    opacity: 0;
+    width: 100%;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    &--active {
+      opacity: 1;
+      height: 100vh;
+    }
+  }
+
+  &__list {
+    @include centre-content;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: $font-display;
+      font-size: 3rem;
+      font-weight: 400;
+      color: $color-white;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 230%;
+      transition: all 0.5s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: scale(1.1);
+    }
+  }
+
+  // NAV ICON
+}
+
+// Background animation
+@keyframes bg-anim {
+  0% {
+    height: 7rem;
+  }
+
+  30% {
+    height: 6rem;
+  }
+
+  100% {
+    height: 100vh;
+  }
+}

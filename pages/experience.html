@@ -7,251 +7,314 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-    <head>
-        <meta charset="UTF-8">
+    <!-- Set width of website content to the device width, for responsive site -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Set width of website content to the device width, for responsive site -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <link href="/css/style.css" rel="stylesheet" >
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>JC Design Portfolio</title>
+  </head>
 
-        <title>JC Design Portfolio</title>
-    </head>
+  <body class="experience grid">
+    <!-- Navigation -->
+    <div class="nav">
+      <div class="nav__button">
+        <p class="nav__button__text">MENU</p>
+        <span class="nav__button__icon-1">&nbsp;</span>
+        <span class="nav__button__icon-2">&nbsp;</span>
+      </div>
 
-    <body class="experience grid">
+      <div class="nav__bg"></div>
 
-        <!-- Header -->
-        <header class="header">
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="/index.html#top" class="nav__link">Home</a></li>
-                    <p class="nav__slash">/</p>
-                    <li class="nav__item"><a href="/index.html#about-me" class="nav__link" id="menu__about">About</a></li>
-                    <p class="nav__slash">/</p>
-                    <li class="nav__item"><a href="/pages/portfolio.html" class="nav__link">Portfolio</a></li>
-                    <p class="nav__slash">/</p>
-                    <li class="nav__item"><a href="/pages/experience.html" class="nav__link">Experience</a></li>
-                </ul>
-            </nav>
-        </header>
+      <nav class="nav__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="/index.html#about-me" class="nav__link" id="menu__about"
+              >About</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="/pages/portfolio.html" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="/pages/experience.html" class="nav__link">Experience</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-        <!-- Hero Section -->
-        <section class="hero">
+    <!-- Header -->
+    <header class="header"></header>
 
-            <img src="/img/Experience/Experience_header.jpg" alt="Design sketches" class="hero__image">
+    <!-- Hero Section -->
+    <section class="hero">
+      <img
+        src="/img/Experience/Experience_header.jpg"
+        alt="Design sketches"
+        class="hero__image"
+      />
 
-            <div class="hero__heading">
-                <h1 class="heading__main">Experience</h1>
-            </div>
+      <div class="hero__heading">
+        <h1 class="heading__main">Experience</h1>
+      </div>
 
-            <div class="hero__button">
-                <a href="/pages/experience.html" class="button button--white">Download CV</a>
-            </div>
+      <div class="hero__button">
+        <a href="/pages/experience.html" class="button button--white"
+          >Download CV</a
+        >
+      </div>
 
-            <div class="hero__arrow">
-                <svg class="hero__arrow__svg">
-                    <use xlink:href="/img/portfolio-icons-sprite.svg#icon-chevron-thin-down"></use>
-                </svg>
-            </div>
+      <div class="hero__arrow">
+        <svg class="hero__arrow__svg">
+          <use
+            xlink:href="/img/portfolio-icons-sprite.svg#icon-chevron-thin-down"
+          ></use>
+        </svg>
+      </div>
+    </section>
 
-        </section>
+    <!-- My Skills section -->
+    <section class="section grid section--first">
+      <h3 class="heading__section">
+        My <span class="heading__section--slash">/</span> Skills
+      </h3>
 
-        <!-- My Skills section -->
-        <section class="section grid section--first">
-            <h3 class="heading__section">
-                My <span class="heading__section--slash">/</span> Skills
-            </h3>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">Expertise</h4>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">Expertise</h4>
-    
-                <div class="experience__design">
-                        <p class="experience__list__head">Design</p>
-                        <ul class="experience__list">
-                            <li class="experience__item">Print design</li>
-                            <li class="experience__item">Typography</li>
-                            <li class="experience__item">Artworking</li>
-                            <li class="experience__item">Web and UI design</li>
-                            <li class="experience__item">Motion Graphics</li>
-                            <li class="experience__item">Photoshop retouching</li>
-                            <li class="experience__item">Copywriting</li>
-                        </ul>
-                </div>
-    
-                <div class="experience__dev">
-                    <p class="experience__list__head">Development</p>
-                    <ul class="experience__list">
-                        <li class="experience__item">Web development</li>
-                        <li class="experience__item">Responsive design</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="experience__design">
+          <p class="experience__list__head">Design</p>
+          <ul class="experience__list">
+            <li class="experience__item">Print design</li>
+            <li class="experience__item">Typography</li>
+            <li class="experience__item">Artworking</li>
+            <li class="experience__item">Web and UI design</li>
+            <li class="experience__item">Motion Graphics</li>
+            <li class="experience__item">Photoshop retouching</li>
+            <li class="experience__item">Copywriting</li>
+          </ul>
+        </div>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">Technologies</h4>
-    
-                <div class="experience__design">
-                        <p class="experience__list__head">Design</p>
-                        <ul class="experience__list">
-                            <li class="experience__item">Adobe InDesign</li>
-                            <li class="experience__item">Adobe Photoshop</li>
-                            <li class="experience__item">Adobe Illustrator</li>
-                            <li class="experience__item">Adobe After Effects (limited)</li>
-                            <li class="experience__item">Adobe Premiere Pro (limited)</li>
-                            <li class="experience__item">Adobe XD</li>
-                            <li class="experience__item">UXPin</li>
-                            <li class="experience__item">Microsoft Office suite</li>
-                        </ul>
-                </div>
-    
-                <div class="experience__dev">
-                    <p class="experience__list__head">Development</p>
-                    <ul class="experience__list">
-                        <li class="experience__item">HTML 5</li>
-                        <li class="experience__item">CSS 3</li>
-                        <li class="experience__item">Sass/Scss</li>
-                        <li class="experience__item">JavaScript</li>
-                        <li class="experience__item">Git / GitHub  (limited)</li>
-                        <li class="experience__item">Visual Studio Code</li>
-                        <li class="experience__item">NPM / Node.js (limited)</li>
-                        <li class="experience__item">Webpack (limited)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <div class="experience__dev">
+          <p class="experience__list__head">Development</p>
+          <ul class="experience__list">
+            <li class="experience__item">Web development</li>
+            <li class="experience__item">Responsive design</li>
+          </ul>
+        </div>
+      </div>
 
-        <!-- My Experience section -->
-        <section class="section--color grid">
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">Technologies</h4>
 
-            <h3 class="heading__section">
-                My <span class="heading__section--slash">/</span> Experience
-            </h3>
+        <div class="experience__design">
+          <p class="experience__list__head">Design</p>
+          <ul class="experience__list">
+            <li class="experience__item">Adobe InDesign</li>
+            <li class="experience__item">Adobe Photoshop</li>
+            <li class="experience__item">Adobe Illustrator</li>
+            <li class="experience__item">Adobe After Effects (limited)</li>
+            <li class="experience__item">Adobe Premiere Pro (limited)</li>
+            <li class="experience__item">Adobe XD</li>
+            <li class="experience__item">UXPin</li>
+            <li class="experience__item">Microsoft Office suite</li>
+          </ul>
+        </div>
 
-            <div class="experience__subsection grid">
-    
-                <h4 class="section__subhead">2007 – 2020</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">Freelance Design</span></p>
-                    <p class="para">
-                        Freelance design for clients including Classic FM, XFM, Pan Macmillan and Chickenshed Theatre Company. 
-                    </p>
-                    <p class="para">
-                        Sole responsibility for the complete design cycle, from initial concept and design through to picture research and page 
-                        layout, and finally the production of print-ready PDFs.
-                    </p>
-                    <p class="para">
-                        Extensive use of Photoshop to manipulate/retouch images.
-                    </p>
-                </div>
-            </div>
+        <div class="experience__dev">
+          <p class="experience__list__head">Development</p>
+          <ul class="experience__list">
+            <li class="experience__item">HTML 5</li>
+            <li class="experience__item">CSS 3</li>
+            <li class="experience__item">Sass/Scss</li>
+            <li class="experience__item">JavaScript</li>
+            <li class="experience__item">Git / GitHub (limited)</li>
+            <li class="experience__item">Visual Studio Code</li>
+            <li class="experience__item">NPM / Node.js (limited)</li>
+            <li class="experience__item">Webpack (limited)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">2003 – 2007</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">Designer</span> • Think Publishing</p>
-                    <p class="para">
-                        Design of magazines, books and advertisements for clients including the Ramblers’ Association, the Campaign 
-                        to Protect Rural England and the Department for Transport. 
-                    </p>
-                    <p class="para">
-                        Working individually and in collaboration with fellow designers, editorial staff and the advertising sales team.
-                    </p>
-                </div>
-            </div>
+    <!-- My Experience section -->
+    <section class="section--color grid">
+      <h3 class="heading__section">
+        My <span class="heading__section--slash">/</span> Experience
+      </h3>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">2002 – 2003</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">Film Critic</span> • The Weekly Fix</p>
-                    <p class="para">
-                        Film reviews for ‘The Weekly Fix’, an information service for radio DJs.
-                    </p>
-                </div>
-            </div>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">2007 – 2020</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">Freelance Design</span>
+          </p>
+          <p class="para">
+            Freelance design for clients including Classic FM, XFM, Pan
+            Macmillan and Chickenshed Theatre Company.
+          </p>
+          <p class="para">
+            Sole responsibility for the complete design cycle, from initial
+            concept and design through to picture research and page layout, and
+            finally the production of print-ready PDFs.
+          </p>
+          <p class="para">
+            Extensive use of Photoshop to manipulate/retouch images.
+          </p>
+        </div>
+      </div>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">1999 – 2002</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">Website Developer</span> • Quidnunc</p>
-                    <p class="para">
-                        Key team member developing commercial websites for clients including M&S and the University of Cambridge.
-                        Extensive use of HTML, SQL and Java.
-                    </p>
-                </div>
-            </div>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">2003 – 2007</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">Designer</span> • Think
+            Publishing
+          </p>
+          <p class="para">
+            Design of magazines, books and advertisements for clients including
+            the Ramblers’ Association, the Campaign to Protect Rural England and
+            the Department for Transport.
+          </p>
+          <p class="para">
+            Working individually and in collaboration with fellow designers,
+            editorial staff and the advertising sales team.
+          </p>
+        </div>
+      </div>
 
-        </section>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">2002 – 2003</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">Film Critic</span> • The Weekly
+            Fix
+          </p>
+          <p class="para">
+            Film reviews for ‘The Weekly Fix’, an information service for radio
+            DJs.
+          </p>
+        </div>
+      </div>
 
-        <!-- My Education section -->
-        <section class="section grid">
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">1999 – 2002</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">Website Developer</span> •
+            Quidnunc
+          </p>
+          <p class="para">
+            Key team member developing commercial websites for clients including
+            M&S and the University of Cambridge. Extensive use of HTML, SQL and
+            Java.
+          </p>
+        </div>
+      </div>
+    </section>
 
-            <h3 class="heading__section">
-                My <span class="heading__section--slash">/</span> Education
-            </h3>
+    <!-- My Education section -->
+    <section class="section grid">
+      <h3 class="heading__section">
+        My <span class="heading__section--slash">/</span> Education
+      </h3>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">2020</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">The Developer Pathway</span> • Northcoders, Manchester</p>
-                    <p class="para">
-                        I am currently enrolled on a coding bootcamp at Northcoders, training to be a full-stack software developer.
-                    </p>
-                    <p class="para">
-                        The course covers coding in Javascript; front-end development in HTML, CSS and React; and back-end development 
-                        with Node.js, Express and SQL.
-                    </p>
-                </div>
-            </div>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">2020</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">The Developer Pathway</span> •
+            Northcoders, Manchester
+          </p>
+          <p class="para">
+            I am currently enrolled on a coding bootcamp at Northcoders,
+            training to be a full-stack software developer.
+          </p>
+          <p class="para">
+            The course covers coding in Javascript; front-end development in
+            HTML, CSS and React; and back-end development with Node.js, Express
+            and SQL.
+          </p>
+        </div>
+      </div>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">2003</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">NCTJ Magazine Journalism</span> • Harlow Journalism Centre</p>
-                    <p class="para">
-                        NCTJ magazine journalism course. Distinction grades in design, subediting and feature writing.
-                    </p>
-                </div>
-            </div>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">2003</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">NCTJ Magazine Journalism</span>
+            • Harlow Journalism Centre
+          </p>
+          <p class="para">
+            NCTJ magazine journalism course. Distinction grades in design,
+            subediting and feature writing.
+          </p>
+        </div>
+      </div>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">1996 - 1999</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">BSc Computer Science</span> • University of Nottingham</p>
-                    <p class="para">
-                        Programming languages, primarily C++ and Java.
-                        <BR>Object-oriented and functional programming.
-                        <BR>Front-end development, UI design and HTML.
-                        <BR>Back-end development, databases and SQL
-                    </p>
-                </div>
-            </div>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">1996 - 1999</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">BSc Computer Science</span> •
+            University of Nottingham
+          </p>
+          <p class="para">
+            Programming languages, primarily C++ and Java.
+            <br />Object-oriented and functional programming. <br />Front-end
+            development, UI design and HTML. <br />Back-end development,
+            databases and SQL
+          </p>
+        </div>
+      </div>
 
-            <div class="experience__subsection grid">
-                <h4 class="section__subhead">1992-1996</h4>
-                <div class="section__text--left">
-                    <p class="experience__head"><span class="experience__head--main">3 A-Levels • 10 GCSEs</span> • Quinton House School, Northampton</p>
-                </div>
-            </div>
+      <div class="experience__subsection grid">
+        <h4 class="section__subhead">1992-1996</h4>
+        <div class="section__text--left">
+          <p class="experience__head">
+            <span class="experience__head--main">3 A-Levels • 10 GCSEs</span> •
+            Quinton House School, Northampton
+          </p>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__nav__item">
+          <a href="/index.html" class="footer__nav__link">Home</a>
+        </li>
+        <li class="footer__nav__item">
+          <a href="/index.html" class="footer__nav__link">About</a>
+        </li>
+        <li class="footer__nav__item">
+          <a href="/pages/portfolio.html" class="footer__nav__link"
+            >Portfolio</a
+          >
+        </li>
+        <li class="footer__nav__item">
+          <a href="/pages/experience.html" class="footer__nav__link"
+            >Experience</a
+          >
+        </li>
+      </ul>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <ul class="footer__nav">
-                <li class="footer__nav__item"><a href="/index.html" class="footer__nav__link">Home</a></li>
-                <li class="footer__nav__item"><a href="/index.html" class="footer__nav__link">About</a></li>
-                <li class="footer__nav__item"><a href="/pages/portfolio.html" class="footer__nav__link">Portfolio</a></li>
-                <li class="footer__nav__item"><a href="/pages/experience.html" class="footer__nav__link">Experience</a></li>
-            </ul>
+      <div class="footer__logo">/</div>
 
-            <div class="footer__logo">/</div>
+      <p class="footer__text">© 2020 James Collins. All rights reserved.</p>
+    </footer>
 
-            <p class="footer__text">© 2020 James Collins. All rights reserved.</p>
-        </footer>
-
-        <script src="/js/index.js"></script>
-    </body>
-
+    <script src="/js/index.js"></script>
+  </body>
 </html>

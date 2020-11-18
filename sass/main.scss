@@ -5,20 +5,22 @@
 * 
 ***************************/
 
-@import "abstracts/variables";
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import "base/base";
-@import "base/typography";
+@import 'base/base';
+@import 'base/typography';
 
-@import "components/button";
-@import "components/hero";
+@import 'components/button';
+@import 'components/hero';
 
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/section";
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/section';
 
-@import "pages/experience";
-@import "pages/home";
-@import "pages/portfolio";
-@import "pages/project";
+@import 'pages/experience';
+@import 'pages/home';
+@import 'pages/portfolio';
+@import 'pages/project';

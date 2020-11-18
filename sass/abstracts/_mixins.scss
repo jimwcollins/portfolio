@@ -1,0 +1,13 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Abstracts: _mixins.scss
+* 
+***************************/
+
+@mixin centre-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
