@@ -59,22 +59,34 @@ body {
 .para:not(:last-child) {
   margin-bottom: 2.2rem; }
 
-.logo, .logo__symbol, .logo__text {
+.hero, .hero__symbol, .hero__symbol--small, .hero__text, .hero__text--small {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   text-transform: uppercase; }
-  .logo__symbol {
-    font-weight: 500;
+  .hero__box {
+    display: flex;
+    align-items: center; }
+  .hero__symbol, .hero__symbol--small {
+    font-weight: 300;
     font-size: 10rem;
     letter-spacing: 2rem;
     margin-right: -2rem;
     color: #8c0e07; }
-  .logo__text {
+    .hero__symbol--small {
+      font-size: 2.5rem; }
+  .hero__text, .hero__text--small {
+    margin-left: 2.5rem;
+    margin-right: 1rem;
     font-weight: 700;
     font-size: 3.5rem;
-    letter-spacing: 2.5rem;
-    margin-right: -2rem;
+    letter-spacing: 1rem;
     color: #fff; }
+    .hero__text--small {
+      margin-left: 1.5rem;
+      margin-right: 0.5rem;
+      color: #000;
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem; }
 
 .heading, .heading__main, .heading__sub, .heading__section {
   font-family: "Josefin Sans", sans-serif;
@@ -156,7 +168,7 @@ body {
 *  Components: _hero.scss
 * 
 ***************************/
-.hero {
+.hero, .hero__symbol, .hero__symbol--small, .hero__text, .hero__text--small {
   grid-column: full-start / full-end;
   position: relative; }
   .hero__image {
@@ -264,21 +276,22 @@ body {
 * 
 ***************************/
 .header {
+  display: none;
+  opacity: 0;
   position: fixed;
   top: 0rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   height: 7rem;
   width: 100%;
-  z-index: 100;
-  color: #fff;
+  z-index: 500;
+  background-color: rgba(255, 255, 255, 0.95);
   transition: all 0.5s; }
   .header--scroll {
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #000; }
-  .header--red {
-    background-color: #8c0e07; }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 1; }
+  .header__logo {
+    margin-left: 3rem; }
 
 /***************************
 * 
@@ -304,6 +317,8 @@ body {
     justify-content: flex-end;
     color: #fff;
     cursor: pointer; }
+    .nav__button--scroll {
+      color: #000; }
     .nav__button__text {
       align-self: center;
       overflow: hidden;
@@ -318,25 +333,25 @@ body {
       .nav__button__text--hover {
         width: 100%;
         opacity: 1; }
-    .nav__button__icon, .nav__button__icon-1, .nav__button__icon-2 {
+    .nav__button__icon, .nav__button__icon--1, .nav__button__icon--2 {
       position: absolute;
       display: block;
       width: 0.3rem;
       height: 2.25rem;
-      background-color: #fff;
+      background-color: currentColor;
       transform: rotate(10deg);
       transition: all 0.25s; }
-      .nav__button__icon-1 {
+      .nav__button__icon--1 {
         margin-right: 1.1rem; }
-        .nav__button__icon-1--hover {
+        .nav__button__icon--1--hover {
           margin-right: 1.2rem;
           background-color: #8c0e07; }
-        .nav__button__icon-1--cross {
+        .nav__button__icon--1--cross {
           background-color: #fff;
           transform: translateX(0.6rem) rotate(-225deg); }
-      .nav__button__icon-2--hover {
+      .nav__button__icon--2--hover {
         background-color: #8c0e07; }
-      .nav__button__icon-2--cross {
+      .nav__button__icon--2--cross {
         background-color: #fff;
         transform: translateX(-0.6rem) rotate(225deg); }
   .nav__bg {
@@ -374,9 +389,10 @@ body {
   .nav__link:link, .nav__link:visited {
     display: inline-block;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: transparent;
+    text-transform: uppercase;
     background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.5) 50%);
     background-clip: text;
     background-size: 200%;
