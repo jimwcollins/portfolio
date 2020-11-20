@@ -33,7 +33,7 @@ navButton.addEventListener('mouseleave', (event) => {
 });
 
 navButton.addEventListener('click', (event) => {
-  navBG.classList.toggle('nav__bg--anim');
+  navBG.classList.toggle('nav__bg--active');
   nav.classList.toggle('nav__nav--active');
   navText.classList.remove('nav__button__text--hover');
   navIcon1.classList.toggle('nav__button__icon-1--cross');

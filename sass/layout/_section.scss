@@ -55,7 +55,8 @@
 
     // Remove margin for last section before footer
     &--last {
-      margin-bottom: 10rem;
+      @extend .section--color;
+      margin-bottom: 0rem;
     }
   }
 }
