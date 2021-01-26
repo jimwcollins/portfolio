@@ -361,10 +361,11 @@ body {
     height: 0.1rem;
     width: 0.1rem;
     border-radius: 50%;
+    overflow: hidden;
     background-image: radial-gradient(#8c0e07, #14008a);
     transition: all 0.6s cubic-bezier(0.86, 0, 0.07, 1); }
     .nav__bg--active {
-      transform: scale(4500); }
+      transform: scale(8000); }
   .nav__nav {
     visibility: hidden;
     position: fixed;
@@ -550,19 +551,20 @@ body {
 .work-grid {
   grid-column: content-start / content-end;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr));
   grid-gap: 4rem;
+  justify-content: center;
   margin-top: 7rem;
   margin-bottom: 5rem; }
   .work-grid__item {
-    height: 25vw;
+    height: 48rem;
     cursor: pointer; }
   .work-grid__img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     filter: grayscale(100%);
-    transition: all .5s; }
+    transition: all 0.5s; }
   .work-grid__item:hover > .work-grid__img {
     filter: none; }
 
