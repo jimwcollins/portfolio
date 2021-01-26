@@ -14,7 +14,7 @@
   grid-column: content-start / content-end;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr));
+  grid-template-columns: repeat(auto-fit, 48rem);
   grid-gap: $column-gap-master;
   justify-content: center;
 
