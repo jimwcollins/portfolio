@@ -19,39 +19,14 @@
       rel="stylesheet"
     />
 
+    <script src="/js/components/nav.js" defer></script>
+    <script src="/js/index.js" defer></script>
+
     <title>JC Design Portfolio</title>
   </head>
 
   <body class="project grid">
-    <!-- Navigation -->
-    <div class="nav">
-      <div class="nav__button">
-        <p class="nav__button__text">MENU</p>
-        <span class="nav__button__icon-1">&nbsp;</span>
-        <span class="nav__button__icon-2">&nbsp;</span>
-      </div>
-
-      <div class="nav__bg"></div>
-
-      <nav class="nav__nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="/index.html" class="nav__link">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="/index.html#about-me" class="nav__link" id="menu__about"
-              >About</a
-            >
-          </li>
-          <li class="nav__item">
-            <a href="/pages/portfolio.html" class="nav__link">Portfolio</a>
-          </li>
-          <li class="nav__item">
-            <a href="/pages/experience.html" class="nav__link">Experience</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav-comp class="nav"></nav-comp>
 
     <!-- Header -->
     <header class="header"></header>
@@ -235,7 +210,5 @@
 
       <p class="footer__text">© 2020 James Collins. All rights reserved.</p>
     </footer>
-
-    <script src="/js/index.js"></script>
   </body>
 </html>
