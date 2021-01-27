@@ -34,7 +34,16 @@ body {
     font-size: 10rem;
     letter-spacing: 2rem;
     margin-right: -2rem;
-    color: $color-primary;
+
+    &--standard {
+      @extend .hero__symbol;
+      color: $color-primary;
+    }
+
+    &--project {
+      @extend .hero__symbol;
+      color: $color-white;
+    }
 
     &--small {
       @extend .hero__symbol;

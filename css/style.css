@@ -59,19 +59,22 @@ body {
 .para:not(:last-child) {
   margin-bottom: 2.2rem; }
 
-.hero, .hero__symbol, .hero__symbol--small, .hero__text, .hero__text--small {
+.hero, .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--small, .hero__text, .hero__text--small {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   text-transform: uppercase; }
   .hero__box {
     display: flex;
     align-items: center; }
-  .hero__symbol, .hero__symbol--small {
+  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--small {
     font-weight: 300;
     font-size: 10rem;
     letter-spacing: 2rem;
-    margin-right: -2rem;
-    color: #8c0e07; }
+    margin-right: -2rem; }
+    .hero__symbol--standard {
+      color: #8c0e07; }
+    .hero__symbol--project {
+      color: #fff; }
     .hero__symbol--small {
       font-size: 2.5rem; }
   .hero__text, .hero__text--small {
@@ -168,18 +171,20 @@ body {
 *  Components: _hero.scss
 * 
 ***************************/
-.hero, .hero__symbol, .hero__symbol--small, .hero__text, .hero__text--small {
-  grid-column: full-start / full-end;
-  position: relative; }
+.section__hero {
+  grid-column: full-start / full-end; }
+
+.hero, .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--small, .hero__text, .hero__text--small {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .hero__image {
     height: 100%;
     width: 100%;
     object-fit: cover; }
   .hero__heading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    position: absolute; }
   .hero__button {
     position: absolute;
     top: 70%;
@@ -187,9 +192,7 @@ body {
     transform: translateX(-50%); }
   .hero__arrow {
     position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translateX(-50%); }
+    align-self: flex-end; }
     .hero__arrow__svg {
       height: 3rem;
       width: 3rem;

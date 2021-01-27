@@ -21,6 +21,7 @@
 
     <script src="/js/components/nav.js" defer></script>
     <script src="/js/components/header.js" defer></script>
+    <script src="/js/components/hero.js" defer></script>
     <script src="/js/components/footer.js" defer></script>
     <script src="/js/index.js" defer></script>
 
@@ -28,30 +29,16 @@
   </head>
 
   <body class="project grid">
-    <!-- Nav and Header components -->
+    <!-- Nav, Header and Hero components -->
     <nav-comp class="nav"></nav-comp>
     <header-comp class="header"></header-comp>
-
-    <!-- Section: Hero -->
-    <section class="hero">
-      <img
-        src="/img/Projects/Chickenshed/Chickenshed_Header.jpg"
-        alt="The original chickenshed"
-        class="hero__image"
-      />
-
-      <div class="hero__heading">
-        <h1 class="heading__main">Chickenshed</h1>
-      </div>
-
-      <div class="hero__arrow">
-        <svg class="hero__arrow__svg">
-          <use
-            xlink:href="/img/portfolio-icons-sprite.svg#icon-chevron-thin-down"
-          ></use>
-        </svg>
-      </div>
-    </section>
+    <hero-comp
+      class="section__hero"
+      title="Chickenshed"
+      image="/img/Projects/Chickenshed/Chickenshed_Header.jpg"
+      imageAlt="The original chickenshed"
+      page="project"
+    ></hero-comp>
 
     <!-- Section: Intro -->
     <section class="section project__intro grid section--first section__split">

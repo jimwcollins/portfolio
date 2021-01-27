@@ -5,10 +5,15 @@
 * 
 ***************************/
 
-.hero {
-  // Position
+.section__hero {
   grid-column: full-start / full-end;
-  position: relative;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__image {
     height: 100%;
@@ -17,7 +22,7 @@
   }
 
   &__heading {
-    @include centre-content;
+    position: absolute;
   }
 
   &__button {
@@ -29,9 +34,7 @@
 
   &__arrow {
     position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translateX(-50%);
+    align-self: flex-end;
 
     &__svg {
       height: 3rem;

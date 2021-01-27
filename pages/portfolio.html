@@ -21,6 +21,7 @@
 
     <script src="/js/components/nav.js" defer></script>
     <script src="/js/components/header.js" defer></script>
+    <script src="/js/components/hero.js" defer></script>
     <script src="/js/components/footer.js" defer></script>
     <script src="/js/index.js" defer></script>
 
@@ -28,33 +29,16 @@
   </head>
 
   <body class="portfolio grid">
-    <!-- Nav and Header components -->
+    <!-- Nav, Header and Hero components -->
     <nav-comp class="nav"></nav-comp>
     <header-comp class="header"></header-comp>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <img
-        src="/img/Portfolio/portfolio_hero.jpg"
-        alt="Design sketches"
-        class="hero__image"
-      />
-
-      <div class="hero__heading">
-        <h1 class="heading__main">Portfolio</h1>
-        <h2 class="heading__sub">
-          Design <span class="heading__sub--slash">/</span> Development
-        </h2>
-      </div>
-
-      <div class="hero__arrow">
-        <svg class="hero__arrow__svg">
-          <use
-            xlink:href="/img/portfolio-icons-sprite.svg#icon-chevron-thin-down"
-          ></use>
-        </svg>
-      </div>
-    </section>
+    <hero-comp
+      class="section__hero"
+      title="Portfolio"
+      image="/img/Portfolio/portfolio_hero.jpg"
+      imageAlt="Design Sketches"
+      page="standard"
+    ></hero-comp>
 
     <!-- Design Projects section -->
     <section class="section grid section--first">
