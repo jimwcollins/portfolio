@@ -24,9 +24,8 @@ class Nav extends HTMLElement {
 
         <nav class="nav__nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="/index.html#top" class="nav__link">Home</a></li>
             <li class="nav__item">
-              <a href="/index.html#about-me" class="nav__link" id="menu__about">About</a>
+              <a href="/index.html#top" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
               <a href="/pages/portfolio.html" class="nav__link">Portfolio</a>
