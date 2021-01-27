@@ -210,8 +210,10 @@ body {
 *  Layout: _footer.scss
 * 
 ***************************/
+.footer-comp {
+  grid-column: full-start / full-end; }
+
 .footer {
-  grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-gap: 2rem;
@@ -235,12 +237,12 @@ body {
     .footer__nav__link:link, .footer__nav__link:visited {
       color: #fff;
       text-decoration: none;
-      transition: color .5s; }
+      transition: color 0.5s; }
     .footer__nav__link:hover {
       color: #8c0e07; }
   .footer__logo {
     position: relative;
-    top: .3rem;
+    top: 0.3rem;
     color: #8c0e07;
     font-size: 4rem;
     font-weight: 300; }

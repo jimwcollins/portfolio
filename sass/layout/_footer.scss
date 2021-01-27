@@ -5,56 +5,58 @@
 * 
 ***************************/
 
+.footer-comp {
+  grid-column: full-start / full-end;
+}
+
 .footer {
-    grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  height: 7rem;
+  background-color: $color-background-dark;
+
+  color: $color-white;
+  font-family: $font-body;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+  &__nav {
+    justify-self: end;
 
     display: grid;
-    grid-template-columns: 1fr min-content 1fr;
+    grid-template-columns: repeat(4, min-content);
     grid-gap: 2rem;
-    justify-content: center;
     align-items: center;
 
-    height: 7rem;
-    background-color: $color-background-dark;
+    list-style: none;
 
-    color: $color-white;
-    font-family: $font-body;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-
-    &__nav {
-        justify-self: end;
-
-        display: grid;
-        grid-template-columns: repeat(4, min-content);
-        grid-gap: 2rem;
-        align-items: center;
-
-        list-style: none;
-
-        &__item {
-            align-self: center;
-        }
-
-        &__link {
-            &:link,
-            &:visited {
-                color: $color-white;
-                text-decoration: none;
-                transition: color .5s;
-            }
-
-            &:hover {
-                color: $color-primary;
-            }
-        }
+    &__item {
+      align-self: center;
     }
 
-    &__logo {
-        position: relative;
-        top: .3rem;
+    &__link {
+      &:link,
+      &:visited {
+        color: $color-white;
+        text-decoration: none;
+        transition: color 0.5s;
+      }
+
+      &:hover {
         color: $color-primary;
-        font-size: 4rem;
-        font-weight: 300;
+      }
     }
+  }
+
+  &__logo {
+    position: relative;
+    top: 0.3rem;
+    color: $color-primary;
+    font-size: 4rem;
+    font-weight: 300;
+  }
 }
