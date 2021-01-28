@@ -11,9 +11,7 @@
 
 const allSections = document.querySelectorAll('.section');
 
-const revealSection = (entries, observer) => {
-  const [entry] = entries;
-
+const revealSection = ([entry], observer) => {
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove('section--hidden');
@@ -36,9 +34,7 @@ allSections.forEach((section) => {
 
 const allSplits = document.querySelectorAll('.section__split');
 
-const revealSplit = (entries, observer) => {
-  const [entry] = entries;
-
+const revealSplit = ([entry], observer) => {
   if (!entry.isIntersecting) return;
 
   let leftDiv, rightDiv;
@@ -81,8 +77,33 @@ allSplits.forEach((section) => {
 });
 
 /***************************
+ * Image up animation
+ **************************/
+
+const allUpImages = document.querySelectorAll('.image__animUp');
+
+const revealUpImg = ([entry], observer) => {
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('image__animUp--hidden');
+  observer.unobserve(entry.target);
+};
+
+const upImgObserver = new IntersectionObserver(revealUpImg, {
+  root: null,
+  threshold: 0.5,
+});
+
+allUpImages.forEach((image) => {
+  image.classList.add('image__animUp--hidden');
+  upImgObserver.observe(image);
+});
+
+/***************************
  * Project spread animation
  **************************/
+
+const allSpreads = document.querySelectorAll('.spread');
 
 const revealSpread = ([entry], observer) => {
   if (!entry.isIntersecting) return;
@@ -99,8 +120,6 @@ const spreadObserver = new IntersectionObserver(revealSpread, {
   root: null,
   threshold: 0.5,
 });
-
-const allSpreads = document.querySelectorAll('.spread');
 
 let isLeft = false;
 

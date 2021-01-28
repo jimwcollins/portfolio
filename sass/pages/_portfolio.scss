@@ -24,6 +24,12 @@
   &__item {
     height: 48rem;
     cursor: pointer;
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
   }
 
   &__img {
@@ -34,7 +40,23 @@
     transition: all 0.5s;
   }
 
+  &__cap {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1.1;
+    text-transform: uppercase;
+    transform: translateY(-2rem);
+    opacity: 0;
+    transition: all 1s;
+  }
+
   &__item:hover > &__img {
     filter: none;
+  }
+
+  &__item:hover > &__cap {
+    transform: translateY(0);
+
+    opacity: 1;
   }
 }

@@ -18,6 +18,11 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .hero {
   font-family: $font-display;
   text-align: center;
@@ -122,12 +127,17 @@ body {
 
 .section {
   &__subhead {
-    grid-column: content-start / col-end 3;
+    grid-column: col-start 1 / col-end 3;
 
     text-transform: uppercase;
     text-align: right;
     font-weight: 400;
     color: $color-primary;
+
+    &--lc {
+      @extend .section__subhead;
+      text-transform: none;
+    }
   }
 
   &__text {

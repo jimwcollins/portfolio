@@ -20,7 +20,7 @@ class Footer extends HTMLElement {
             <a href="/index.html" class="footer__nav__link">Home</a>
           </li>
           <li class="footer__nav__item">
-            <a href="/index.html" class="footer__nav__link">About</a>
+            <a href="/index.html#about" class="footer__nav__link">About</a>
           </li>
           <li class="footer__nav__item">
             <a href="/pages/portfolio.html" class="footer__nav__link"

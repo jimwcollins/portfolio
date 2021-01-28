@@ -6,41 +6,59 @@
 ***************************/
 
 .experience {
-    // Specifiy CSS Grid row. Columns specified by standard grid
-    grid-template-rows: 100vh repeat(4, min-content);
+  // Specifiy CSS Grid row. Columns specified by standard grid
+  grid-template-rows: 100vh repeat(4, min-content);
 
-    &__subsection {
-        grid-column: full-start / full-end;
+  &__subsection {
+    grid-column: full-start / full-end;
 
-        &:not(:last-child) {
-            margin-bottom: 5rem;
-        }
+    &:not(:last-child) {
+      margin-bottom: 5rem;
     }
+  }
 
-    &__design {
-        grid-column: col-start 5 / span 4;
-    }
+  &__dev {
+    grid-column: col-start 5 / span 4;
+  }
 
-    &__dev {
-        grid-column: col-start 9 / span 4;
+  &__design {
+    grid-column: col-start 9 / span 4;
+  }
+
+  &__head {
+    font: $font-display;
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    &--main {
+      text-transform: uppercase;
     }
+  }
+
+  &__list {
+    list-style: none;
 
     &__head {
-        font: $font-display;
-        font-weight: 400;
-        margin-bottom: 2rem;
-
-        &--main {
-            text-transform: uppercase;
-        }
+      font-weight: 400;
+      margin-bottom: 2rem;
     }
+  }
 
-    &__list {
-        list-style: none;
+  &__para {
+    margin-bottom: 1.75rem;
+  }
 
-        &__head {
-            font-weight: 400;
-            margin-bottom: 2rem;
-        }
+  &__para__svg {
+    margin-top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    transition: fill 1s;
+
+    &:hover {
+      fill: $color-primary;
     }
+  }
 }

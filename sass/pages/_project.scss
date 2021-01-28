@@ -22,8 +22,18 @@
 
       &--copy {
         font-weight: 400;
-        font-size: 1.85rem;
+        font-size: 1.8rem;
         margin-bottom: 2rem;
+      }
+
+      &--copy a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 1s;
+      }
+
+      &--copy a:hover {
+        color: $color-secondary;
       }
     }
   }
@@ -42,13 +52,6 @@
     background-attachment: fixed;
     background-size: cover;
     opacity: 95%;
-
-    &--chickenshed-1 {
-      background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Collage.jpg);
-    }
-    &--chickenshed-2 {
-      background-image: url(/img/Projects/Chickenshed/Splash/Chickenshed_Splash_Crime.jpg);
-    }
   }
 }
 
@@ -72,5 +75,22 @@
 
   &:last-child {
     margin-bottom: 5rem;
+  }
+}
+
+.image__main--left {
+  grid-column: col-start 1 / col-end 6;
+  justify-self: start;
+}
+
+.image__animUp {
+  width: 100%;
+  opacity: 1;
+  margin-bottom: 10rem;
+  transition: all 1s;
+
+  &--hidden {
+    opacity: 0;
+    transform: translateY(2rem);
   }
 }

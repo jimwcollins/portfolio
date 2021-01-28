@@ -1,0 +1,113 @@
+<!-------------------------
+
+    JC Portfolio
+    Projects: The Iris
+
+-------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Set width of website content to the device width, for responsive site -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/js/components/nav.js" defer></script>
+    <script src="/js/components/header.js" defer></script>
+    <script src="/js/components/hero.js" defer></script>
+    <script src="/js/components/footer.js" defer></script>
+    <script src="/js/index.js" defer></script>
+
+    <title>James Collins</title>
+  </head>
+
+  <body class="project grid">
+    <!-- Nav, Header and Hero components -->
+    <nav-comp class="nav"></nav-comp>
+    <header-comp class="header"></header-comp>
+    <hero-comp
+      class="section__hero"
+      title="The Iris"
+      image="/img/Portfolio/Projects/Iris/Iris_Header.jpg"
+      imageAlt="The Iris"
+      page="project"
+    ></hero-comp>
+
+    <!-- Section: Intro -->
+    <section class="section project__intro grid section--first section__split">
+      <h3 class="heading__section">
+        The <span class="heading__section--slash">/</span> Iris
+      </h3>
+
+      <div class="project__intro__details section__left">
+        <p class="project__intro__details--head">The project</p>
+        <p class="project__intro__details--copy">Full-stack news site</p>
+        <p class="project__intro__details--head">Disciplines</p>
+        <p class="project__intro__details--copy">
+          Web Design
+          <br />Front-end development <br />Back-end development
+        </p>
+        <p class="project__intro__details--head">Tech</p>
+        <p class="project__intro__details--copy">
+          React / JavaScript<br />HTML / CSS <br />Axios / Express
+          <br />postgreSQL
+        </p>
+        <p class="project__intro__details--head">Visit</p>
+        <p class="project__intro__details--copy">
+          <a href="https://the-iris.netlify.app/">The Iris</a>
+          <br /><a href="https://github.com/jimwcollins/iris-fe">GitHub</a>
+        </p>
+      </div>
+
+      <div class="section__right">
+        <p class="para">
+          The Iris is a responsive, full-stack news site completed towards the
+          end of my time at Northcoders bootcamp. It allows users to browse
+          topics and articles, comment on articles, vote on articles and
+          comments, and post their own articles, all within a clean, attractive
+          design.
+        </p>
+        <p class="para">
+          The project had two stages: a back-end phase in which I set up the
+          database and back-end api; and a front-end phase in which I designed
+          and built a React app that made cals to this api and displayed the
+          results.
+        </p>
+        <p class="para">
+          This front-end is fully responsive, with specific UI elements and
+          menus for tablets and phones. The most popular articles appear in a
+          sidebar to drive site engagement, and articles can be sorted in
+          various ways.
+        </p>
+        <p class="para">
+          The back-end api was driven by Express server, which I accessed via
+          Axios calls from the front-end. I used Knex for database seeding,
+          migrations and queries, and postgreSQL for the database itself.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Project Showcase 1 -->
+    <section class="project__showcase grid">
+      <img
+        src="/img/Portfolio/Projects/Iris/Iris_iMac_Home.png"
+        alt=""
+        class="image__animUp image__main--left"
+      />
+      <img
+        src="/img/Portfolio/Projects/Iris/Iris_MacBook_Article.png"
+        alt=""
+        class="image__animUp"
+      />
+    </section>
+
+    <footer-comp class="footer-comp"></footer-comp>
+  </body>
+</html>
