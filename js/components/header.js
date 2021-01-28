@@ -17,9 +17,9 @@ class Header extends HTMLElement {
       <header>
         <div class="header__logo">
           <div class="hero__box">
-            <p class="hero__symbol--small">{</p>
-            <p class="hero__text--small">James Collins</p>
-            <p class="hero__symbol--small">}</p>
+            <p class="hero__symbol--header">{</p>
+            <p class="hero__text--header">James Collins</p>
+            <p class="hero__symbol--header">}</p>
           </div>
         </div>
       </header>

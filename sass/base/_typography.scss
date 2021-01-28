@@ -50,9 +50,10 @@ a {
       color: $color-white;
     }
 
-    &--small {
+    &--header {
       @extend .hero__symbol;
       font-size: 2.5rem;
+      color: $color-primary;
     }
   }
 
@@ -66,7 +67,7 @@ a {
     letter-spacing: 1rem;
     color: $color-white;
 
-    &--small {
+    &--header {
       @extend .hero__text;
       margin-left: 1.5rem;
       margin-right: 0.5rem;

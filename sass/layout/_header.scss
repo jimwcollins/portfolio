@@ -6,8 +6,9 @@
 ***************************/
 
 .header {
-  display: none;
+  display: flex;
   opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0rem;
 
@@ -23,6 +24,7 @@
     justify-content: flex-start;
     align-items: center;
     opacity: 1;
+    visibility: visible;
   }
 
   &__logo {
