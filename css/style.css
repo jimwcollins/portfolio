@@ -447,7 +447,7 @@ a {
 *  Layout: _section.scss
 * 
 ****************************/
-.section, .section--color, .section--color--last {
+.section {
   grid-column: full-start / full-end;
   margin-top: 5rem;
   margin-bottom: 5rem;
