@@ -43,6 +43,7 @@
 .split {
   &__left {
     grid-column: content-start / col-end 3;
+    text-align: right;
 
     transition: all 2s;
 
@@ -61,5 +62,22 @@
       opacity: 0;
       transform: translateX(-3rem);
     }
+  }
+}
+
+.spotlight {
+  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__intro {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 5rem;
+  }
+
+  & .section__subhead {
+    margin-bottom: 2rem;
   }
 }

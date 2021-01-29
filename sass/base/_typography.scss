@@ -110,7 +110,7 @@ a {
   &__section {
     @extend .heading;
     grid-column: content-start / content-end;
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
     color: $color-black;
     font-size: 3rem;
     font-weight: 400;
@@ -128,16 +128,31 @@ a {
 
 .section {
   &__subhead {
-    grid-column: col-start 1 / col-end 3;
-
-    text-transform: uppercase;
-    text-align: right;
-    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
     color: $color-primary;
+  }
+}
 
-    &--lc {
-      @extend .section__subhead;
-      text-transform: none;
-    }
+.divider {
+  grid-column: content-start / content-end;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: $color-primary;
+  margin: 5rem 0;
+
+  &__symbol {
+    font-family: $font-display;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $color-white;
+    padding-top: 0.2rem;
   }
 }

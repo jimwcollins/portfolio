@@ -38,8 +38,8 @@ const revealSplit = ([entry], observer) => {
   if (!entry.isIntersecting) return;
 
   // Remove the hidden class when we intersect left and right divs
-  const leftDiv = entry.target.querySelector('.split__left');
-  const rightDiv = entry.target.querySelector('.split__right');
+  const leftDiv = entry.target.children[0];
+  const rightDiv = entry.target.children[1];
 
   leftDiv.classList.remove('split__left--hidden');
   rightDiv.classList.remove('split__right--hidden');
@@ -54,8 +54,8 @@ const splitObserver = new IntersectionObserver(revealSplit, {
 
 allSplits.forEach((section) => {
   // Hide section initially
-  const leftDiv = section.querySelector('.split__left');
-  const rightDiv = section.querySelector('.split__right');
+  const leftDiv = section.children[0];
+  const rightDiv = section.children[1];
   leftDiv.classList.add('split__left--hidden');
   rightDiv.classList.add('split__right--hidden');
 

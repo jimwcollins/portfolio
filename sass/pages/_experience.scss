@@ -25,7 +25,14 @@
     grid-column: col-start 9 / span 4;
   }
 
-  &__head {
+  &__subhead {
+    grid-column: col-start 1 / col-end 3;
+    text-align: right;
+    font-weight: 400;
+    color: $color-primary;
+  }
+
+  &__title {
     font: $font-display;
     font-weight: 400;
     margin-bottom: 2rem;

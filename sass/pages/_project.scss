@@ -99,7 +99,6 @@
 .image__animUp {
   width: 100%;
   opacity: 1;
-  margin-bottom: 10rem;
   transition: all 1.5s;
 
   &--hidden {
@@ -109,9 +108,7 @@
 }
 
 .video {
-  grid-column: col-start 3 / col-end 10;
-  margin: 5rem 0;
-  width: 100%;
+  width: 80%;
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 1rem rgba($color-black, 0.1);
 }

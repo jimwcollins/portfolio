@@ -124,7 +124,7 @@ a {
       font-size: 5rem; }
   .heading__section {
     grid-column: content-start / content-end;
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
     color: #000;
     font-size: 3rem;
     font-weight: 400;
@@ -136,14 +136,30 @@ a {
       font-size: 4rem;
       font-weight: 400; }
 
-.section__subhead, .section__subhead--lc {
-  grid-column: col-start 1 / col-end 3;
-  text-transform: uppercase;
-  text-align: right;
-  font-weight: 400;
+.section__subhead {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 300;
   color: #8c0e07; }
-  .section__subhead--lc {
-    text-transform: none; }
+
+.divider {
+  grid-column: content-start / content-end;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #8c0e07;
+  margin: 5rem 0; }
+  .divider__symbol {
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 0.2rem; }
 
 /***************************
 * 
@@ -466,6 +482,7 @@ a {
 
 .split__left {
   grid-column: content-start / col-end 3;
+  text-align: right;
   transition: all 2s; }
   .split__left--hidden {
     opacity: 0;
@@ -477,6 +494,18 @@ a {
   .split__right--hidden {
     opacity: 0;
     transform: translateX(-3rem); }
+
+.spotlight {
+  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .spotlight__intro {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 5rem; }
+  .spotlight .section__subhead {
+    margin-bottom: 2rem; }
 
 /***************************
 * 
@@ -494,11 +523,16 @@ a {
     grid-column: col-start 5 / span 4; }
   .experience__design {
     grid-column: col-start 9 / span 4; }
-  .experience__head {
+  .experience__subhead {
+    grid-column: col-start 1 / col-end 3;
+    text-align: right;
+    font-weight: 400;
+    color: #8c0e07; }
+  .experience__title {
     font: "Josefin Sans", sans-serif;
     font-weight: 400;
     margin-bottom: 2rem; }
-    .experience__head--main {
+    .experience__title--main {
       text-transform: uppercase; }
   .experience__list {
     list-style: none; }
@@ -680,15 +714,12 @@ a {
 .image__animUp {
   width: 100%;
   opacity: 1;
-  margin-bottom: 10rem;
   transition: all 1.5s; }
   .image__animUp--hidden {
     opacity: 0;
     transform: translateY(8rem); }
 
 .video {
-  grid-column: col-start 3 / col-end 10;
-  margin: 5rem 0;
-  width: 100%;
+  width: 80%;
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1); }
