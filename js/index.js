@@ -6,26 +6,26 @@
  ***************************/
 
 /*******************
- * Section animation
+ * Fade-in animation
  *******************/
 
-const allSections = document.querySelectorAll('.section');
+const allFadeIns = document.querySelectorAll('.fadein');
 
-const revealSection = ([entry], observer) => {
+const revealElem = ([entry], observer) => {
   if (!entry.isIntersecting) return;
 
-  entry.target.classList.remove('section--hidden');
+  entry.target.classList.remove('fadein--hidden');
   observer.unobserve(entry.target);
 };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
+const fadeObserver = new IntersectionObserver(revealElem, {
   root: null,
   threshold: 0.2,
 });
 
-allSections.forEach((section) => {
-  section.classList.add('section--hidden');
-  sectionObserver.observe(section);
+allFadeIns.forEach((elem) => {
+  elem.classList.add('fadein--hidden');
+  fadeObserver.observe(elem);
 });
 
 /*************************

@@ -107,3 +107,9 @@
     transform: translateY(8rem);
   }
 }
+
+.video {
+  margin: 5rem 0;
+  width: 100%;
+  grid-column: col-start 2 / col-end 11;
+}

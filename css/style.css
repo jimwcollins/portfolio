@@ -17,6 +17,12 @@
 *  Abstracts: _variables.scss
 * 
 *****************************/
+.fadein {
+  opacity: 1;
+  transition: opacity 2s; }
+  .fadein--hidden {
+    opacity: 0; }
+
 /***************************
 * 
 *  JC PORTFOLIO
@@ -450,11 +456,7 @@ a {
 .section {
   grid-column: full-start / full-end;
   margin-top: 5rem;
-  margin-bottom: 5rem;
-  opacity: 1;
-  transition: all 2s; }
-  .section--hidden {
-    opacity: 0; }
+  margin-bottom: 5rem; }
   .section__left {
     grid-column: content-start / col-end 3;
     transition: all 2s; }
@@ -683,3 +685,8 @@ a {
   .image__animUp--hidden {
     opacity: 0;
     transform: translateY(8rem); }
+
+.video {
+  margin: 5rem 0;
+  width: 100%;
+  grid-column: col-start 2 / col-end 11; }

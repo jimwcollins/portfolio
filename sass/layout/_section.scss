@@ -9,14 +9,6 @@
   grid-column: full-start / full-end;
   margin-top: $section-top;
   margin-bottom: $section-bottom;
-  opacity: 1;
-
-  transition: all 2s;
-
-  // Hidden
-  &--hidden {
-    opacity: 0;
-  }
 
   // Split section
   &__left {
