@@ -10,7 +10,37 @@
   margin-top: $section-top;
   margin-bottom: $section-bottom;
 
-  // Split section
+  &__center {
+    grid-column: col-start 2 / col-end 11;
+    text-align: center;
+  }
+
+  &__split {
+    grid-column: full-start / full-end;
+  }
+
+  // Add larger margin for first main section after the header image
+  &--first {
+    margin-top: 10rem;
+  }
+
+  // Color section
+  &--color {
+    @extend .section;
+    background-color: $color-background-med;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    // Remove margin for last section before footer
+    &--last {
+      @extend .section--color;
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+// Split section
+.split {
   &__left {
     grid-column: content-start / col-end 3;
 
@@ -30,24 +60,6 @@
     &--hidden {
       opacity: 0;
       transform: translateX(-3rem);
-    }
-  }
-
-  // Add larger margin for first main section after the header image
-  &--first {
-    margin-top: 10rem;
-  }
-
-  // Color section
-  &--color {
-    background-color: $color-background-med;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-
-    // Remove margin for last section before footer
-    &--last {
-      @extend .section--color;
-      margin-bottom: 0rem;
     }
   }
 }

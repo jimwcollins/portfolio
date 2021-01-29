@@ -109,7 +109,9 @@
 }
 
 .video {
+  grid-column: col-start 3 / col-end 10;
   margin: 5rem 0;
   width: 100%;
-  grid-column: col-start 2 / col-end 11;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba($color-black, 0.1);
 }

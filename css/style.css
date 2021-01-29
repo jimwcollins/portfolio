@@ -145,13 +145,6 @@ a {
   .section__subhead--lc {
     text-transform: none; }
 
-.section__text--left {
-  text-align: left; }
-
-.section__text--center {
-  grid-column: col-start 2 / col-end 11;
-  text-align: center; }
-
 /***************************
 * 
 *  JC PORTFOLIO
@@ -453,22 +446,15 @@ a {
 *  Layout: _section.scss
 * 
 ****************************/
-.section {
+.section, .section--color, .section--color--last {
   grid-column: full-start / full-end;
   margin-top: 5rem;
   margin-bottom: 5rem; }
-  .section__left {
-    grid-column: content-start / col-end 3;
-    transition: all 2s; }
-    .section__left--hidden {
-      opacity: 0;
-      transform: translateX(3rem); }
-  .section__right {
-    grid-column: col-start 5 / content-end;
-    transition: all 2s; }
-    .section__right--hidden {
-      opacity: 0;
-      transform: translateX(-3rem); }
+  .section__center {
+    grid-column: col-start 2 / col-end 11;
+    text-align: center; }
+  .section__split {
+    grid-column: full-start / full-end; }
   .section--first {
     margin-top: 10rem; }
   .section--color, .section--color--last {
@@ -477,6 +463,20 @@ a {
     padding-bottom: 8rem; }
     .section--color--last {
       margin-bottom: 0rem; }
+
+.split__left {
+  grid-column: content-start / col-end 3;
+  transition: all 2s; }
+  .split__left--hidden {
+    opacity: 0;
+    transform: translateX(3rem); }
+
+.split__right {
+  grid-column: col-start 5 / content-end;
+  transition: all 2s; }
+  .split__right--hidden {
+    opacity: 0;
+    transform: translateX(-3rem); }
 
 /***************************
 * 
@@ -687,6 +687,8 @@ a {
     transform: translateY(8rem); }
 
 .video {
+  grid-column: col-start 3 / col-end 10;
   margin: 5rem 0;
   width: 100%;
-  grid-column: col-start 2 / col-end 11; }
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1); }

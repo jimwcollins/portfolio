@@ -40,7 +40,6 @@ const stickyNav = (entries) => {
   if (!entry.isIntersecting) {
     header.classList.add('header--scroll');
     navButton.classList.add('nav__button--scroll');
-    console.log(navButton);
   } else {
     header.classList.remove('header--scroll');
     navButton.classList.remove('nav__button--scroll');

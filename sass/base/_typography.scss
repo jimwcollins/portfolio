@@ -140,15 +140,4 @@ a {
       text-transform: none;
     }
   }
-
-  &__text {
-    &--left {
-      text-align: left;
-    }
-
-    &--center {
-      grid-column: col-start 2 / col-end 11;
-      text-align: center;
-    }
-  }
 }
