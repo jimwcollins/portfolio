@@ -152,7 +152,7 @@ a {
   width: 4rem;
   border-radius: 50%;
   background-color: #8c0e07;
-  margin: 5rem 0; }
+  margin-bottom: 5rem; }
   .divider__symbol {
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
@@ -502,8 +502,7 @@ a {
   align-items: center; }
   .spotlight__intro {
     text-align: center;
-    width: 80%;
-    margin-bottom: 5rem; }
+    width: 80%; }
   .spotlight .section__subhead {
     margin-bottom: 2rem; }
 
@@ -722,4 +721,5 @@ a {
 .video {
   width: 80%;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 7rem 0; }
