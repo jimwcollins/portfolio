@@ -119,16 +119,6 @@
   }
 }
 
-.image__animUp {
-  opacity: 1;
-  transition: all 1.5s;
-
-  &--hidden {
-    opacity: 0;
-    transform: translateY(8rem);
-  }
-}
-
 .video {
   width: 80%;
   border-radius: 0.5rem;

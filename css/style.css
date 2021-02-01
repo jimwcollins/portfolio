@@ -23,6 +23,13 @@
   .fadein--hidden {
     opacity: 0; }
 
+.animUp {
+  opacity: 1;
+  transition: all 1.5s; }
+  .animUp--hidden {
+    opacity: 0;
+    transform: translateY(8rem); }
+
 /***************************
 * 
 *  JC PORTFOLIO
@@ -726,13 +733,6 @@ a {
     grid-column: 5 / 8;
     grid-row: 3 / 7;
     z-index: 2; }
-
-.image__animUp {
-  opacity: 1;
-  transition: all 1.5s; }
-  .image__animUp--hidden {
-    opacity: 0;
-    transform: translateY(8rem); }
 
 .video {
   width: 80%;

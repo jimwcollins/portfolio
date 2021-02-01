@@ -66,12 +66,12 @@ allSplits.forEach((section) => {
  * Image up animation
  **************************/
 
-const allUpImages = document.querySelectorAll('.image__animUp');
+const allUpImages = document.querySelectorAll('.animUp');
 
 const revealUpImg = ([entry], observer) => {
   if (!entry.isIntersecting) return;
 
-  entry.target.classList.remove('image__animUp--hidden');
+  entry.target.classList.remove('animUp--hidden');
   observer.unobserve(entry.target);
 };
 
@@ -81,7 +81,7 @@ const upImgObserver = new IntersectionObserver(revealUpImg, {
 });
 
 allUpImages.forEach((image) => {
-  image.classList.add('image__animUp--hidden');
+  image.classList.add('animUp--hidden');
   upImgObserver.observe(image);
 });
 
