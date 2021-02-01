@@ -25,6 +25,11 @@
     height: 48rem;
     cursor: pointer;
     text-align: center;
+
+    &--border {
+      @extend .work-grid__item;
+      border: 0.1rem solid $color-grey-light;
+    }
   }
 
   &__link {
