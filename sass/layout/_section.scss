@@ -63,6 +63,35 @@
       transform: translateX(-3rem);
     }
   }
+
+  &__main {
+    grid-column: content-start / col-end 7;
+    text-align: left;
+
+    transition: all 2s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(3rem);
+    }
+  }
+
+  &__sub {
+    grid-column: col-start 8 / content-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 2s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(3rem);
+    }
+  }
+
+  &__img {
+    width: 80%;
+  }
 }
 
 .spotlight {

@@ -119,6 +119,26 @@
   }
 }
 
+.video__collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 95%;
+  margin: 7rem 0;
+
+  &__vid {
+    width: 70%;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 1rem rgba($color-black, 0.2);
+  }
+
+  &__vid--main {
+    @extend .video__collection__vid
+    width: 75%;
+  }
+}
+
 .video {
   width: 80%;
   border-radius: 0.5rem;

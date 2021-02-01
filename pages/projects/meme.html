@@ -101,14 +101,54 @@
     <section class="project__showcase imgGrid">
       <img
         src="/img/Portfolio/Projects/Meme/Meme_Flat_Title.png"
-        alt="Round screen"
+        alt="Title screen"
         class="imgGrid__phone--main animUp"
       />
       <img
         src="/img/Portfolio/Projects/Meme/Meme_Flat_Const.png"
-        alt=""
+        alt="Round screen"
         class="imgGrid__phone--sub animUp"
       />
+    </section>
+
+    <!-- Section: New Tech -->
+    <section class="section project__intro grid section--first fadein">
+      <h3 class="heading__section">
+        New <span class="heading__section--slash">/</span> Technology
+      </h3>
+
+      <div class="section__split grid">
+        <div class="split__main">
+          <p class="para">
+            One of the greatest challenges on this project was also one of its
+            greatest draws: the use of exciting new technology. For the
+            front-end we used React Native. Whilst it differs from React for web
+            in significant ways, our existing familiarity with React made
+            learning React Native an achievable (and enjoyable) challenge.
+          </p>
+          <p class="para">
+            For the back end we used Google Firebase and its Cloud Firestore
+            database, enabling us to synchronise all of our users around a
+            common source of data. It also provided us with database listeners
+            that would prompt various real-time events, such as score updates
+            and screen progressions.
+          </p>
+        </div>
+        <div class="split__sub">
+          <img
+            src="/img/Portfolio/Projects/Meme/RNLogo.png"
+            alt="React Native Logo"
+            class="split__img animUp"
+            style="margin-left: 0.5rem; margin-top: 1rem"
+          />
+          <img
+            src="/img/Portfolio/Projects/Meme/FirebaseLogo.png"
+            alt="Firebase Logo"
+            class="split__img animUp"
+            style="margin-left: 7rem; margin-bottom: 2rem; width: 70%"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Section: Project Spotlight -->
@@ -119,47 +159,72 @@
 
       <div class="spotlight">
         <div class="spotlight__intro">
-          <h4 class="section__subhead">Topic search</h4>
+          <h4 class="section__subhead">Realtime challenge</h4>
           <p class="para">
-            Users can perform a fuzzy search of topics, which will return any
-            appropriate matches. <br />They can then display the articles solely
-            for one topic.
+            Probably the greatest challenge of this project arose from the
+            realtime nature of the game and its need for numerous asynchronous
+            calls to the database. Both state and page rendering had to be
+            carefully managed to avoid loading issues, as did the storage of
+            information between rounds to ensure there were no conflicts. Moving
+            all players to the next screen in unison was another technical
+            hurdle, requiring the use of database listeners to manage navigation
+            centrally.
           </p>
         </div>
 
-        <video width="100%" height="auto" autoplay loop class="video animUp">
-          <source
-            src="/img/Portfolio/Projects/Iris/vids/Iris_TopicVid.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+        <div class="video__collection animUp">
+          <video
+            width="100%"
+            height="auto"
+            autoplay
+            loop
+            class="video__collection__vid"
+          >
+            <source
+              src="/img/Portfolio/Projects/Meme/vids/Realtime_1.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <video
+            width="100%"
+            height="auto"
+            autoplay
+            loop
+            class="video__collection__vid--main"
+          >
+            <source
+              src="/img/Portfolio/Projects/Meme/vids/Realtime_2.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <video
+            width="100%"
+            height="auto"
+            autoplay
+            loop
+            class="video__collection__vid"
+          >
+            <source
+              src="/img/Portfolio/Projects/Meme/vids/Realtime_3.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-      <div class="divider">
-        <p class="divider__symbol">{}</p>
-      </div>
-
-      <div class="spotlight">
         <div class="spotlight__intro">
-          <h4 class="section__subhead">User login</h4>
           <p class="para">
-            When users log in to the site, they gain access to buttons allowing
-            them to post a
-            <br />new article, delete their own articles, or comment on existing
-            articles.
-          </p>
-          <p class="para">
-            If no user is logged in, these buttons are not rendered.
+            The above videos show the game lobby updating in real-time as a new
+            player joins. When the lobby gains the required minimum number of
+            players (3), a ‘Begin Round’ button appears for the host only. Only
+            pressing this button, a flag is set in the database indicating we
+            can proceed to the next round. A database listener in each user’s
+            app will notice this change, triggering a simultaneous transition to
+            the next screen for all players.
           </p>
         </div>
-        <video width="100%" height="auto" autoplay loop class="video animUp">
-          <source
-            src="/img/Portfolio/Projects/Iris/vids/Iris_LoginVid.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
       </div>
     </section>
 
