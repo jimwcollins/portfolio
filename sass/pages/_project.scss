@@ -48,13 +48,13 @@
   &__showcase {
     grid-column: content-start / content-end;
     margin-top: $section-top;
-    margin-bottom: $section-bottom;
   }
 
   &__splash {
     grid-column: full-start / full-end;
     height: 60rem;
-    margin-bottom: 5rem;
+    margin-top: $section-top;
+    margin-bottom: $section-bottom;
 
     background-attachment: fixed;
     background-size: cover;
@@ -88,7 +88,7 @@
 .imgGrid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(7, 8vw);
+  grid-template-rows: repeat(7, 15rem);
 
   &__mac--main {
     width: 100%;

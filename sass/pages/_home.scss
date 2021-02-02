@@ -23,6 +23,7 @@
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(5, 5.5vw);
   grid-gap: 0.5rem;
+  overflow: hidden;
 
   &__box {
     &--1 {
@@ -56,6 +57,7 @@
     &--8 {
       grid-column: 8 / span 3;
       grid-row: 3 / span 3;
+      align-self: flex-start;
     }
   }
 

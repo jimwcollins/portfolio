@@ -609,7 +609,8 @@ a {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(5, 5.5vw);
-  grid-gap: 0.5rem; }
+  grid-gap: 0.5rem;
+  overflow: hidden; }
   .home__gallery__box--1 {
     grid-column: 1 / span 2;
     grid-row: 1 / -1; }
@@ -633,7 +634,8 @@ a {
     grid-row: 3 / span 3; }
   .home__gallery__box--8 {
     grid-column: 8 / span 3;
-    grid-row: 3 / span 3; }
+    grid-row: 3 / span 3;
+    align-self: flex-start; }
   .home__gallery__img {
     display: block;
     height: 100%;
@@ -718,11 +720,11 @@ a {
       color: #530896; }
   .project__showcase {
     grid-column: content-start / content-end;
-    margin-top: 5rem;
-    margin-bottom: 5rem; }
+    margin-top: 5rem; }
   .project__splash {
     grid-column: full-start / full-end;
     height: 60rem;
+    margin-top: 5rem;
     margin-bottom: 5rem;
     background-attachment: fixed;
     background-size: cover;
@@ -745,7 +747,7 @@ a {
 .imgGrid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(7, 8vw); }
+  grid-template-rows: repeat(7, 15rem); }
   .imgGrid__mac--main {
     width: 100%;
     grid-column: 1 / 8;
