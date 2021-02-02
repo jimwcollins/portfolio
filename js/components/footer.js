@@ -14,7 +14,7 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-        <footer class="footer">
+      <footer class="footer">
         <ul class="footer__nav">
           <li class="footer__nav__item">
             <a href="/index.html" class="footer__nav__link">Home</a>
@@ -34,9 +34,11 @@ class Footer extends HTMLElement {
           </li>
         </ul>
 
-        <div class="footer__logo">/</div>
+        <div class="footer__logo">
+        <p class="footer__logo__symbol">{}</p>
+        </div>
 
-        <p class="footer__text">© 2020 James Collins. All rights reserved.</p>
+        <p class="footer__text">Designed and built by James Collins © 2021</p>
       </footer>
     `;
   }

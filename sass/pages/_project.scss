@@ -134,7 +134,7 @@
   }
 
   &__vid--main {
-    @extend .video__collection__vid
+    @extend .video__collection__vid;
     width: 75%;
   }
 }

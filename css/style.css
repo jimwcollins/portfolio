@@ -162,6 +162,7 @@ a {
   margin-bottom: 5rem; }
   .divider__symbol {
     font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
@@ -253,6 +254,7 @@ a {
   align-items: center;
   height: 7rem;
   background-color: #2b2929;
+  padding-top: 0.2rem;
   color: #fff;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
@@ -273,11 +275,21 @@ a {
     .footer__nav__link:hover {
       color: #8c0e07; }
   .footer__logo {
-    position: relative;
-    top: 0.3rem;
-    color: #8c0e07;
-    font-size: 4rem;
-    font-weight: 300; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: #8c0e07; }
+    .footer__logo__symbol {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #fff;
+      padding-top: 0.2rem; }
 
 /***************************
 * 
@@ -760,16 +772,14 @@ a {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  width: 100%;
+  width: 95%;
   margin: 7rem 0; }
-  .video__collection__vid--main {
-    width: 75%;
-    border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1); }
-  .video__collection__vid {
+  .video__collection__vid, .video__collection__vid--main {
     width: 70%;
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1); }
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2); }
+  .video__collection__vid--main {
+    width: 75%; }
 
 .video {
   width: 80%;
