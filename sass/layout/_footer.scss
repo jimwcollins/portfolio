@@ -10,15 +10,14 @@
 }
 
 .footer {
+  background-color: $color-background-dark;
+  padding-top: 0.2rem;
+  height: 7rem;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-gap: 2rem;
   justify-content: center;
   align-items: center;
-
-  height: 7rem;
-  background-color: $color-background-dark;
-  padding-top: 0.2rem;
 
   color: $color-white;
   font-family: $font-body;
@@ -70,6 +69,34 @@
       font-weight: 600;
       color: $color-white;
       padding-top: 0.2rem;
+    }
+  }
+}
+
+// Tablet break-point for footer
+@media only screen and (max-width: 800px) {
+  .footer {
+    height: 11rem;
+    display: block;
+    padding-top: 1.25rem;
+
+    &__nav {
+      justify-content: center;
+    }
+
+    &__text {
+      text-align: center;
+      text-transform: none;
+    }
+
+    &__logo {
+      height: 3rem;
+      width: 3rem;
+      margin: 0.5rem auto 0.75rem auto;
+
+      &__symbol {
+        font-size: 1.5rem;
+      }
     }
   }
 }

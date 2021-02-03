@@ -10,19 +10,17 @@
 class Hero extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section class="hero">
-        <img
-          src=${this.getAttribute('image')}
-          alt=${this.getAttribute('imageAlt')}
-          class="hero__image"
-        />
+      <section 
+        class="hero" 
+        style="background-image: url(${this.getAttribute('image')}"
+      >
 
-        <div class="hero__heading">
-          <div class="hero__box">
-            <p class="hero__symbol--${this.getAttribute('page')}">{</p>
-            <p class="hero__text">${this.getAttribute('title')}</p>
-            <p class="hero__symbol--${this.getAttribute('page')}">}</p>
-          </div>
+        <div class="hero__title">
+          <p class="hero__text">
+            <span class="hero__symbol--${this.getAttribute('page')}">{</span>
+            ${this.getAttribute('title')}
+            <span class="hero__symbol--${this.getAttribute('page')}">}</span>
+          </p>
         </div>
 
         <div class="hero__arrow">

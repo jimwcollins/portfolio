@@ -11,18 +11,13 @@
 
 .hero {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
 
-  &__image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  &__heading {
-    position: absolute;
+  &__title {
+    @include centre-content;
+    width: max-content;
   }
 
   &__button {
@@ -34,7 +29,9 @@
 
   &__arrow {
     position: absolute;
-    align-self: flex-end;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__svg {
       height: 3rem;

@@ -31,3 +31,10 @@
     margin-left: 3rem;
   }
 }
+
+// Tablet break-point for hero section
+@media only screen and (max-width: 600px) {
+  .header__logo {
+    display: none;
+  }
+}

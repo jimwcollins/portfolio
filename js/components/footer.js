@@ -35,7 +35,7 @@ class Footer extends HTMLElement {
         </ul>
 
         <div class="footer__logo">
-        <p class="footer__logo__symbol">{}</p>
+          <p class="footer__logo__symbol">{}</p>
         </div>
 
         <p class="footer__text">Designed and built by James Collins © 2021</p>

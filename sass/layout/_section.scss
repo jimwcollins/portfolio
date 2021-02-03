@@ -13,6 +13,9 @@
   &__center {
     grid-column: col-start 2 / col-end 11;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__split {
@@ -28,14 +31,29 @@
   &--color {
     @extend .section;
     background-color: $color-background-med;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding: 8rem 0;
 
     // Remove margin for last section before footer
     &--last {
       @extend .section--color;
-      margin-bottom: 0rem;
+      margin-bottom: 0rem !important;
     }
+  }
+}
+
+// Phone break-point for section
+@media only screen and (max-width: 600px) {
+  .section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    &--color {
+      padding: 5rem 0;
+    }
+  }
+
+  .content {
+    margin: 0 3rem;
   }
 }
 
@@ -91,6 +109,43 @@
 
   &__img {
     width: 80%;
+  }
+}
+
+// Tablet break-point for sections
+@media only screen and (max-width: 800px) {
+  .section__center {
+    text-align: justify;
+  }
+
+  .split__left {
+    grid-column: col-start 2 / col-end 11;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .split__right {
+    grid-column: col-start 2 / col-end 11;
+    text-align: justify;
+  }
+}
+
+// Phone break-point for sections
+@media only screen and (max-width: 600px) {
+  .section__center {
+    grid-column: content-start / content-end;
+    text-align: justify;
+  }
+
+  .split__left {
+    grid-column: content-start / content-end;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .split__right {
+    grid-column: content-start / content-end;
+    text-align: justify;
   }
 }
 

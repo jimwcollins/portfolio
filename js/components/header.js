@@ -14,7 +14,7 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <header>
+      <header
         <div class="header__logo">
           <div class="hero__box">
             <p class="hero__symbol--header">{</p>

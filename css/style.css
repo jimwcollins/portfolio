@@ -76,26 +76,13 @@ a {
   text-decoration: none;
   color: inherit; }
 
-.hero, .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header, .hero__text, .hero__text--header {
+.hero {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   text-transform: uppercase; }
-  .hero__box {
-    display: flex;
-    align-items: center; }
-  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header {
-    font-weight: 300;
-    font-size: 10rem;
-    letter-spacing: 2rem;
-    margin-right: -2rem; }
-    .hero__symbol--standard {
-      color: #8c0e07; }
-    .hero__symbol--project {
-      color: #fff; }
-    .hero__symbol--header {
-      font-size: 2.5rem;
-      color: #8c0e07; }
   .hero__text, .hero__text--header {
+    display: flex;
+    align-items: center;
     margin-left: 2.5rem;
     margin-right: 1rem;
     font-weight: 700;
@@ -108,40 +95,63 @@ a {
       color: #000;
       font-size: 1.5rem;
       letter-spacing: 0.5rem; }
+  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header {
+    font-weight: 300;
+    font-size: 10rem;
+    margin: 0 1.5rem; }
+    .hero__symbol--standard {
+      color: #8c0e07; }
+    .hero__symbol--project {
+      color: #fff; }
+    .hero__symbol--header {
+      font-size: 2.5rem;
+      color: #8c0e07; }
 
-.heading, .heading__main, .heading__sub, .heading__section {
+@media only screen and (max-width: 800px) {
+  .hero__text, .hero__text--header {
+    font-size: 3rem; }
+    .hero__text--header {
+      font-size: 1.75rem; }
+  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header {
+    font-size: 8rem; }
+    .hero__symbol--header {
+      font-size: 3.5rem; } }
+
+@media only screen and (max-width: 600px) {
+  .hero__text, .hero__text--header {
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem; }
+    .hero__text--header {
+      font-size: 1.75rem; }
+  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header {
+    font-size: 6rem; }
+    .hero__symbol--header {
+      font-size: 3.5rem; } }
+
+.heading__section {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  line-height: 1.25; }
-  .heading__main {
-    color: #fff;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 0.5rem; }
-  .heading__sub {
-    color: #fff;
+  line-height: 1.25;
+  grid-column: content-start / content-end;
+  margin-bottom: 6rem;
+  color: #000;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem; }
+  .heading__section--slash {
+    position: relative;
+    top: 0.35rem;
+    color: #8c0e07;
     font-size: 4rem;
-    font-weight: 200;
-    letter-spacing: 0.35rem; }
-    .heading__sub--slash {
-      position: relative;
-      top: 0.3rem;
-      color: #8c0e07;
-      font-size: 5rem; }
+    font-weight: 400; }
+
+@media only screen and (max-width: 600px) {
   .heading__section {
-    grid-column: content-start / content-end;
-    margin-bottom: 6rem;
-    color: #000;
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 0.5rem; }
-    .heading__section--slash {
-      position: relative;
-      top: 0.35rem;
-      color: #8c0e07;
-      font-size: 4rem;
-      font-weight: 400; }
+    font-size: 2.5rem;
+    margin-bottom: 4rem; }
+  .heading__symbol {
+    font-size: 8rem; } }
 
 .section__subhead {
   font-size: 3rem;
@@ -204,17 +214,17 @@ a {
 .section__hero {
   grid-column: full-start / full-end; }
 
-.hero, .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header, .hero__text, .hero__text--header {
+.hero {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .hero__image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; }
-  .hero__heading {
-    position: absolute; }
+  position: relative;
+  background-size: cover;
+  background-position: center; }
+  .hero__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content; }
   .hero__button {
     position: absolute;
     top: 70%;
@@ -222,7 +232,9 @@ a {
     transform: translateX(-50%); }
   .hero__arrow {
     position: absolute;
-    align-self: flex-end; }
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%); }
     .hero__arrow__svg {
       height: 3rem;
       width: 3rem;
@@ -247,14 +259,14 @@ a {
   grid-column: full-start / full-end; }
 
 .footer {
+  background-color: #2b2929;
+  padding-top: 0.2rem;
+  height: 7rem;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-gap: 2rem;
   justify-content: center;
   align-items: center;
-  height: 7rem;
-  background-color: #2b2929;
-  padding-top: 0.2rem;
   color: #fff;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
@@ -291,6 +303,23 @@ a {
       color: #fff;
       padding-top: 0.2rem; }
 
+@media only screen and (max-width: 800px) {
+  .footer {
+    height: 11rem;
+    display: block;
+    padding-top: 1.25rem; }
+    .footer__nav {
+      justify-content: center; }
+    .footer__text {
+      text-align: center;
+      text-transform: none; }
+    .footer__logo {
+      height: 3rem;
+      width: 3rem;
+      margin: 0.5rem auto 0.75rem auto; }
+      .footer__logo__symbol {
+        font-size: 1.5rem; } }
+
 /***************************
 * 
 *  JC PORTFOLIO
@@ -314,6 +343,10 @@ a {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(12, [col-start] minmax(min-content, 4.8rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end];
   column-gap: 4rem; }
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    display: block; } }
 
 /***************************
 * 
@@ -340,6 +373,10 @@ a {
     visibility: visible; }
   .header__logo {
     margin-left: 3rem; }
+
+@media only screen and (max-width: 600px) {
+  .header__logo {
+    display: none; } }
 
 /***************************
 * 
@@ -487,17 +524,28 @@ a {
   margin-bottom: 5rem; }
   .section__center {
     grid-column: col-start 2 / col-end 11;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .section__split {
     grid-column: full-start / full-end; }
   .section--first {
     margin-top: 10rem; }
   .section--color, .section--color--last {
     background-color: #ebebeb;
-    padding-top: 8rem;
-    padding-bottom: 8rem; }
+    padding: 8rem 0; }
     .section--color--last {
-      margin-bottom: 0rem; }
+      margin-bottom: 0rem !important; }
+
+@media only screen and (max-width: 600px) {
+  .section, .section--color, .section--color--last {
+    margin-top: 5rem;
+    margin-bottom: 5rem; }
+    .section--color, .section--color--last {
+      padding: 5rem 0; }
+  .content {
+    margin: 0 3rem; } }
 
 .split__left {
   grid-column: content-start / col-end 3;
@@ -534,6 +582,29 @@ a {
 
 .split__img {
   width: 80%; }
+
+@media only screen and (max-width: 800px) {
+  .section__center {
+    text-align: justify; }
+  .split__left {
+    grid-column: col-start 2 / col-end 11;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .split__right {
+    grid-column: col-start 2 / col-end 11;
+    text-align: justify; } }
+
+@media only screen and (max-width: 600px) {
+  .section__center {
+    grid-column: content-start / content-end;
+    text-align: justify; }
+  .split__left {
+    grid-column: content-start / content-end;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .split__right {
+    grid-column: content-start / content-end;
+    text-align: justify; } }
 
 .spotlight {
   grid-column: content-start / content-end;
@@ -604,6 +675,16 @@ a {
   border-radius: 50%;
   height: 22rem;
   width: 22rem; }
+
+@media only screen and (max-width: 800px) {
+  .home__about-me__image {
+    height: 18rem;
+    width: 18rem; } }
+
+@media only screen and (max-width: 800px) {
+  .home__about-me__image {
+    height: 12rem;
+    width: 12rem; } }
 
 .home__gallery {
   display: grid;
