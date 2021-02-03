@@ -14,15 +14,11 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <header
-        <div class="header__logo">
-          <div class="hero__box">
-            <p class="hero__symbol--header">{</p>
-            <p class="hero__text--header">James Collins</p>
-            <p class="hero__symbol--header">}</p>
-          </div>
-        </div>
-      </header>
+        <img
+          src="/img/General/Header_logo.png"
+          alt="James Collins Logo"
+          class="header__image"
+        />
     `;
   }
 }

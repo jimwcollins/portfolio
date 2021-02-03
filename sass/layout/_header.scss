@@ -7,6 +7,7 @@
 
 .header {
   display: flex;
+  align-items: center;
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -20,21 +21,20 @@
   transition: all 0.5s;
 
   &--scroll {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     opacity: 1;
     visibility: visible;
   }
 
-  &__logo {
-    margin-left: 3rem;
+  &__image {
+    width: 22rem;
+    height: auto;
+    margin-left: 2rem;
   }
 }
 
 // Tablet break-point for hero section
 @media only screen and (max-width: 600px) {
-  .header__logo {
+  .header__image {
     display: none;
   }
 }

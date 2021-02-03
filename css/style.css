@@ -80,7 +80,7 @@ a {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   text-transform: uppercase; }
-  .hero__text, .hero__text--header {
+  .hero__text {
     display: flex;
     align-items: center;
     margin-left: 2.5rem;
@@ -89,13 +89,7 @@ a {
     font-size: 3.5rem;
     letter-spacing: 1rem;
     color: #fff; }
-    .hero__text--header {
-      margin-left: 1.5rem;
-      margin-right: 0.5rem;
-      color: #000;
-      font-size: 1.5rem;
-      letter-spacing: 0.5rem; }
-  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header {
+  .hero__symbol, .hero__symbol--standard, .hero__symbol--project {
     font-weight: 300;
     font-size: 10rem;
     margin: 0 1.5rem; }
@@ -103,27 +97,20 @@ a {
       color: #8c0e07; }
     .hero__symbol--project {
       color: #fff; }
-    .hero__symbol--header {
-      font-size: 2.5rem;
-      color: #8c0e07; }
 
 @media only screen and (max-width: 800px) {
-  .hero__text, .hero__text--header {
+  .hero__text {
     font-size: 3rem; }
-    .hero__text--header {
-      font-size: 1.75rem; }
-  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header {
-    font-size: 8rem; }
-    .hero__symbol--header {
-      font-size: 3.5rem; } }
+  .hero__symbol, .hero__symbol--standard, .hero__symbol--project {
+    font-size: 8rem; } }
 
 @media only screen and (max-width: 600px) {
-  .hero__text, .hero__text--header {
+  .hero__text {
     font-size: 1.8rem;
     letter-spacing: 0.5rem; }
     .hero__text--header {
       font-size: 1.75rem; }
-  .hero__symbol, .hero__symbol--standard, .hero__symbol--project, .hero__symbol--header {
+  .hero__symbol, .hero__symbol--standard, .hero__symbol--project {
     font-size: 6rem; }
     .hero__symbol--header {
       font-size: 3.5rem; } }
@@ -356,6 +343,7 @@ a {
 ***************************/
 .header {
   display: flex;
+  align-items: center;
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -366,16 +354,15 @@ a {
   background-color: rgba(255, 255, 255, 0.95);
   transition: all 0.5s; }
   .header--scroll {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     opacity: 1;
     visibility: visible; }
-  .header__logo {
-    margin-left: 3rem; }
+  .header__image {
+    width: 22rem;
+    height: auto;
+    margin-left: 2rem; }
 
 @media only screen and (max-width: 600px) {
-  .header__logo {
+  .header__image {
     display: none; } }
 
 /***************************
@@ -681,7 +668,7 @@ a {
     height: 18rem;
     width: 18rem; } }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .home__about-me__image {
     height: 12rem;
     width: 12rem; } }
