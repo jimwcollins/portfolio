@@ -82,6 +82,7 @@ a {
   text-transform: uppercase; }
   .hero__text {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-left: 2.5rem;
     margin-right: 1rem;
@@ -108,12 +109,8 @@ a {
   .hero__text {
     font-size: 1.8rem;
     letter-spacing: 0.5rem; }
-    .hero__text--header {
-      font-size: 1.75rem; }
   .hero__symbol, .hero__symbol--standard, .hero__symbol--project {
-    font-size: 6rem; }
-    .hero__symbol--header {
-      font-size: 3.5rem; } }
+    font-size: 6rem; } }
 
 .heading__section {
   font-family: "Josefin Sans", sans-serif;
@@ -133,12 +130,20 @@ a {
     font-size: 4rem;
     font-weight: 400; }
 
+@media only screen and (max-width: 800px) {
+  .heading__section {
+    margin-bottom: 4rem; } }
+
 @media only screen and (max-width: 600px) {
   .heading__section {
-    font-size: 2.5rem;
-    margin-bottom: 4rem; }
-  .heading__symbol {
-    font-size: 8rem; } }
+    font-size: 2.25rem;
+    margin-bottom: 3rem; }
+    .heading__section--slash {
+      position: relative;
+      top: 0.35rem;
+      color: #8c0e07;
+      font-size: 3.25rem;
+      font-weight: 400; } }
 
 .section__subhead {
   font-size: 3rem;
@@ -205,7 +210,8 @@ a {
   height: 100vh;
   position: relative;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  overflow: hidden; }
   .hero__title {
     position: absolute;
     top: 50%;
@@ -328,8 +334,13 @@ a {
 ***************************************************************************/
 .grid {
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(12, [col-start] minmax(min-content, 4.8rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(5rem, 1fr) [content-start] repeat(12, [col-start] minmax(0, 4.8rem) [col-end]) [content-end] minmax(5rem, 1fr) [full-end];
   column-gap: 4rem; }
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [content-start] repeat(12, [col-start] minmax(min-content, 4.8rem) [col-end]) [content-end] minmax(3rem, 1fr) [full-end];
+    column-gap: 3.5rem; } }
 
 @media only screen and (max-width: 600px) {
   .grid {
@@ -525,14 +536,25 @@ a {
     .section--color--last {
       margin-bottom: 0rem !important; }
 
+@media only screen and (max-width: 800px) {
+  .section, .section--color, .section--color--last {
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
+    .section--color, .section--color--last {
+      padding: 5rem 0; }
+    .section--first {
+      margin-top: 6rem; } }
+
 @media only screen and (max-width: 600px) {
   .section, .section--color, .section--color--last {
     margin-top: 5rem;
     margin-bottom: 5rem; }
     .section--color, .section--color--last {
       padding: 5rem 0; }
-  .content {
-    margin: 0 3rem; } }
+    .section__split {
+      margin: 0 3rem; }
+    .section__center {
+      margin: 0 3rem; } }
 
 .split__left {
   grid-column: content-start / col-end 3;
@@ -574,11 +596,11 @@ a {
   .section__center {
     text-align: justify; }
   .split__left {
-    grid-column: col-start 2 / col-end 11;
-    text-align: center;
+    grid-column: col-start 1 / col-end 3;
     margin-bottom: 2rem; }
   .split__right {
-    grid-column: col-start 2 / col-end 11;
+    grid-column: col-start 4 / col-end 12; }
+  .split__main {
     text-align: justify; } }
 
 @media only screen and (max-width: 600px) {
@@ -591,7 +613,9 @@ a {
     margin-bottom: 2rem; }
   .split__right {
     grid-column: content-start / content-end;
-    text-align: justify; } }
+    text-align: justify; }
+  .split__sub {
+    margin-top: 1.5rem; } }
 
 .spotlight {
   grid-column: content-start / content-end;
@@ -603,6 +627,10 @@ a {
     width: 80%; }
   .spotlight .section__subhead {
     margin-bottom: 2rem; }
+
+@media only screen and (max-width: 800px) {
+  .spotlight__intro {
+    text-align: justify; } }
 
 /***************************
 * 
@@ -665,8 +693,8 @@ a {
 
 @media only screen and (max-width: 800px) {
   .home__about-me__image {
-    height: 18rem;
-    width: 18rem; } }
+    height: 13rem;
+    width: 13rem; } }
 
 @media only screen and (max-width: 600px) {
   .home__about-me__image {
@@ -722,7 +750,7 @@ a {
 .work-grid {
   grid-column: content-start / content-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 48rem);
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 48rem));
   grid-gap: 4rem;
   justify-content: center;
   margin-top: 7rem;
@@ -755,6 +783,20 @@ a {
   .work-grid__item:hover > .work-grid__cap, .work-grid__item--border:hover > .work-grid__cap {
     transform: translateY(0);
     opacity: 1; }
+
+@media only screen and (max-width: 800px) {
+  .work-grid {
+    margin-top: 5rem;
+    padding: 0 3rem; }
+    .work-grid__item, .work-grid__item--border {
+      height: 45rem; } }
+
+@media only screen and (max-width: 600px) {
+  .work-grid {
+    margin-top: 4rem;
+    padding: 0 3rem; }
+    .work-grid__item, .work-grid__item--border {
+      height: 30rem; } }
 
 /***************************
 * 
@@ -791,12 +833,16 @@ a {
     margin-top: 5rem; }
   .project__splash {
     grid-column: full-start / full-end;
-    height: 60rem;
+    height: 30vw;
     margin-top: 5rem;
     margin-bottom: 5rem;
     background-attachment: fixed;
     background-size: cover;
     opacity: 95%; }
+
+@media only screen and (max-width: 800px) {
+  .project__splash {
+    height: 40vw; } }
 
 .spread {
   width: 100%;
@@ -837,6 +883,18 @@ a {
     grid-row: 3 / 7;
     z-index: 2; }
 
+@media only screen and (max-width: 800px) {
+  .imgGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 10rem); } }
+
+@media only screen and (max-width: 600px) {
+  .imgGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 6rem); } }
+
 .video__collection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -856,3 +914,7 @@ a {
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
   margin: 7rem 0; }
+
+@media only screen and (max-width: 800px) {
+  .video {
+    margin: 5rem 0; } }

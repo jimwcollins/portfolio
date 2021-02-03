@@ -14,7 +14,7 @@
   grid-column: content-start / content-end;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, 48rem);
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 48rem));
   grid-gap: $column-gap-master;
   justify-content: center;
 
@@ -63,5 +63,29 @@
     transform: translateY(0);
 
     opacity: 1;
+  }
+}
+
+// Tablet break-point for portfolio work grid
+@media only screen and (max-width: 800px) {
+  .work-grid {
+    margin-top: 5rem;
+    padding: 0 $mobile-border;
+
+    &__item {
+      height: 45rem;
+    }
+  }
+}
+
+// Phone break-point for portfolio work grid
+@media only screen and (max-width: 600px) {
+  .work-grid {
+    margin-top: 4rem;
+    padding: 0 $mobile-border;
+
+    &__item {
+      height: 30rem;
+    }
   }
 }

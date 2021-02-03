@@ -41,6 +41,22 @@
   }
 }
 
+// Tablet break-point for section
+@media only screen and (max-width: 800px) {
+  .section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    &--color {
+      padding: 5rem 0;
+    }
+
+    &--first {
+      margin-top: 6rem;
+    }
+  }
+}
+
 // Phone break-point for section
 @media only screen and (max-width: 600px) {
   .section {
@@ -50,10 +66,14 @@
     &--color {
       padding: 5rem 0;
     }
-  }
 
-  .content {
-    margin: 0 3rem;
+    &__split {
+      margin: 0 $mobile-border;
+    }
+
+    &__center {
+      margin: 0 $mobile-border;
+    }
   }
 }
 
@@ -119,13 +139,15 @@
   }
 
   .split__left {
-    grid-column: col-start 2 / col-end 11;
-    text-align: center;
+    grid-column: col-start 1 / col-end 3;
     margin-bottom: 2rem;
   }
 
   .split__right {
-    grid-column: col-start 2 / col-end 11;
+    grid-column: col-start 4 / col-end 12;
+  }
+
+  .split__main {
     text-align: justify;
   }
 }
@@ -147,6 +169,10 @@
     grid-column: content-start / content-end;
     text-align: justify;
   }
+
+  .split__sub {
+    margin-top: 1.5rem;
+  }
 }
 
 .spotlight {
@@ -162,5 +188,12 @@
 
   & .section__subhead {
     margin-bottom: 2rem;
+  }
+}
+
+// Tablet break-point for spotlight section
+@media only screen and (max-width: 800px) {
+  .spotlight__intro {
+    text-align: justify;
   }
 }

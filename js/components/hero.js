@@ -9,6 +9,10 @@
 
 class Hero extends HTMLElement {
   connectedCallback() {
+    if (this.getAttribute('page') === true) {
+      this.splitTitle = 'splitTitle';
+    }
+
     this.innerHTML = `
       <section 
         class="hero" 

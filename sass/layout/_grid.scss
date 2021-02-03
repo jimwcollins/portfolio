@@ -22,12 +22,25 @@
 .grid {
   display: grid;
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr) [content-start] repeat(
+    [full-start] minmax(5rem, 1fr) [content-start] repeat(
       12,
-      [col-start] minmax(min-content, 4.8rem) [col-end]
+      [col-start] minmax(0, 4.8rem) [col-end]
     )
-    [content-end] minmax(6rem, 1fr) [full-end];
+    [content-end] minmax(5rem, 1fr) [full-end];
   column-gap: $column-gap-master;
+}
+
+// Tablet break-point for grid
+@media only screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns:
+      [full-start] minmax(3rem, 1fr) [content-start] repeat(
+        12,
+        [col-start] minmax(min-content, 4.8rem) [col-end]
+      )
+      [content-end] minmax(3rem, 1fr) [full-end];
+    column-gap: 3.5rem;
+  }
 }
 
 // Phone break-point for grid

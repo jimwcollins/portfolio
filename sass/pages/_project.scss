@@ -52,13 +52,20 @@
 
   &__splash {
     grid-column: full-start / full-end;
-    height: 60rem;
+    height: 30vw;
     margin-top: $section-top;
     margin-bottom: $section-bottom;
 
     background-attachment: fixed;
     background-size: cover;
     opacity: 95%;
+  }
+}
+
+// Tablet break-point for spotlight section
+@media only screen and (max-width: 800px) {
+  .project__splash {
+    height: 40vw;
   }
 }
 
@@ -119,6 +126,24 @@
   }
 }
 
+// Tablet break-point for image grid
+@media only screen and (max-width: 800px) {
+  .imgGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 10rem);
+  }
+}
+
+// Phone break-point for image grid
+@media only screen and (max-width: 600px) {
+  .imgGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 6rem);
+  }
+}
+
 .video__collection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -144,4 +169,11 @@
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 1rem rgba($color-black, 0.1);
   margin: 7rem 0;
+}
+
+// Tablet break-point for video
+@media only screen and (max-width: 800px) {
+  .video {
+    margin: 5rem 0;
+  }
 }
