@@ -144,6 +144,13 @@ a {
   }
 }
 
+// Phone break-point for section subhead
+@media only screen and (max-width: 600px) {
+  .section__subhead {
+    font-size: 2.5rem;
+  }
+}
+
 .divider {
   grid-column: content-start / content-end;
   justify-self: center;

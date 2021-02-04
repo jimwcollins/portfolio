@@ -62,10 +62,17 @@
   }
 }
 
-// Tablet break-point for spotlight section
+// Tablet break-point for project sections
 @media only screen and (max-width: 800px) {
   .project__splash {
-    height: 40vw;
+    height: 45vw;
+  }
+}
+
+// Phone break-point for project sections
+@media only screen and (max-width: 600px) {
+  .project__showcase {
+    margin: 0 $mobile-border;
   }
 }
 

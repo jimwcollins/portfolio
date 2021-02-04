@@ -220,11 +220,11 @@
           <p class="para">
             The above videos show the game lobby updating in real-time as a new
             player joins. When the lobby gains the required minimum number of
-            players (3), a ‘Begin Round’ button appears for the host only. Only
+            players (3), a ‘Begin Round’ button appears for the host only. Upon
             pressing this button, a flag is set in the database indicating we
             can proceed to the next round. A database listener in each user’s
-            app will notice this change, triggering a simultaneous transition to
-            the next screen for all players.
+            app will register this change, triggering a simultaneous transition
+            to the next screen for all players.
           </p>
         </div>
       </div>
