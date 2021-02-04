@@ -36,7 +36,7 @@
     grid-template-columns:
       [full-start] minmax(3rem, 1fr) [content-start] repeat(
         12,
-        [col-start] minmax(min-content, 4.8rem) [col-end]
+        [col-start] minmax(2rem, 4.8rem) [col-end]
       )
       [content-end] minmax(3rem, 1fr) [full-end];
     column-gap: 3.5rem;

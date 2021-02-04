@@ -57,6 +57,18 @@ body {
 .spacer {
   margin-top: 1rem; }
 
+.display--desk {
+  display: block; }
+
+.display--mob {
+  display: none; }
+
+@media only screen and (max-width: 800px) {
+  .display--desk {
+    display: none; }
+  .display--mob {
+    display: block; } }
+
 /***************************
 * 
 *  JC PORTFOLIO
@@ -343,7 +355,7 @@ a {
 
 @media only screen and (max-width: 800px) {
   .grid {
-    grid-template-columns: [full-start] minmax(3rem, 1fr) [content-start] repeat(12, [col-start] minmax(min-content, 4.8rem) [col-end]) [content-end] minmax(3rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [content-start] repeat(12, [col-start] minmax(2rem, 4.8rem) [col-end]) [content-end] minmax(3rem, 1fr) [full-end];
     column-gap: 3.5rem; } }
 
 @media only screen and (max-width: 600px) {
@@ -680,6 +692,30 @@ a {
     transition: fill 1s; }
     .experience__para__svg:hover {
       fill: #8c0e07; }
+
+@media only screen and (max-width: 800px) {
+  .experience__dev {
+    grid-column: col-start 4 / span 4; }
+  .experience__design {
+    grid-column: col-start 8 / span 4; }
+  .experience__subsection:not(:last-child) {
+    margin-bottom: 3.5rem; } }
+
+@media only screen and (max-width: 600px) {
+  .experience__subsection {
+    margin: 0 3rem; }
+  .experience__subhead {
+    text-align: center;
+    margin-bottom: 1.5rem; }
+  .experience__list__head {
+    margin-bottom: 1rem; }
+  .experience__dev {
+    margin-bottom: 1.5rem; }
+  .experience__design {
+    grid-column: col-start 8 / span 4; }
+  .experience__title {
+    font-size: 1.8rem;
+    text-align: center; } }
 
 /***************************
 * 

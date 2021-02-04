@@ -9,30 +9,51 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 // Remove automatic border around all focused items
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 
-    // Set value of 1 rem
-    // 1 rem = 10 pixels
-    // 10/16 = 62.5%
-    font-size: 62.5%;
+  // Set value of 1 rem
+  // 1 rem = 10 pixels
+  // 10/16 = 62.5%
+  font-size: 62.5%;
 }
 
 body {
-    background-color: $color-background;
+  background-color: $color-background;
 }
 
 .spacer {
-    margin-top: 1rem;
+  margin-top: 1rem;
+}
+
+// Manage display of elements for desktop and tablet/mobile
+.display {
+  &--desk {
+    display: block;
+  }
+  &--mob {
+    display: none;
+  }
+}
+
+// Tablet break-point for display of mobile elements
+@media only screen and (max-width: 800px) {
+  .display--desk {
+    display: none;
+  }
+
+  .display--mob {
+    display: block;
+  }
 }
