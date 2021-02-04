@@ -173,3 +173,11 @@ a {
     padding-top: 0.2rem;
   }
 }
+
+// Phone break-point for divider
+@media only screen and (max-width: 600px) {
+  .divider {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}

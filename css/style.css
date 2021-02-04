@@ -187,6 +187,11 @@ a {
     color: #fff;
     padding-top: 0.2rem; }
 
+@media only screen and (max-width: 600px) {
+  .divider {
+    margin: 0 auto;
+    margin-bottom: 3rem; } }
+
 /***************************
 * 
 *  JC PORTFOLIO
