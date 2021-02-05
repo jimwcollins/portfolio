@@ -166,6 +166,17 @@
   }
 }
 
+// Phone break-point for nav
+@media only screen and (max-width: 600px) {
+  .nav__link {
+    &:link,
+    &:visited {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+  }
+}
+
 // Background animation
 @keyframes nav-anim-open {
   0% {
