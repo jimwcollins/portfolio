@@ -80,6 +80,7 @@
 
       &--2 {
         @extend .nav__button__icon;
+        margin-left: 1.1rem;
 
         &--hover {
           background-color: $color-primary;
@@ -94,7 +95,6 @@
   }
 
   &__bg {
-    position: fixed;
     top: 0;
     right: 0;
     height: 0.1rem;

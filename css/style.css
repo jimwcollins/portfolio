@@ -57,6 +57,12 @@ body {
 .spacer {
   margin-top: 1rem; }
 
+.spacer__top {
+  margin-top: 3rem; }
+
+.spacer__bottom {
+  margin-bottom: 3rem; }
+
 .display--desk {
   display: block; }
 
@@ -217,6 +223,68 @@ a {
 .button:hover {
   background-color: #8c0e07;
   color: #fff; }
+
+/***************************
+* 
+*  JC PORTFOLIO
+*  Components: _contact.scss
+* 
+***************************/
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .contact__text {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s; }
+    .contact__text--show {
+      opacity: 1;
+      visibility: visible; }
+
+.contactGrid {
+  display: flex;
+  margin-top: 2rem; }
+  .contactGrid__item, .contactGrid__item--circle {
+    margin: 0 2rem;
+    color: #423d3c;
+    text-align: center;
+    transition: color 1s; }
+    .contactGrid__item--circle {
+      background-color: #423d3c;
+      border-radius: 50%; }
+    .contactGrid__item a, .contactGrid__item--circle a {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+  .contactGrid__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: #423d3c;
+    border-radius: 50%;
+    transition: background-color 1s; }
+  .contactGrid__icon, .contactGrid__icon--circle {
+    width: 4rem;
+    height: 4rem;
+    stroke-width: 0;
+    fill: #423d3c;
+    transition: fill 1s; }
+    .contactGrid__icon--circle {
+      height: 60%;
+      width: 60%;
+      fill: #ebebeb;
+      transition: background-color 1s; }
+  .contactGrid__item:hover, .contactGrid__item--circle:hover {
+    color: #000; }
+  .contactGrid__item:hover .contactGrid__icon, .contactGrid__item--circle:hover .contactGrid__icon, .contactGrid__item:hover .contactGrid__icon--circle, .contactGrid__item--circle:hover .contactGrid__icon--circle {
+    fill: #8c0e07; }
+  .contactGrid__item:hover .contactGrid__icon--circle, .contactGrid__item--circle:hover .contactGrid__icon--circle {
+    fill: #ebebeb; }
+  .contactGrid__item:hover .contactGrid__container, .contactGrid__item--circle:hover .contactGrid__container {
+    background-color: #8c0e07; }
 
 /***************************
 * 
@@ -453,13 +521,14 @@ a {
         .nav__button__icon--1--cross {
           background-color: #fff;
           transform: translateX(0.6rem) rotate(-225deg); }
-      .nav__button__icon--2--hover {
-        background-color: #8c0e07; }
-      .nav__button__icon--2--cross {
-        background-color: #fff;
-        transform: translateX(-0.6rem) rotate(225deg); }
+      .nav__button__icon--2 {
+        margin-left: 1.1rem; }
+        .nav__button__icon--2--hover {
+          background-color: #8c0e07; }
+        .nav__button__icon--2--cross {
+          background-color: #fff;
+          transform: translateX(-0.6rem) rotate(225deg); }
   .nav__bg {
-    position: fixed;
     top: 0;
     right: 0;
     height: 0.1rem;
@@ -553,7 +622,7 @@ a {
     margin-top: 10rem; }
   .section--color, .section--color--last {
     background-color: #ebebeb;
-    padding: 8rem 0; }
+    padding: 7rem 0; }
     .section--color--last {
       margin-bottom: 0rem !important; }
 

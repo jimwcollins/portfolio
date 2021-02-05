@@ -1,0 +1,91 @@
+/***************************
+* 
+*  JC PORTFOLIO
+*  Components: _contact.scss
+* 
+***************************/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+    &--show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.contactGrid {
+  display: flex;
+  margin-top: 2rem;
+
+  &__item {
+    margin: 0 2rem;
+    color: $color-grey-dark;
+    text-align: center;
+    transition: color 1s;
+
+    &--circle {
+      @extend .contactGrid__item;
+      background-color: $color-grey-dark;
+      border-radius: 50%;
+    }
+
+    & a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: $color-grey-dark;
+    border-radius: 50%;
+    transition: background-color 1s;
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    stroke-width: 0;
+    fill: $color-grey-dark;
+    transition: fill 1s;
+
+    &--circle {
+      @extend .contactGrid__icon;
+      height: 60%;
+      width: 60%;
+      fill: $color-section;
+
+      transition: background-color 1s;
+    }
+  }
+
+  &__item:hover {
+    color: $color-black;
+  }
+
+  &__item:hover &__icon {
+    fill: $color-primary;
+  }
+
+  &__item:hover &__icon--circle {
+    fill: $color-section;
+  }
+
+  &__item:hover &__container {
+    background-color: $color-primary;
+  }
+}

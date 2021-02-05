@@ -30,8 +30,8 @@
   // Color section
   &--color {
     @extend .section;
-    background-color: $color-background-med;
-    padding: 8rem 0;
+    background-color: $color-section;
+    padding: 7rem 0;
 
     // Remove margin for last section before footer
     &--last {
