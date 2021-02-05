@@ -49,7 +49,7 @@ const revealSplit = ([entry], observer) => {
 
 const splitObserver = new IntersectionObserver(revealSplit, {
   root: null,
-  threshold: 0.2,
+  threshold: 0.5,
 });
 
 allSplits.forEach((section) => {
