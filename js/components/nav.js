@@ -33,6 +33,9 @@ class Nav extends HTMLElement {
             <li class="nav__item">
               <a href="/pages/experience.html" class="nav__link">Experience</a>
             </li>
+            <li class="nav__item">
+              <a href="/pages/experience.html#contact" class="nav__link">Contact Me</a>
+            </li>
           </ul>
         </nav>
     `;
