@@ -21,11 +21,12 @@
     width: max-content;
   }
 
-  &__button {
+  &__buttons {
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
   }
 
   &__arrow {

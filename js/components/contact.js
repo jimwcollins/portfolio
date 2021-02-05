@@ -8,11 +8,11 @@
 // Reusable Contact component
 
 const contactRef = {
-  Default: 'get in touch!',
-  GitHub: 'browse my GitHub repos!',
-  Mail: 'email: jimwcollins@gmail.com!',
-  LinkedIn: 'visit my LinkedIn profile!',
-  CV: 'download my CV!',
+  Default: 'get in touch.',
+  GitHub: 'browse my GitHub repos.',
+  Mail: 'email me at jimwcollins@gmail.com.',
+  LinkedIn: 'visit my LinkedIn profile.',
+  CV: 'download my CV.',
 };
 
 class Contact extends HTMLElement {
