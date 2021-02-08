@@ -971,7 +971,7 @@ a {
   .project__showcase {
     margin: 0 3rem; } }
 
-.spread, .spread--wide {
+.spread {
   width: 80%;
   margin-bottom: 10rem;
   opacity: 1;
@@ -984,7 +984,7 @@ a {
   .spread__right--hidden {
     opacity: 0;
     transform: translateX(2rem); }
-  .spread:last-child, .spread--wide:last-child {
+  .spread:last-child {
     margin-bottom: 5rem; }
 
 .imgGrid {

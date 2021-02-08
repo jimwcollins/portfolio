@@ -86,7 +86,6 @@
   transition: all 1s;
 
   &--wide {
-    @extend .spread;
     width: 100%;
   }
 
