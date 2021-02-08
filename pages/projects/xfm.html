@@ -1,0 +1,123 @@
+<!-------------------------
+
+    JC Portfolio
+    Projects: Chickenshed
+
+-------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Set width of website content to the device width, for responsive site -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/js/components/nav.js" defer></script>
+    <script src="/js/components/hero.js" defer></script>
+    <script src="/js/components/header.js" defer></script>
+    <script src="/js/components/footer.js" defer></script>
+    <script src="/js/index.js" defer></script>
+
+    <title>James Collins</title>
+  </head>
+
+  <body class="project grid">
+    <!-- Nav, Header and Hero components -->
+    <nav-comp class="nav"></nav-comp>
+    <header class="header">
+      <header-comp></header-comp>
+    </header>
+    <hero-comp
+      class="section__hero"
+      title="XFM"
+      image="/img/Portfolio/Projects/XFM/XFM_Header.jpg"
+      imageAlt="XFM"
+      page="project"
+    ></hero-comp>
+
+    <!-- Section: Intro -->
+    <section class="section project__intro grid section--first">
+      <h3 class="heading__section fadein">
+        Design 02 <span class="heading__section--slash">/</span> <br />The XFM
+        Top 1000 Songs Of All Time
+      </h3>
+
+      <div class="section__split grid">
+        <div class="project__intro__details split__left">
+          <p class="project__intro__details--head">Client</p>
+          <p class="project__intro__details--copy">XFM</p>
+          <p class="project__intro__details--head">Publisher</p>
+          <p class="project__intro__details--copy">Elliot & Thompson</p>
+          <p class="project__intro__details--head">Disciplines</p>
+          <p class="project__intro__details--copy">
+            Art Direction<br />Book Design<br />Photoshop Retouching
+          </p>
+        </div>
+
+        <div class="split__right">
+          <p class="project__intro__sell">
+            XFM (now Radio X) is a commercial radio station with an alternative,
+            indie rock focus.
+          </p>
+          <p class="para">
+            When I came to design this compendium of their top 1000 songs of all
+            time, I went for a distressed, grungy feel to reflect this, as well
+            as extensive use of their excellent library of album and band
+            photography.
+          </p>
+          <p class="para">
+            This is very much the kind of music I love to listen to, making this
+            a hugely enjoyable project to work on.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Project Showcase 1 -->
+    <section class="project__showcase">
+      <img
+        src="/img/Portfolio/Projects/XFM/Spreads/XFM_Spread1.jpg"
+        alt=""
+        class="spread"
+      />
+      <img
+        src="/img/Portfolio/Projects/XFM/Spreads/XFM_Spread2.jpg"
+        alt=""
+        class="spread"
+      />
+      <img
+        src="/img/Portfolio/Projects/XFM/Spreads/XFM_Spread3.jpg"
+        alt=""
+        class="spread"
+      />
+    </section>
+
+    <div
+      class="project__splash"
+      style="
+        background-image: url(/img/Portfolio/Projects/XFM/Splash/XFM_Splash.jpg);
+      "
+    ></div>
+
+    <section class="section spotlight">
+      <div class="spotlight__intro">
+        <h4 class="section__subhead">Did you know?</h4>
+        <p class="para">
+          Franz Ferdinand’s seminal noughties classic ‘Take Me Out’ only ever
+          appears on their setlists as ‘The Scottish Song’, in reference to
+          Shakespearean actors superstitiously referring to Macbeth as ‘The
+          Scottish Play’.
+        </p>
+      </div>
+    </section>
+
+    <footer-comp class="footer-comp"></footer-comp>
+  </body>
+</html>
