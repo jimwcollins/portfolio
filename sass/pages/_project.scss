@@ -105,6 +105,8 @@
 }
 
 .imgGrid {
+  grid-column: content-start / content-end;
+  margin-top: $section-top;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 15rem);
