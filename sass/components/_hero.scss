@@ -16,6 +16,11 @@
   background-position: center;
   overflow: hidden;
 
+  &--top {
+    @extend .hero;
+    background-position: top;
+  }
+
   &__title {
     @include centre-content;
     width: max-content;

@@ -13,9 +13,12 @@ class Hero extends HTMLElement {
       this.splitTitle = 'splitTitle';
     }
 
+    this.heroImg =
+      this.getAttribute('position') === 'top' ? 'hero--top' : 'hero';
+
     this.innerHTML = `
       <section 
-        class="hero" 
+        class=${this.heroImg}
         style="background-image: url(${this.getAttribute('image')}"
       >
 

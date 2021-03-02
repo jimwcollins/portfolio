@@ -32,6 +32,11 @@
     }
   }
 
+  &__double {
+    grid-column: 1 / -1;
+    align-self: center;
+  }
+
   &__link {
     text-decoration: none;
     color: inherit;

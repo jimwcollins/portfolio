@@ -94,7 +94,7 @@ a {
   text-decoration: none;
   color: inherit; }
 
-.hero {
+.hero, .hero--top {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   text-transform: uppercase; }
@@ -295,12 +295,14 @@ a {
 .section__hero {
   grid-column: full-start / full-end; }
 
-.hero {
+.hero, .hero--top {
   height: 100vh;
   position: relative;
   background-size: cover;
   background-position: center;
   overflow: hidden; }
+  .hero--top {
+    background-position: top; }
   .hero__title {
     position: absolute;
     top: 50%;
@@ -881,6 +883,9 @@ a {
     text-align: center; }
     .work-grid__item--border {
       border: 0.1rem solid #a19391; }
+  .work-grid__double {
+    grid-column: 1 / -1;
+    align-self: center; }
   .work-grid__link {
     text-decoration: none;
     color: inherit; }
@@ -972,7 +977,7 @@ a {
     margin: 0 3rem; } }
 
 .spread {
-  width: 80%;
+  width: 85%;
   margin-bottom: 10rem;
   opacity: 1;
   transition: all 1s; }
