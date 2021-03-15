@@ -173,31 +173,6 @@ a {
   .section__subhead {
     font-size: 2.5rem; } }
 
-.divider {
-  grid-column: content-start / content-end;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  background-color: #8c0e07;
-  margin-bottom: 5rem; }
-  .divider__symbol {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #fff;
-    padding-top: 0.2rem; }
-
-@media only screen and (max-width: 600px) {
-  .divider {
-    margin: 0 auto;
-    margin-bottom: 3rem; } }
-
 /***************************
 * 
 *  JC PORTFOLIO
@@ -285,6 +260,31 @@ a {
     fill: #ebebeb; }
   .contactGrid__item:hover .contactGrid__container, .contactGrid__item--circle:hover .contactGrid__container {
     background-color: #8c0e07; }
+
+.divider {
+  grid-column: content-start / content-end;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #8c0e07;
+  margin: 5rem 0; }
+  .divider__symbol {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 0.2rem; }
+
+@media only screen and (max-width: 600px) {
+  .divider {
+    margin: 0 auto;
+    margin-bottom: 3rem; } }
 
 /***************************
 * 
@@ -725,6 +725,9 @@ a {
     width: 80%; }
   .spotlight .section__subhead {
     margin-bottom: 2rem; }
+  .spotlight__logo {
+    height: 8rem;
+    margin-top: 2rem; }
 
 @media only screen and (max-width: 800px) {
   .spotlight__intro {
@@ -1037,13 +1040,29 @@ a {
   justify-items: center;
   align-items: center;
   width: 95%;
-  margin: 7rem 0; }
+  margin-top: 5rem; }
+  .video__collection:not(:last-child) {
+    margin-bottom: 5rem; }
   .video__collection__vid, .video__collection__vid--main {
     width: 70%;
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2); }
   .video__collection__vid--main {
     width: 75%; }
+
+.video__TwinCollection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 5rem; }
+  .video__TwinCollection:not(:last-child) {
+    margin-bottom: 5rem; }
+  .video__TwinCollection__vid {
+    width: 90%;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2); }
 
 .video {
   width: 80%;

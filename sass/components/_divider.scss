@@ -1,0 +1,30 @@
+.divider {
+  grid-column: content-start / content-end;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: $color-primary;
+  margin: 5rem 0;
+
+  &__symbol {
+    font-family: $font-display;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $color-white;
+    padding-top: 0.2rem;
+  }
+}
+
+// Phone break-point for divider
+@media only screen and (max-width: 600px) {
+  .divider {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
