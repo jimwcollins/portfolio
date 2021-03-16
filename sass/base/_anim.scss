@@ -16,3 +16,25 @@
     transform: translateY(8rem);
   }
 }
+
+.animPinch {
+  &__left {
+    opacity: 1;
+    transition: all 1.5s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(-2rem);
+    }
+  }
+
+  &__right {
+    opacity: 1;
+    transition: all 1.5s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(2rem);
+    }
+  }
+}

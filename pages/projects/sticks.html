@@ -64,6 +64,17 @@
             Styled Components <br />
             HTML / CSS <br />Axios
           </p>
+          <p class="project__intro__details--head">Visit</p>
+          <p class="project__intro__details--copy">
+            <a href="https://sticksandstones-jc.netlify.app/" target="_blank"
+              >Sticks + Stones</a
+            >
+            <br /><a
+              href="https://github.com/jimwcollins/sticksandstones"
+              target="_blank"
+              >GitHub</a
+            >
+          </p>
         </div>
 
         <div class="split__right">
@@ -106,9 +117,9 @@
       <div class="spotlight__intro">
         <h4 class="section__subhead">Developing the game</h4>
         <p class="para">
-          The game now features numerous animated elements for a slick,
-          game-like feel, powered by React Transition Group. It also includes an
-          animated hangman built around the HTML canvas.
+          The app now features numerous animated elements for a slick, game-like
+          feel, powered by React Transition Group. It also includes an animated
+          hangman built around the HTML canvas.
         </p>
         <p class="para">
           Rather than hard-coding a bank of phrases, I now make Axios requests
@@ -121,7 +132,7 @@
         </p>
       </div>
 
-      <video width="100%" height="auto" autoplay loop class="video animUp">
+      <video width="100%" height="auto" loop class="video video__main animUp">
         <source
           src="/img/Portfolio/Projects/Sticks/vids/Sticks_Night.mp4"
           type="video/mp4"
@@ -143,18 +154,17 @@
             The game uses a HTML canvas to display the hangman. To animate the
             drawing, I built an animated canvas component that receives draw
             instructions and renders them a frame at a time, using JavaScript’s
-            requestAnimationFrame to make recursive calls to the render
+            requestAnimationFrame to prompt recursive calls to the render
             function.
           </p>
         </div>
 
-        <div class="video__TwinCollection animUp">
+        <div class="videoMulti video__TwinCollection animPinch">
           <video
             width="100%"
             height="auto"
-            autoplay
             loop
-            class="video__TwinCollection__vid"
+            class="video__TwinCollection__vid animPinch__left"
           >
             <source
               src="/img/Portfolio/Projects/Sticks/vids/HangmanAnim_Hang.mp4"
@@ -165,9 +175,8 @@
           <video
             width="100%"
             height="auto"
-            autoplay
             loop
-            class="video__TwinCollection__vid"
+            class="video__TwinCollection__vid animPinch__right"
           >
             <source
               src="/img/Portfolio/Projects/Sticks/vids/HangmanAnim_Keys.mp4"
@@ -203,13 +212,12 @@
           </p>
         </div>
 
-        <div class="video__TwinCollection animUp">
+        <div class="videoMulti video__TwinCollection animPinch">
           <video
             width="100%"
             height="auto"
-            autoplay
             loop
-            class="video__TwinCollection__vid"
+            class="video__TwinCollection__vid animPinch__left"
           >
             <source
               src="/img/Portfolio/Projects/Sticks/vids/LetterAnim_Phrase.mp4"
@@ -220,9 +228,8 @@
           <video
             width="100%"
             height="auto"
-            autoplay
             loop
-            class="video__TwinCollection__vid"
+            class="video__TwinCollection__vid animPinch__right"
           >
             <source
               src="/img/Portfolio/Projects/Sticks/vids/LetterAnim_Keys.mp4"
@@ -245,7 +252,7 @@
             API, which are then filtered to remove titles that are excessively
             long or contain numbers. Random numbers are generated to determine
             both the page of titles retrieved and the title selected from the
-            retrieved array. Once used, film titles are deleted from the array
+            retrieved array. Once used, film titles are removed from the array
             to remove any chance of them appearing again within a session. Only
             when these 20 titles are all used do we retrieve another 20.
           </p>

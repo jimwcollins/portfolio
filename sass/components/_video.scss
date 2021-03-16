@@ -1,0 +1,58 @@
+.video {
+  &__main {
+    width: 80%;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 1rem rgba($color-black, 0.1);
+    margin: 7rem 0;
+  }
+
+  &__collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 95%;
+    margin-top: 5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    &__vid {
+      width: 70%;
+      border-radius: 0.5rem;
+      box-shadow: 0.1rem 0.1rem 1rem rgba($color-black, 0.2);
+    }
+
+    &__vid--main {
+      @extend .video__collection__vid;
+      width: 75%;
+    }
+  }
+
+  &__TwinCollection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    &__vid {
+      width: 90%;
+      border-radius: 0.5rem;
+      box-shadow: 0.1rem 0.1rem 1rem rgba($color-black, 0.2);
+    }
+  }
+}
+
+// Tablet break-point for video
+@media only screen and (max-width: 800px) {
+  .video__solo {
+    margin: 5rem 0;
+  }
+}

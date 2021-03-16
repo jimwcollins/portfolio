@@ -6,6 +6,51 @@
  ***************************/
 
 /*******************
+ * Trigger videos
+ *******************/
+
+const playVid = (vid, play) => {
+  if (play) vid.play();
+  else vid.pause();
+};
+
+// Single vids
+const allSoloVids = document.querySelectorAll('.video');
+console.log('Solo vids', allSoloVids);
+
+const handleSingleVid = ([entry]) => {
+  playVid(entry.target, entry.isIntersecting);
+};
+
+const vidObserver = new IntersectionObserver(handleSingleVid, {
+  root: null,
+  threshold: 1,
+});
+
+allSoloVids.forEach((vid) => {
+  vidObserver.observe(vid);
+});
+
+// Vid Collection
+const allMultVids = document.querySelectorAll('.videoMulti');
+
+const handleMultiVids = ([entry]) => {
+  // Loop through all videos in collection and play/pause all
+  [...entry.target.children].forEach((childVid) => {
+    playVid(childVid, entry.isIntersecting);
+  });
+};
+
+const multiVidObserver = new IntersectionObserver(handleMultiVids, {
+  root: null,
+  threshold: 1,
+});
+
+allMultVids.forEach((multi) => {
+  multiVidObserver.observe(multi);
+});
+
+/*******************
  * Fade-in animation
  *******************/
 
@@ -60,6 +105,40 @@ allSplits.forEach((section) => {
   rightDiv.classList.add('split__right--hidden');
 
   splitObserver.observe(section);
+});
+
+/*************************
+ * Pinch animation
+ *************************/
+
+const allPinch = document.querySelectorAll('.animPinch');
+
+const revealPinch = ([entry], observer) => {
+  if (!entry.isIntersecting) return;
+
+  // Remove the hidden class when we intersect left and right divs
+  const leftElem = entry.target.children[0];
+  const rightElem = entry.target.children[1];
+
+  leftElem.classList.remove('animPinch__left--hidden');
+  rightElem.classList.remove('animPinch__right--hidden');
+
+  observer.unobserve(entry.target);
+};
+
+const pinchObserver = new IntersectionObserver(revealPinch, {
+  root: null,
+  threshold: 0.25,
+});
+
+allPinch.forEach((pinch) => {
+  // Hide elem initially
+  const leftElem = pinch.children[0];
+  const rightElem = pinch.children[1];
+  leftElem.classList.add('animPinch__left--hidden');
+  rightElem.classList.add('animPinch__right--hidden');
+
+  pinchObserver.observe(pinch);
 });
 
 /***************************
