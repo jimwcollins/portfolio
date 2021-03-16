@@ -133,30 +133,25 @@
 
   &__item {
     margin: 1rem;
-  }
-
-  &__link {
-    &:link,
-    &:visited {
-      display: inline-block;
-      font-family: $font-display;
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: transparent;
-      text-transform: uppercase;
-      background-image: linear-gradient(
-        -90deg,
-        rgba($color-white, 0.9),
-        rgba($color-white, 0.9) 50%,
-        rgba($color-white, 0.5) 50%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      background-size: 200%;
-      text-decoration: none;
-      padding: 1rem 2rem;
-      transition: all 0.5s;
-    }
+    display: block;
+    font-family: $font-display;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: transparent;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -90deg,
+      rgba($color-white, 0.9),
+      rgba($color-white, 0.9) 50%,
+      rgba($color-white, 0.5) 50%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200%;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.5s;
 
     &:hover,
     &:active {

@@ -616,9 +616,8 @@ a {
     list-style: none;
     text-align: center; }
   .nav__item {
-    margin: 1rem; }
-  .nav__link:link, .nav__link:visited {
-    display: inline-block;
+    margin: 1rem;
+    display: block;
     font-family: "Josefin Sans", sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
@@ -630,10 +629,11 @@ a {
     background-size: 200%;
     text-decoration: none;
     padding: 1rem 2rem;
+    cursor: pointer;
     transition: all 0.5s; }
-  .nav__link:hover, .nav__link:active {
-    background-position: -100%;
-    transform: scale(1.1); }
+    .nav__item:hover, .nav__item:active {
+      background-position: -100%;
+      transform: scale(1.1); }
 
 @media only screen and (max-width: 600px) {
   .nav__link:link, .nav__link:visited {

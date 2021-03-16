@@ -13,6 +13,17 @@ class Nav extends HTMLElement {
   }
 
   connectedCallback() {
+    const fromMenu = new URLSearchParams(location.search).get('menu');
+    let backgroundClass = 'nav__bg';
+    let navClass = 'nav__nav';
+
+    // Display the menu initially on page load if we've clicked a menu link
+    // Provides a seamless menu nav experience
+    if (fromMenu) {
+      backgroundClass += ' nav__bg--active';
+      navClass += ' nav__nav--active';
+    }
+
     this.innerHTML = `
         <div class="nav__button">
           <p class="nav__button__text">MENU</p>
@@ -20,21 +31,21 @@ class Nav extends HTMLElement {
           <span class="nav__button__icon nav__button__icon--2">&nbsp;</span>
         </div>
 
-        <div class="nav__bg"></div>
+        <div class="${backgroundClass}"></div>
 
-        <nav class="nav__nav">
+        <nav class="${navClass}">
           <ul class="nav__list">
-            <li class="nav__item">
-              <a href="/index.html#top" class="nav__link">Home</a>
+            <li class="nav__item" onClick=navigate("/index.html?menu=true#top")>
+              Home
             </li>
-            <li class="nav__item">
-              <a href="/pages/portfolio.html" class="nav__link">Portfolio</a>
+            <li class="nav__item" onClick=navigate("/pages/portfolio.html?menu=true")>
+              Portfolio
             </li>
-            <li class="nav__item">
-              <a href="/pages/experience.html" class="nav__link">Experience</a>
+            <li class="nav__item" onClick=navigate("/pages/experience.html?menu=true")>
+              Experience
             </li>
-            <li class="nav__item">
-              <a href="/pages/experience.html#contact" class="nav__link">Contact Me</a>
+            <li class="nav__item" onClick=navigate("/pages/experience.html?menu=true#contact")>
+              Contact Me
             </li>
           </ul>
         </nav>
@@ -44,7 +55,7 @@ class Nav extends HTMLElement {
 
 customElements.define('nav-comp', Nav);
 
-// Nav js
+// Menu JS
 
 const nav = document.querySelector('.nav__nav');
 const navBG = document.querySelector('.nav__bg');
@@ -76,3 +87,25 @@ navButton.addEventListener('click', (event) => {
   navIcon1.classList.toggle('nav__button__icon--1--cross');
   navIcon2.classList.toggle('nav__button__icon--2--cross');
 });
+
+// Page navigation JS
+
+const navigate = (page) => {
+  window.location.assign(page);
+
+  // If this code executes, location has not changed.
+  // onLoad will not fire, so clear nav elements here.
+  nav.classList.remove('nav__nav--active');
+  navBG.classList.remove('nav__bg--active');
+  navIcon1.classList.remove('nav__button__icon--1--cross');
+  navIcon2.classList.remove('nav__button__icon--2--cross');
+  navIcon1.classList.remove('nav__button__icon--1--hover');
+  navIcon2.classList.remove('nav__button__icon--2--hover');
+};
+
+// Clear the nav when the page loads to handle occasions where
+// we've come from a menu click. Provides seamless page navs.
+window.onload = () => {
+  nav.classList.remove('nav__nav--active');
+  navBG.classList.remove('nav__bg--active');
+};
