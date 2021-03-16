@@ -16,7 +16,6 @@ const playVid = (vid, play) => {
 
 // Single vids
 const allSoloVids = document.querySelectorAll('.video');
-console.log('Solo vids', allSoloVids);
 
 const handleSingleVid = ([entry]) => {
   playVid(entry.target, entry.isIntersecting);
