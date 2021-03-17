@@ -67,10 +67,13 @@ const fadeObserver = new IntersectionObserver(revealElem, {
   threshold: 0.2,
 });
 
-allFadeIns.forEach((elem) => {
-  elem.classList.add('fadein--hidden');
-  fadeObserver.observe(elem);
-});
+// Only set up observers and hide spreads if user hasn't clicked back or fwd
+if (!browserBtn) {
+  allFadeIns.forEach((elem) => {
+    elem.classList.add('fadein--hidden');
+    fadeObserver.observe(elem);
+  });
+}
 
 /*************************
  * Split section animation
@@ -96,15 +99,17 @@ const splitObserver = new IntersectionObserver(revealSplit, {
   threshold: 0.25,
 });
 
-allSplits.forEach((section) => {
-  // Hide section initially
-  const leftDiv = section.children[0];
-  const rightDiv = section.children[1];
-  leftDiv.classList.add('split__left--hidden');
-  rightDiv.classList.add('split__right--hidden');
+if (!browserBtn) {
+  allSplits.forEach((section) => {
+    // Hide section initially
+    const leftDiv = section.children[0];
+    const rightDiv = section.children[1];
+    leftDiv.classList.add('split__left--hidden');
+    rightDiv.classList.add('split__right--hidden');
 
-  splitObserver.observe(section);
-});
+    splitObserver.observe(section);
+  });
+}
 
 /*************************
  * Pinch animation
@@ -130,15 +135,16 @@ const pinchObserver = new IntersectionObserver(revealPinch, {
   threshold: 0.25,
 });
 
-allPinch.forEach((pinch) => {
-  // Hide elem initially
-  const leftElem = pinch.children[0];
-  const rightElem = pinch.children[1];
-  leftElem.classList.add('animPinch__left--hidden');
-  rightElem.classList.add('animPinch__right--hidden');
+if (!browserBtn) {
+  allPinch.forEach((pinch) => {
+    const leftElem = pinch.children[0];
+    const rightElem = pinch.children[1];
+    leftElem.classList.add('animPinch__left--hidden');
+    rightElem.classList.add('animPinch__right--hidden');
 
-  pinchObserver.observe(pinch);
-});
+    pinchObserver.observe(pinch);
+  });
+}
 
 /***************************
  * Image up animation
@@ -158,10 +164,12 @@ const upImgObserver = new IntersectionObserver(revealUpImg, {
   threshold: 0.25,
 });
 
-allUpImages.forEach((image) => {
-  image.classList.add('animUp--hidden');
-  upImgObserver.observe(image);
-});
+if (!browserBtn) {
+  allUpImages.forEach((image) => {
+    image.classList.add('animUp--hidden');
+    upImgObserver.observe(image);
+  });
+}
 
 /***************************
  * Project spread animation
@@ -185,11 +193,12 @@ const spreadObserver = new IntersectionObserver(revealSpread, {
 
 let isLeft = false;
 
-allSpreads.forEach((spread) => {
-  // Apply our hidden classes
-  isLeft = !isLeft;
-  if (isLeft) spread.classList.add('spread__left--hidden');
-  else spread.classList.add('spread__right--hidden');
+if (!browserBtn) {
+  allSpreads.forEach((spread) => {
+    isLeft = !isLeft;
+    if (isLeft) spread.classList.add('spread__left--hidden');
+    else spread.classList.add('spread__right--hidden');
 
-  spreadObserver.observe(spread);
-});
+    spreadObserver.observe(spread);
+  });
+}
