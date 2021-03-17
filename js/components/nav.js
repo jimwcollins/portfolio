@@ -21,7 +21,7 @@ class Nav extends HTMLElement {
 
     if (fromMenu && !browserBtn) {
       backgroundClass += ' nav__bg--active';
-      navClass += ' nav__nav--activeStatic';
+      navClass += ' nav__nav--placeholder';
     }
 
     this.innerHTML = `
@@ -119,6 +119,12 @@ window.onhashchange = () => {
 // Clear the nav when the page loads to handle occasions where
 // we've come from a menu click. Provides seamless page navs.
 window.onload = () => {
-  nav.classList.remove('nav__nav--activeStatic');
+  nav.classList.remove('nav__nav--placeholder');
+  navBG.classList.remove('nav__bg--active');
+};
+
+// Remove menu before moving to new page
+window.onunload = () => {
+  nav.classList.remove('nav__nav--active');
   navBG.classList.remove('nav__bg--active');
 };

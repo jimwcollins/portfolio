@@ -124,9 +124,9 @@
       animation: nav-anim-open 0.4s forwards ease-in-out;
     }
 
-    &--activeStatic {
+    &--placeholder {
       visibility: visible;
-      animation: nav-anim-static-open forwards ease-in-out;
+      animation: nav-anim-open-ph forwards ease-in-out;
     }
   }
 
@@ -195,7 +195,7 @@
   }
 }
 
-@keyframes nav-anim-static-open {
+@keyframes nav-anim-open-ph {
   100% {
     opacity: 1;
     width: 100vw;

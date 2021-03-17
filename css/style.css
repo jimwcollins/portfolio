@@ -609,9 +609,9 @@ a {
     .nav__nav--active {
       visibility: visible;
       animation: nav-anim-open 0.4s forwards ease-in-out; }
-    .nav__nav--activeStatic {
+    .nav__nav--placeholder {
       visibility: visible;
-      animation: nav-anim-static-open forwards ease-in-out; }
+      animation: nav-anim-open-ph forwards ease-in-out; }
   .nav__list {
     position: absolute;
     top: 50%;
@@ -655,7 +655,7 @@ a {
     opacity: 1;
     width: 100vw; } }
 
-@keyframes nav-anim-static-open {
+@keyframes nav-anim-open-ph {
   100% {
     opacity: 1;
     width: 100vw; } }
