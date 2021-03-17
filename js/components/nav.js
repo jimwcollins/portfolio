@@ -21,7 +21,7 @@ class Nav extends HTMLElement {
 
     if (fromMenu && !browserBtn) {
       backgroundClass += ' nav__bg--active';
-      navClass += ' nav__nav--active';
+      navClass += ' nav__nav--activeStatic';
     }
 
     this.innerHTML = `
@@ -91,10 +91,23 @@ navButton.addEventListener('click', (event) => {
 // Page navigation JS
 
 const navigate = (page) => {
+  const oldPath = location.pathname + location.search + location.hash;
+
   window.location.assign(page);
 
-  // If this code executes, location has not changed.
-  // onLoad will not fire, so clear nav elements here.
+  // Reset menu if we've clicked same menu item (path unchanged)
+  if (oldPath === page) {
+    nav.classList.remove('nav__nav--active');
+    navBG.classList.remove('nav__bg--active');
+    navIcon1.classList.remove('nav__button__icon--1--cross');
+    navIcon2.classList.remove('nav__button__icon--2--cross');
+    navIcon1.classList.remove('nav__button__icon--1--hover');
+    navIcon2.classList.remove('nav__button__icon--2--hover');
+  }
+};
+
+// Reset menu if only hash has changed
+window.onhashchange = () => {
   nav.classList.remove('nav__nav--active');
   navBG.classList.remove('nav__bg--active');
   navIcon1.classList.remove('nav__button__icon--1--cross');
@@ -106,6 +119,6 @@ const navigate = (page) => {
 // Clear the nav when the page loads to handle occasions where
 // we've come from a menu click. Provides seamless page navs.
 window.onload = () => {
-  nav.classList.remove('nav__nav--active');
+  nav.classList.remove('nav__nav--activeStatic');
   navBG.classList.remove('nav__bg--active');
 };

@@ -123,6 +123,11 @@
       visibility: visible;
       animation: nav-anim-open 0.4s forwards ease-in-out;
     }
+
+    &--activeStatic {
+      visibility: visible;
+      animation: nav-anim-static-open forwards ease-in-out;
+    }
   }
 
   &__list {
@@ -184,6 +189,13 @@
     width: 110vw;
   }
 
+  100% {
+    opacity: 1;
+    width: 100vw;
+  }
+}
+
+@keyframes nav-anim-static-open {
   100% {
     opacity: 1;
     width: 100vw;
