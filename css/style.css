@@ -66,7 +66,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  overscroll-behavior-y: none; }
 
 .spacer {
   margin-top: 1rem; }
