@@ -13,13 +13,13 @@ class Nav extends HTMLElement {
   }
 
   connectedCallback() {
+    // Display the menu initially on page load if we've clicked a menu link
+    // Provides a seamless menu nav experience
     const fromMenu = new URLSearchParams(location.search).get('menu');
     let backgroundClass = 'nav__bg';
     let navClass = 'nav__nav';
 
-    // Display the menu initially on page load if we've clicked a menu link
-    // Provides a seamless menu nav experience
-    if (fromMenu) {
+    if (fromMenu && !browserBtn) {
       backgroundClass += ' nav__bg--active';
       navClass += ' nav__nav--active';
     }
