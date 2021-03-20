@@ -64,7 +64,7 @@ const revealElem = ([entry], observer) => {
 
 const fadeObserver = new IntersectionObserver(revealElem, {
   root: null,
-  threshold: 1,
+  threshold: 0.65,
 });
 
 // Only set up observers and hide spreads if user hasn't clicked back or fwd
