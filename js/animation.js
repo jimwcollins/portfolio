@@ -64,7 +64,7 @@ const revealElem = ([entry], observer) => {
 
 const fadeObserver = new IntersectionObserver(revealElem, {
   root: null,
-  threshold: 0.2,
+  threshold: 1,
 });
 
 // Only set up observers and hide spreads if user hasn't clicked back or fwd
@@ -96,7 +96,7 @@ const revealSplit = ([entry], observer) => {
 
 const splitObserver = new IntersectionObserver(revealSplit, {
   root: null,
-  threshold: 0.25,
+  threshold: 0.75,
 });
 
 if (!browserBtn) {
@@ -161,7 +161,7 @@ const revealUpImg = ([entry], observer) => {
 
 const upImgObserver = new IntersectionObserver(revealUpImg, {
   root: null,
-  threshold: 0.25,
+  threshold: 0.5,
 });
 
 if (!browserBtn) {
@@ -188,7 +188,7 @@ const revealSpread = ([entry], observer) => {
 
 const spreadObserver = new IntersectionObserver(revealSpread, {
   root: null,
-  threshold: 0.5,
+  threshold: 0.85,
 });
 
 let isLeft = false;

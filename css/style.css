@@ -508,6 +508,7 @@ a {
   top: 0rem;
   height: 7rem;
   width: 100%;
+  padding-top: 0.4rem;
   z-index: 500;
   background-color: rgba(255, 255, 255, 0.95);
   transition: all 0.5s; }
@@ -538,7 +539,7 @@ a {
   z-index: 1000; }
   .nav__button {
     position: fixed;
-    top: 2rem;
+    top: 2.3rem;
     right: 3rem;
     width: 7.5rem;
     height: 2.5rem;
@@ -948,7 +949,7 @@ a {
     cursor: pointer;
     text-align: center; }
     .work-grid__item--border {
-      border: 0.1rem solid #a19391; }
+      border: 0.2rem solid #423d3c; }
   .work-grid__double {
     grid-column: 1 / -1;
     align-self: center; }
