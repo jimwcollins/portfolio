@@ -949,7 +949,7 @@ a {
     cursor: pointer;
     text-align: center; }
     .work-grid__item--border {
-      border: 0.2rem solid #423d3c; }
+      border: 0.1rem solid #423d3c; }
   .work-grid__double {
     grid-column: 1 / -1;
     align-self: center; }
