@@ -161,7 +161,7 @@ const revealUpImg = ([entry], observer) => {
 
 const upImgObserver = new IntersectionObserver(revealUpImg, {
   root: null,
-  threshold: 0.5,
+  threshold: 0.3,
 });
 
 if (!browserBtn) {
