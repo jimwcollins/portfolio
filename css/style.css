@@ -829,6 +829,9 @@ a {
     .experience__list__head {
       font-weight: 400;
       margin-bottom: 2rem; }
+    .experience__list__sub {
+      font-weight: 400;
+      color: #423d3c; }
   .experience__para {
     margin-bottom: 1.75rem; }
   .experience__para__svg {
