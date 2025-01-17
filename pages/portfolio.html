@@ -7,149 +7,132 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
 
-    <!-- Set width of website content to the device width, for responsive site -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Set width of website content to the device width, for responsive site -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="/css/style.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+		<link href="/css/style.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <script src="/js/index.js" defer></script>
-    <script src="/js/components/nav.js" defer></script>
-    <script src="/js/components/hero.js" defer></script>
-    <script src="/js/components/header.js" defer></script>
-    <script src="/js/components/footer.js" defer></script>
-    <script src="/js/animation.js" defer></script>
+		<script src="/js/index.js" defer></script>
+		<script src="/js/components/nav.js" defer></script>
+		<script src="/js/components/hero.js" defer></script>
+		<script src="/js/components/header.js" defer></script>
+		<script src="/js/components/footer.js" defer></script>
+		<script src="/js/animation.js" defer></script>
 
-    <title>James Collins</title>
-  </head>
+		<title>James Collins</title>
+	</head>
 
-  <body class="portfolio grid">
-    <!-- Nav, Header and Hero components -->
-    <nav-comp class="nav"></nav-comp>
-    <header class="header">
-      <header-comp></header-comp>
-    </header>
-    <hero-comp
-      class="section__hero"
-      title="Portfolio"
-      image="/img/Portfolio/portfolio_hero.jpg"
-      imageAlt="Design Sketches"
-      page="standard"
-    ></hero-comp>
+	<body class="portfolio grid">
+		<!-- Nav, Header and Hero components -->
+		<nav-comp class="nav"></nav-comp>
+		<header class="header">
+			<header-comp></header-comp>
+		</header>
+		<hero-comp
+			class="section__hero"
+			title="Portfolio"
+			image="/img/Portfolio/portfolio_hero.jpg"
+			imageAlt="Design Sketches"
+			page="standard"
+		></hero-comp>
 
-    <!-- Dev Projects section -->
-    <section class="section grid section--first">
-      <h3 class="heading__section display--desk fadein">
-        Development <span class="heading__section--slash">/</span> Projects
-      </h3>
-      <h3 class="heading__section display--mob">
-        Dev <span class="heading__section--slash">/</span> Projects
-      </h3>
+		<!-- Dev Projects section -->
+		<section class="section grid section--first">
+			<h3 class="heading__section display--desk fadein">
+				Development <span class="heading__section--slash">/</span> Projects
+			</h3>
+			<h3 class="heading__section display--mob">
+				Dev <span class="heading__section--slash">/</span> Projects
+			</h3>
 
-      <div class="section__center">
-        <p class="para">
-          My new development journey is just beginning, however during my time
-          at Northcoders coding bootcamp I worked on numerous exciting projects,
-          as well as in my subsequent personal work. Some highlights can be seen
-          below.
-        </p>
-      </div>
+			<div class="section__center">
+				<p class="para">
+					In my current role at Tred, I work across the front-end and back-end, on a tech stack
+					including technologies such as React Native, TypeScript and Amazon Web Services.
+				</p>
+				<p class="para">
+					During my time at Northcoders coding bootcamp, and in my subsequent personal work, I
+					worked on numerous exciting projects. Some highlights can be seen below.
+				</p>
+			</div>
 
-      <div class="work-grid animUp">
-        <a href="/pages/projects/sticks.html" class="work-grid__link">
-          <figure class="work-grid__item">
-            <image
-              src="/img/Portfolio/Grid/Sticks_Grid.svg"
-              class="work-grid__img"
-            ></image>
-            <figcaption class="work-grid__cap">Sticks + Stones</figcaption>
-          </figure>
-        </a>
-        <a href="/pages/projects/portfolio-site.html" class="work-grid__link">
-          <figure class="work-grid__item">
-            <image
-              src="/img/Portfolio/Grid/Portfolio_Grid.jpg"
-              class="work-grid__img"
-            ></image>
-            <figcaption class="work-grid__cap">Portfolio Website</figcaption>
-          </figure>
-        </a>
-        <a href="/pages/projects/meme.html" class="work-grid__link">
-          <figure class="work-grid__item">
-            <image
-              src="/img/Portfolio/Grid/Meme_Grid.png"
-              class="work-grid__img"
-            ></image>
-            <figcaption class="work-grid__cap">Meme What You Say</figcaption>
-          </figure>
-        </a>
-        <a href="/pages/projects/iris.html" class="work-grid__link">
-          <figure class="work-grid__item">
-            <image
-              src="/img/Portfolio/Grid/Iris_Grid.png"
-              class="work-grid__img"
-            ></image>
-            <figcaption class="work-grid__cap">The Iris</figcaption>
-          </figure>
-        </a>
-      </div>
-    </section>
+			<div class="work-grid animUp">
+				<a href="/pages/projects/sticks.html" class="work-grid__link">
+					<figure class="work-grid__item">
+						<image src="/img/Portfolio/Grid/Sticks_Grid.svg" class="work-grid__img"></image>
+						<figcaption class="work-grid__cap">Sticks + Stones</figcaption>
+					</figure>
+				</a>
+				<a href="/pages/projects/portfolio-site.html" class="work-grid__link">
+					<figure class="work-grid__item">
+						<image src="/img/Portfolio/Grid/Portfolio_Grid.jpg" class="work-grid__img"></image>
+						<figcaption class="work-grid__cap">Portfolio Website</figcaption>
+					</figure>
+				</a>
+				<a href="/pages/projects/meme.html" class="work-grid__link">
+					<figure class="work-grid__item">
+						<image src="/img/Portfolio/Grid/Meme_Grid.png" class="work-grid__img"></image>
+						<figcaption class="work-grid__cap">Meme What You Say</figcaption>
+					</figure>
+				</a>
+				<a href="/pages/projects/iris.html" class="work-grid__link">
+					<figure class="work-grid__item">
+						<image src="/img/Portfolio/Grid/Iris_Grid.png" class="work-grid__img"></image>
+						<figcaption class="work-grid__cap">The Iris</figcaption>
+					</figure>
+				</a>
+			</div>
+		</section>
 
-    <!-- Design Projects section -->
-    <section class="section grid section">
-      <h3 class="heading__section fadein">
-        Design <span class="heading__section--slash">/</span> Projects
-      </h3>
+		<!-- Design Projects section -->
+		<section class="section grid section">
+			<h3 class="heading__section fadein">
+				Design <span class="heading__section--slash">/</span> Projects
+			</h3>
 
-      <div class="section__center">
-        <p class="para">
-          During my design career I have been fortunate to work with a wide
-          range of clients, from Classic FM and XFM to the Ramblers’ Association
-          and Chickenshed Theatre Company. A selection of my work can be viewed
-          below.
-        </p>
-      </div>
+			<div class="section__center">
+				<p class="para">
+					The key to great design has always been great communication. As a designer, I
+					collaborated closely with clients to fully understand their needs, then used attractive,
+					considered design to deliver their message to its audience with maximum clarity and
+					impact. During my design career I have been fortunate to work with a wide range of
+					clients, from Classic FM and XFM to the Ramblers’ Association and Chickenshed Theatre
+					Company. A selection of my work can be viewed below.
+				</p>
+			</div>
 
-      <div class="work-grid animUp">
-        <a
-          href="/pages/projects/chickenshed.html"
-          class="work-grid__link work-grid__double"
-        >
-          <figure class="work-grid__item">
-            <image
-              src="/img/Portfolio/Grid/Chickenshed_grid_dbl.jpg"
-              class="work-grid__img"
-            ></image>
-            <figcaption class="work-grid__cap">Chickenshed</figcaption>
-          </figure>
-        </a>
-        <a href="/pages/projects/xfm.html" class="work-grid__link">
-          <figure class="work-grid__item">
-            <image
-              src="/img/Portfolio/Grid/XFM_grid.jpg"
-              class="work-grid__img"
-            ></image>
-            <figcaption class="work-grid__cap">XFM</figcaption>
-          </figure>
-        </a>
-        <a href="/pages/projects/wildbrit.html" class="work-grid__link">
-          <figure class="work-grid__item">
-            <image
-              src="/img/Portfolio/Grid/WildBrit_grid.jpg"
-              class="work-grid__img"
-            ></image>
-            <figcaption class="work-grid__cap">Wildlife Britain</figcaption>
-          </figure>
-        </a>
-      </div>
-    </section>
+			<div class="work-grid animUp">
+				<a href="/pages/projects/chickenshed.html" class="work-grid__link work-grid__double">
+					<figure class="work-grid__item">
+						<image
+							src="/img/Portfolio/Grid/Chickenshed_grid_dbl.jpg"
+							class="work-grid__img"
+						></image>
+						<figcaption class="work-grid__cap">Chickenshed</figcaption>
+					</figure>
+				</a>
+				<a href="/pages/projects/xfm.html" class="work-grid__link">
+					<figure class="work-grid__item">
+						<image src="/img/Portfolio/Grid/XFM_grid.jpg" class="work-grid__img"></image>
+						<figcaption class="work-grid__cap">XFM</figcaption>
+					</figure>
+				</a>
+				<a href="/pages/projects/wildbrit.html" class="work-grid__link">
+					<figure class="work-grid__item">
+						<image src="/img/Portfolio/Grid/WildBrit_grid.jpg" class="work-grid__img"></image>
+						<figcaption class="work-grid__cap">Wildlife Britain</figcaption>
+					</figure>
+				</a>
+			</div>
+		</section>
 
-    <footer-comp class="footer-comp"></footer-comp>
-  </body>
+		<footer-comp class="footer-comp"></footer-comp>
+	</body>
 </html>
