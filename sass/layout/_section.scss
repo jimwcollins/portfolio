@@ -6,199 +6,199 @@
 ****************************/
 
 .section {
-  grid-column: full-start / full-end;
-  margin-top: $section-top;
-  margin-bottom: $section-bottom;
+	grid-column: full-start / full-end;
+	margin-top: $section-top;
+	margin-bottom: $section-bottom;
 
-  &__center {
-    grid-column: col-start 2 / col-end 11;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+	&__center {
+		grid-column: col-start 2 / col-end 11;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  &__split {
-    grid-column: full-start / full-end;
-  }
+	&__split {
+		grid-column: full-start / full-end;
+	}
 
-  // Add larger margin for first main section after the header image
-  &--first {
-    margin-top: 10rem;
-  }
+	// Add larger margin for first main section after the header image
+	&--first {
+		margin-top: 10rem;
+	}
 
-  // Color section
-  &--color {
-    @extend .section;
-    background-color: $color-section;
-    padding: 7rem 0;
+	// Color section
+	&--color {
+		@extend .section;
+		background-color: $color-section;
+		padding: 7rem 0;
 
-    // Remove margin for last section before footer
-    &--last {
-      @extend .section--color;
-      margin-bottom: 0rem !important;
-    }
-  }
+		// Remove margin for last section before footer
+		&--last {
+			@extend .section--color;
+			margin-bottom: 0rem !important;
+		}
+	}
 }
 
 // Tablet break-point for section
 @media only screen and (max-width: 800px) {
-  .section {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+	.section {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
 
-    &--color {
-      padding: 5rem 0;
-    }
+		&--color {
+			padding: 5rem 0;
+		}
 
-    &--first {
-      margin-top: 6rem;
-    }
-  }
+		&--first {
+			margin-top: 6rem;
+		}
+	}
 }
 
 // Phone break-point for section
 @media only screen and (max-width: 600px) {
-  .section {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+	.section {
+		margin-top: 5rem;
+		margin-bottom: 5rem;
 
-    &--color {
-      padding: 5rem 0;
-    }
+		&--color {
+			padding: 5rem 0;
+		}
 
-    &__split {
-      margin: 0 $mobile-border;
-    }
+		&__split {
+			margin: 0 $mobile-border;
+		}
 
-    &__center {
-      margin: 0 $mobile-border;
-    }
-  }
+		&__center {
+			margin: 0 $mobile-border;
+		}
+	}
 }
 
 // Split section
 .split {
-  &__left {
-    grid-column: content-start / col-end 3;
-    text-align: right;
+	&__left {
+		grid-column: content-start / col-end 3;
+		text-align: right;
 
-    transition: all 2s;
+		transition: all 2s;
 
-    &--hidden {
-      opacity: 0;
-      transform: translateX(3rem);
-    }
-  }
+		&--hidden {
+			opacity: 0;
+			transform: translateX(3rem);
+		}
+	}
 
-  &__right {
-    grid-column: col-start 5 / content-end;
+	&__right {
+		grid-column: col-start 5 / content-end;
 
-    transition: all 2s;
+		transition: all 2s;
 
-    &--hidden {
-      opacity: 0;
-      transform: translateX(-3rem);
-    }
-  }
+		&--hidden {
+			opacity: 0;
+			transform: translateX(-3rem);
+		}
+	}
 
-  &__main {
-    grid-column: content-start / col-end 7;
-    text-align: left;
+	&__main {
+		grid-column: content-start / col-end 7;
+		text-align: left;
 
-    transition: all 2s;
+		transition: all 2s;
 
-    &--hidden {
-      opacity: 0;
-      transform: translateX(3rem);
-    }
-  }
+		&--hidden {
+			opacity: 0;
+			transform: translateX(3rem);
+		}
+	}
 
-  &__sub {
-    grid-column: col-start 8 / content-end;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transition: all 2s;
+	&__sub {
+		grid-column: col-start 8 / content-end;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		transition: all 2s;
 
-    &--hidden {
-      opacity: 0;
-      transform: translateX(3rem);
-    }
-  }
+		&--hidden {
+			opacity: 0;
+			transform: translateX(3rem);
+		}
+	}
 
-  &__img {
-    width: 80%;
-  }
+	&__img {
+		width: 80%;
+	}
 }
 
 // Tablet break-point for sections
 @media only screen and (max-width: 800px) {
-  .section__center {
-    text-align: justify;
-  }
+	.section__center {
+		text-align: justify;
+	}
 
-  .split__left {
-    grid-column: col-start 1 / col-end 3;
-    margin-bottom: 2rem;
-  }
+	.split__left {
+		grid-column: col-start 1 / col-end 3;
+		margin-bottom: 2rem;
+	}
 
-  .split__right {
-    grid-column: col-start 4 / col-end 12;
-  }
+	.split__right {
+		grid-column: col-start 4 / col-end 12;
+	}
 
-  .split__main {
-    text-align: justify;
-  }
+	.split__main {
+		text-align: justify;
+	}
 }
 
 // Phone break-point for sections
 @media only screen and (max-width: 600px) {
-  .section__center {
-    grid-column: content-start / content-end;
-    text-align: justify;
-  }
+	.section__center {
+		grid-column: content-start / content-end;
+		text-align: justify;
+	}
 
-  .split__left {
-    grid-column: content-start / content-end;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
+	.split__left {
+		grid-column: content-start / content-end;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
 
-  .split__right {
-    grid-column: content-start / content-end;
-    text-align: justify;
-  }
+	.split__right {
+		grid-column: content-start / content-end;
+		text-align: justify;
+	}
 
-  .split__sub {
-    margin-top: 1.5rem;
-  }
+	.split__sub {
+		margin-top: 1.5rem;
+	}
 }
 
 .spotlight {
-  grid-column: content-start / content-end;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	grid-column: content-start / content-end;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  &__intro {
-    text-align: center;
-    width: 80%;
-  }
+	&__intro {
+		text-align: center;
+		width: 80%;
+	}
 
-  & .section__subhead {
-    margin-bottom: 2rem;
-  }
+	& .section__subhead {
+		margin-bottom: 2rem;
+	}
 
-  &__logo {
-    height: 8rem;
-    margin-top: 2rem;
-  }
+	&__logo {
+		height: 8rem;
+		margin-top: 2rem;
+	}
 }
 
 // Tablet break-point for spotlight section
 @media only screen and (max-width: 800px) {
-  .spotlight__intro {
-    text-align: justify;
-  }
+	.spotlight__intro {
+		text-align: justify;
+	}
 }

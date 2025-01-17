@@ -1065,6 +1065,9 @@ a {
   height: 22rem;
   width: 22rem;
 }
+.home__about-me .para {
+  font-size: 2.25rem;
+}
 
 @media only screen and (max-width: 800px) {
   .home__about-me__image {
