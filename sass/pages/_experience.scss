@@ -6,119 +6,133 @@
 ***************************/
 
 .experience {
-  // Specifiy CSS Grid row. Columns specified by standard grid
-  grid-template-rows: 100vh repeat(4, min-content);
+	// Specifiy CSS Grid row. Columns specified by standard grid
+	grid-template-rows: 100vh repeat(4, min-content);
 
-  &__subsection {
-    grid-column: full-start / full-end;
+	&__subsection {
+		grid-column: full-start / full-end;
 
-    &:not(:last-child) {
-      margin-bottom: 5rem;
-    }
-  }
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+		}
+	}
 
-  &__dev {
-    grid-column: col-start 5 / span 4;
-  }
+	&__dev {
+		grid-column: col-start 5 / span 4;
+	}
 
-  &__design {
-    grid-column: col-start 9 / span 4;
-  }
+	&__design {
+		grid-column: col-start 9 / span 4;
+	}
 
-  &__subhead {
-    grid-column: col-start 1 / col-end 3;
-    text-align: right;
-    font-weight: 400;
-    color: $color-primary;
-  }
+	&__subhead {
+		grid-column: col-start 1 / col-end 3;
+		text-align: right;
+		font-weight: 400;
+		color: $color-primary;
+	}
 
-  &__title {
-    font: $font-display;
-    font-weight: 400;
-    margin-bottom: 2rem;
+	&__title {
+		font: $font-display;
+		font-weight: 400;
+		margin-bottom: 2rem;
 
-    &--main {
-      text-transform: uppercase;
-    }
-  }
+		&--main {
+			text-transform: uppercase;
+		}
+	}
 
-  &__list {
-    list-style: none;
+	&__subtitle {
+		font-weight: 400;
+		margin-bottom: 0.25rem;
+	}
 
-    &__head {
-      font-weight: 400;
-      margin-bottom: 2rem;
-    }
+	&__list {
+		list-style: none;
 
-    &__sub {
-      font-weight: 400;
-      color: $color-grey-dark;
-    }
-  }
+		&__head {
+			font-weight: 400;
+			margin-bottom: 2rem;
+		}
 
-  &__para {
-    margin-bottom: 1.75rem;
-  }
+		&__sub {
+			font-weight: 400;
+			color: $color-grey-dark;
+		}
+	}
 
-  &__para__svg {
-    margin-top: 1rem;
-    width: 2rem;
-    height: 2rem;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-    transition: fill 1s;
+	&__bullets {
+		margin-left: 1.5rem;
+		margin-bottom: 1.5rem;
 
-    &:hover {
-      fill: $color-primary;
-    }
-  }
+		& li {
+			margin-bottom: 0.25rem;
+		}
+	}
+
+	&__para {
+		margin-bottom: 1.75rem;
+	}
+
+	&__para__svg {
+		margin-top: 1rem;
+		width: 2rem;
+		height: 2rem;
+		stroke-width: 0;
+		stroke: currentColor;
+		fill: currentColor;
+		transition: fill 1s;
+
+		&:hover {
+			fill: $color-primary;
+		}
+	}
 }
 
 // Tablet break-point for experience
 @media only screen and (max-width: 800px) {
-  .experience {
-    &__dev {
-      grid-column: col-start 4 / span 4;
-    }
+	.experience {
+		&__dev {
+			grid-column: col-start 4 / span 4;
+		}
 
-    &__design {
-      grid-column: col-start 8 / span 4;
-    }
+		&__design {
+			grid-column: col-start 8 / span 4;
+		}
 
-    &__subsection:not(:last-child) {
-      margin-bottom: 3.5rem;
-    }
-  }
+		&__subsection:not(:last-child) {
+			margin-bottom: 3.5rem;
+		}
+	}
 }
 
 // Phone break-point for experience
 @media only screen and (max-width: 600px) {
-  .experience {
-    &__subsection {
-      margin: 0 $mobile-border;
-    }
+	.experience {
+		&__subsection {
+			margin: 0 $mobile-border;
+		}
 
-    &__subhead {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
+		&__subhead {
+			text-align: center;
+			margin-bottom: 1.5rem;
+		}
 
-    &__list__head {
-      margin-bottom: 1rem;
-    }
+		&__list__head {
+			margin-bottom: 1rem;
+		}
 
-    &__dev {
-      margin-bottom: 1.5rem;
-    }
+		&__dev {
+			margin-bottom: 1.5rem;
+		}
 
-    &__design {
-      grid-column: col-start 8 / span 4;
-    }
+		&__design {
+			grid-column: col-start 8 / span 4;
+		}
 
-    &__title {
-      font-size: 1.8rem;
-      text-align: center;
-    }
-  }
+		&__title {
+			font-size: 1.8rem;
+			text-align: center;
+		}
+	}
 }
