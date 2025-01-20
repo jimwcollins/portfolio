@@ -8,12 +8,14 @@
 // Reusable Header component
 
 class Footer extends HTMLElement {
-  constructor() {
-    super();
-  }
+	constructor() {
+		super();
+	}
 
-  connectedCallback() {
-    this.innerHTML = `
+	connectedCallback() {
+		const currentYear = new Date().getFullYear();
+
+		this.innerHTML = `
       <footer class="footer">
         <ul class="footer__nav">
           <li class="footer__nav__item">
@@ -38,10 +40,10 @@ class Footer extends HTMLElement {
           <p class="footer__logo__symbol">{}</p>
         </div>
 
-        <p class="footer__text">Designed and built by James Collins © 2021</p>
+        <p class="footer__text">Designed and built by James Collins © ${currentYear}</p>
       </footer>
     `;
-  }
+	}
 }
 
 customElements.define('footer-comp', Footer);

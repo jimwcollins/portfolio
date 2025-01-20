@@ -988,6 +988,10 @@ a {
 .experience__title--main {
   text-transform: uppercase;
 }
+.experience__subtitle {
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
 .experience__list {
   list-style: none;
 }
@@ -998,6 +1002,13 @@ a {
 .experience__list__sub {
   font-weight: 400;
   color: #423d3c;
+}
+.experience__bullets {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.experience__bullets li {
+  margin-bottom: 0.25rem;
 }
 .experience__para {
   margin-bottom: 1.75rem;
