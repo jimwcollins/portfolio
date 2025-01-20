@@ -16,10 +16,12 @@
 		<link href="/css/style.css" rel="stylesheet" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 
+		<script src="js/libs/gsap.min.js"></script>
+		<script src="js/libs/ScrollTrigger.min.js"></script>
 		<script src="/js/index.js" defer></script>
 		<script src="/js/components/nav.js" defer></script>
 		<script src="/js/components/hero.js" defer></script>
@@ -38,22 +40,28 @@
 			<header class="header">
 				<header-comp></header-comp>
 			</header>
-			<hero-comp
+			<!-- <hero-comp
 				class="section__hero"
 				title="James Collins"
 				image="/img/Homepage/Homepage_Mac.jpg"
 				imageAlt="My Office"
 				page="standard"
-			></hero-comp>
+			></hero-comp> -->
+
+			<section class="home__hero">
+				<p class="home__hero__title">James Collins</p>
+
+				<div class="hero__arrow">
+					<svg class="hero__arrow__svg">
+						<use xlink:href="/img/portfolio-icons-sprite.svg#icon-chevron-thin-down"></use>
+					</svg>
+				</div>
+			</section>
 
 			<!-- About Me section -->
 			<div id="about"></div>
-			<section class="section home__about-me section--first">
-				<h1 class="heading__section fadein">
-					About <span class="heading__section--slash">/</span> Me
-				</h1>
-
-				<div class="section__split grid">
+			<section class="home__about-me section--first">
+				<div class="grid">
 					<div class="split__left">
 						<img
 							src="/img/Homepage/JC_Illustration_Red.png"
@@ -63,13 +71,17 @@
 					</div>
 
 					<div class="split__right">
-						<p class="para">
+						<h1 class="heading__section aboutAnim">
+							About <span class="heading__section--slash">/</span> Me
+						</h1>
+
+						<p class="para aboutAnim">
 							I am a full-stack developer and designer with over three years’ experience in
 							commercial app development. My coding journey began in childhood writing adventure
 							games in BASIC, sparking a lifelong passion for blending creativity and technical
 							expertise.
 						</p>
-						<p class="para">
+						<p class="para aboutAnim">
 							With 15 years' experience as a graphic designer, I delight in crafting impactful,
 							user-focused and visually engaging applications that excite and inform their users.
 						</p>

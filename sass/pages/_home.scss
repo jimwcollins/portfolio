@@ -10,7 +10,31 @@
 	grid-template-rows: 100vh repeat(4, min-content);
 }
 
+.home__hero {
+	grid-column: full-start / full-end;
+	height: 100vh;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-image: url('/img/Homepage/Homepage_Mac.jpg');
+	overflow: hidden;
+
+	&__title {
+		@include centre-content;
+		color: white;
+		font-family: 'Anton', serif;
+		font-size: 10rem;
+		align-items: end;
+		text-transform: uppercase;
+	}
+}
+
 .home__about-me {
+	grid-column: full-start / full-end;
+	display: grid;
+	align-items: center;
+	height: 50vh;
+
 	&__image {
 		border-radius: 50%;
 		height: 22rem;

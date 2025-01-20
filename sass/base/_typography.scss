@@ -97,10 +97,10 @@ a {
 .heading {
 	&__section {
 		font-family: $font-display;
-		text-align: center;
+		// text-align: center;
 		text-transform: uppercase;
 		line-height: 1.25;
-		grid-column: content-start / content-end;
+		// grid-column: content-start / content-end;
 		margin-bottom: 6rem;
 		color: $color-black;
 		font-size: 3rem;
