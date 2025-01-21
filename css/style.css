@@ -73,10 +73,11 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 62.5%;
+  background-color: #fff;
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #fff;
   overscroll-behavior-y: none;
 }
 
@@ -1092,7 +1093,6 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  text-align: center;
 }
 .home__hero__firstname {
   color: #8c0e07;
@@ -1102,6 +1102,8 @@ a {
   margin-bottom: 0;
 }
 .home__hero__surname {
+  display: flex;
+  justify-content: center;
   font-size: 12rem;
   line-height: 1;
 }

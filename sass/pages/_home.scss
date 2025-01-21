@@ -27,9 +27,7 @@
 		color: white;
 		font-family: $font-display;
 		font-weight: 900;
-
 		text-transform: uppercase;
-		text-align: center;
 	}
 
 	&__firstname {
@@ -41,6 +39,8 @@
 	}
 
 	&__surname {
+		display: flex;
+		justify-content: center;
 		font-size: 12rem;
 		line-height: 1;
 	}

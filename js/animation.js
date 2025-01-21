@@ -10,6 +10,66 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * Home animations
 	 *******************/
 
+	// Initial title animation
+	gsap
+		.timeline()
+		.from('.home__hero__surname span', {
+			opacity: 0,
+			// letterSpacing: '3rem',
+			y: '20%',
+			stagger: 0.15,
+			duration: 2.5,
+			ease: 'expo.out',
+			delay: 0.5,
+		})
+		.from(
+			'.home__hero__firstname',
+			{
+				opacity: 0,
+				duration: 1.5,
+			},
+			'-=2',
+		)
+		.from(
+			'.home__hero__subtitle',
+			{
+				opacity: 0,
+				y: '40%',
+				duration: 1.5,
+			},
+			'-=2',
+		);
+
+	const timelineScrollAnim = gsap.timeline({
+		scrollTrigger: {
+			animation: homeHeroTimeline,
+			trigger: '.home__hero',
+			start: 'top top',
+			end: 'bottom top',
+			pin: true,
+			scrub: 1,
+			markers: { startColor: 'white', endColor: 'white', fontSize: '12px' },
+		},
+	});
+
+	timelineScrollAnim
+		.from('.home__hero__title', {
+			opacity: 0,
+			y: '30%',
+			stagger: 0.15,
+			duration: 2.5,
+			ease: 'expo.out',
+		})
+		.from(
+			'.titleFadeIn',
+			{
+				opacity: 0,
+				duration: 1,
+			},
+			'-=2',
+		);
+
+	// About section animation
 	gsap.from('.aboutAnim', {
 		opacity: 0,
 		x: '5%',
