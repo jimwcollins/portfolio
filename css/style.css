@@ -137,8 +137,13 @@ a {
   color: #8c0e07;
 }
 
+.emphasis {
+  color: #8c0e07;
+  font-weight: 400;
+}
+
 .hero, .hero--top {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   text-align: center;
   text-transform: uppercase;
 }
@@ -183,7 +188,7 @@ a {
   }
 }
 .heading__section {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
   line-height: 1.25;
   margin-bottom: 6rem;
@@ -346,7 +351,7 @@ a {
   margin: 5rem 0;
 }
 .divider__symbol {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
@@ -519,7 +524,7 @@ a {
   background-color: #8c0e07;
 }
 .footer__logo__symbol {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
@@ -656,7 +661,7 @@ a {
   width: 0;
   opacity: 0;
   padding-right: 1rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
@@ -738,7 +743,7 @@ a {
 .nav__item {
   margin: 1rem;
   display: block;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   color: transparent;
@@ -981,7 +986,7 @@ a {
   color: #8c0e07;
 }
 .experience__title {
-  font: "Josefin Sans", sans-serif;
+  font: "Inter", sans-serif;
   font-weight: 400;
   margin-bottom: 2rem;
 }
@@ -1071,7 +1076,11 @@ a {
 
 .home__hero {
   grid-column: full-start/full-end;
-  height: 100vh;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -1079,22 +1088,38 @@ a {
   overflow: hidden;
 }
 .home__hero__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
-  font-family: "Anton", serif;
-  font-size: 10rem;
-  align-items: end;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
+  text-align: center;
+}
+.home__hero__firstname {
+  color: #8c0e07;
+  font-size: 2.5rem;
+  letter-spacing: 10rem;
+  margin-left: 10rem;
+  margin-bottom: 0;
+}
+.home__hero__surname {
+  font-size: 12rem;
+  line-height: 1;
+}
+.home__hero__subtitle {
+  position: absolute;
+  bottom: 6rem;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .home__about-me {
   grid-column: full-start/full-end;
   display: grid;
   align-items: center;
-  height: 50vh;
+  height: 70vh;
 }
 .home__about-me__image {
   border-radius: 50%;

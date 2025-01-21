@@ -32,6 +32,11 @@ a {
 	}
 }
 
+.emphasis {
+	color: $color-primary;
+	font-weight: 400;
+}
+
 .hero {
 	font-family: $font-display;
 	text-align: center;
