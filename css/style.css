@@ -140,7 +140,9 @@ a {
 
 .emphasis {
   color: #8c0e07;
+  font-size: 3rem;
   font-weight: 400;
+  padding-bottom: 0.5rem;
 }
 
 .hero, .hero--top {
@@ -1129,6 +1131,7 @@ a {
 .home__about-me {
   grid-column: full-start/full-end;
   display: grid;
+  height: 50vh;
 }
 .home__about-me__image {
   border-radius: 50%;
@@ -1149,7 +1152,7 @@ a {
   background-size: cover;
   background-position: center;
   background-color: #8c0e07;
-  width: 300px;
+  width: auto;
   height: 500px;
   justify-self: end;
 }

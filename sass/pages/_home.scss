@@ -59,8 +59,7 @@
 .home__about-me {
 	grid-column: full-start / full-end;
 	display: grid;
-	// align-items: end;
-	// height: 80vh;
+	height: 50vh;
 
 	&__image {
 		border-radius: 50%;
@@ -83,7 +82,7 @@
 	background-size: cover;
 	background-position: center;
 	background-color: $color-primary;
-	width: 300px;
+	width: auto;
 	height: 500px;
 	justify-self: end;
 

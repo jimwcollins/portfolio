@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			'.home__hero__subtitle',
 			{
 				opacity: 0,
-				y: '40%',
 				duration: 1.5,
 			},
 			'-=1',
@@ -59,14 +58,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		.timeline({
 			scrollTrigger: {
 				trigger: '.home__about-me',
-				start: 'top 60%',
-				end: 'center center',
-				scrub: 1,
+				start: 'top 55%',
+				end: 'center 55%',
+				scrub: 1.5,
 				markers: { startColor: 'blue', endColor: 'purple', fontSize: '12px' },
 			},
 		})
 		.from('.about-me-portrait', {
-			height: '10px',
+			height: '0px',
 		})
 		.from('.about-me-portrait', {
 			width: '10px',
@@ -88,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			trigger: '.home__about-me',
 			start: 'top 60%',
 			end: 'center center',
-			scrub: 1,
+			scrub: 1.5,
 			markers: { startColor: 'blue', endColor: 'purple', fontSize: '12px' },
 		},
 	});
