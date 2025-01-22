@@ -92,6 +92,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
+	// Work section
+
+	const workProjects = gsap.utils.toArray('.work__panel');
+	const numProjects = workProjects.length - 1;
+
+	gsap.to(workProjects, {
+		xPercent: -100 * numProjects,
+		scrollTrigger: {
+			trigger: '.home__work',
+			pin: true,
+			ease: 'expo.inOut',
+			scrub: 1,
+			end: () => '+=' + document.querySelector('.home__work').offsetWidth,
+			snap: 1 / numProjects,
+		},
+	});
+
 	/*******************
 	 * Trigger videos
 	 *******************/

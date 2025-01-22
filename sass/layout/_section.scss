@@ -40,6 +40,21 @@
 			margin-bottom: 0rem !important;
 		}
 	}
+
+	&__horizontal {
+		display: flex;
+		overflow-x: hidden;
+		scroll-snap-type: x mandatory;
+		height: 100vh;
+		width: 100%;
+
+		& div {
+			flex: 0 0 100%;
+			height: 100vh;
+			width: 100%;
+			background-color: black;
+		}
+	}
 }
 
 // Tablet break-point for section

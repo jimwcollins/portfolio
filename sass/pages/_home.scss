@@ -72,6 +72,15 @@
 	}
 }
 
+.home__work {
+	// grid-column: full-start / full-end;
+	// display: grid;
+	// height: 100vh;
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+}
+
 .about-me-text {
 	grid-column: col-start 6 / content-end;
 }

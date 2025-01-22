@@ -190,6 +190,18 @@ a {
     font-size: 6rem;
   }
 }
+.section__title {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12rem;
+  font-weight: 800;
+  color: white;
+}
+
 .heading__section {
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
@@ -845,6 +857,19 @@ a {
 .section--color--last {
   margin-bottom: 0rem !important;
 }
+.section__horizontal {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  height: 100vh;
+  width: 100%;
+}
+.section__horizontal div {
+  flex: 0 0 100%;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
 
 @media only screen and (max-width: 800px) {
   .section, .section--color, .section--color--last {
@@ -1140,6 +1165,12 @@ a {
 }
 .home__about-me .para {
   font-size: 2.15rem;
+}
+
+.home__work {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
 }
 
 .about-me-text {
