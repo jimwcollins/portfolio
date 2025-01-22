@@ -224,6 +224,14 @@ a {
     font-weight: 400;
   }
 }
+.subhead {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  color: #8c0e07;
+  margin-bottom: 2rem;
+}
+
 .section__subhead {
   font-size: 3rem;
   text-align: center;
@@ -826,6 +834,7 @@ a {
 }
 .section--first {
   margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 .section--color, .section--color--last {
   background-color: #ebebeb;
@@ -1120,8 +1129,6 @@ a {
 .home__about-me {
   grid-column: full-start/full-end;
   display: grid;
-  align-items: center;
-  height: 70vh;
 }
 .home__about-me__image {
   border-radius: 50%;
@@ -1130,6 +1137,26 @@ a {
 }
 .home__about-me .para {
   font-size: 2.15rem;
+}
+
+.about-me-text {
+  grid-column: col-start 6/content-end;
+}
+
+.about-me-portrait {
+  grid-column: content-start/col-end 4;
+  align-self: start;
+  background-size: cover;
+  background-position: center;
+  background-color: #8c0e07;
+  width: 300px;
+  height: 500px;
+  justify-self: end;
+}
+.about-me-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 800px) {

@@ -59,8 +59,8 @@
 .home__about-me {
 	grid-column: full-start / full-end;
 	display: grid;
-	align-items: center;
-	height: 70vh;
+	// align-items: end;
+	// height: 80vh;
 
 	&__image {
 		border-radius: 50%;
@@ -70,6 +70,27 @@
 
 	& .para {
 		font-size: 2.15rem;
+	}
+}
+
+.about-me-text {
+	grid-column: col-start 6 / content-end;
+}
+
+.about-me-portrait {
+	grid-column: content-start / col-end 4;
+	align-self: start;
+	background-size: cover;
+	background-position: center;
+	background-color: $color-primary;
+	width: 300px;
+	height: 500px;
+	justify-self: end;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 

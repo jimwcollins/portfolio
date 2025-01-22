@@ -49,7 +49,7 @@
 			></hero-comp> -->
 
 			<section class="home__hero">
-				<div class="home__hero__title">
+				<div class="home__hero__title heroAnimUp">
 					<div class="home__hero__firstname">James</div>
 					<div class="home__hero__surname">
 						<span>C</span>
@@ -61,7 +61,10 @@
 						<span>s</span>
 					</div>
 				</div>
-				<p class="home__hero__subtitle">Developer <span class="emphasis">&</span> Designer</p>
+
+				<div class="home__hero__subtitle heroAnimUp">
+					Developer <span class="emphasis">&</span> Designer
+				</div>
 
 				<!-- <div class="hero__arrow">
 					<svg class="hero__arrow__svg">
@@ -71,36 +74,29 @@
 			</section>
 
 			<!-- About Me section -->
-			<div id="about"></div>
-			<section class="home__about-me section--first">
-				<div class="grid">
-					<div class="split__left">
-						<img
-							src="/img/Homepage/JC_Illustration_Red.png"
-							alt="James Collins"
-							class="home__about-me__image"
-						/>
-					</div>
-
-					<div class="split__right">
-						<h1 class="heading__section aboutAnim">
-							About <span class="heading__section--slash">/</span> Me
-						</h1>
-
-						<p class="para aboutAnim">
-							I'm a full-stack developer and designer with over three years&rsquo; experience in
-							commercial app development. My coding journey began in childhood writing adventure
-							games in BASIC, sparking a lifelong passion for blending creativity with technical
-							expertise.
-						</p>
-
-						<p class="para aboutAnim">
-							With 15 years&rsquo; experience as a graphic designer, I bring a keen eye for
-							aesthetics and user-focused design to every project. I delight in building
-							impactful, visually engaging applications that excite and inform their users.
-						</p>
-					</div>
+			<section id="about" class="home__about-me section--first grid">
+				<!-- <div class="grid"> -->
+				<div class="about-me-portrait">
+					<image src="/img/Homepage/JC_Illustration_Slim.png" alt="Portrait of James Collins" />
 				</div>
+
+				<div class="about-me-text">
+					<h1 class="subhead aboutAnim">About Me</h1>
+
+					<p class="para aboutAnim">
+						I'm a full-stack developer and designer with over three years&rsquo; experience in
+						commercial app development. My coding journey began in childhood writing adventure
+						games in BASIC, sparking a lifelong passion for blending creativity with technical
+						expertise.
+					</p>
+
+					<p class="para aboutAnim">
+						With 15 years&rsquo; experience as a graphic designer, I bring a keen eye for
+						aesthetics and user-focused design to every project. I delight in building impactful,
+						visually engaging applications that excite and inform their users.
+					</p>
+				</div>
+				<!-- </div> -->
 			</section>
 
 			<!-- Gallery section -->

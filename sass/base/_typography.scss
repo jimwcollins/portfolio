@@ -149,6 +149,14 @@ a {
 	}
 }
 
+.subhead {
+	font-size: 2.5rem;
+	font-weight: 600;
+	font-family: $font-display;
+	color: $color-primary;
+	margin-bottom: 2rem;
+}
+
 .section {
 	&__subhead {
 		font-size: 3rem;

@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		.timeline()
 		.from('.home__hero__surname span', {
 			opacity: 0,
-			// letterSpacing: '3rem',
-			y: '20%',
-			stagger: 0.15,
+			scale: 4,
+			stagger: 0.1,
 			duration: 2.5,
 			ease: 'expo.out',
 			delay: 0.5,
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				opacity: 0,
 				duration: 1.5,
 			},
-			'-=2',
+			'-=1',
 		)
 		.from(
 			'.home__hero__subtitle',
@@ -37,49 +36,60 @@ document.addEventListener('DOMContentLoaded', function () {
 				y: '40%',
 				duration: 1.5,
 			},
-			'-=2',
+			'-=1',
 		);
 
-	const timelineScrollAnim = gsap.timeline({
+	// Hero animation on scroll
+
+	gsap.to('.heroAnimUp', {
+		y: '-50%',
 		scrollTrigger: {
-			animation: homeHeroTimeline,
 			trigger: '.home__hero',
 			start: 'top top',
-			end: 'bottom top',
-			pin: true,
-			scrub: 1,
-			markers: { startColor: 'white', endColor: 'white', fontSize: '12px' },
+			end: 'bottom center',
+			scrub: 0.5,
+			// markers: { startColor: 'white', endColor: 'red', fontSize: '12px' },
 		},
 	});
 
-	timelineScrollAnim
-		.from('.home__hero__title', {
-			opacity: 0,
-			y: '30%',
-			stagger: 0.15,
-			duration: 2.5,
-			ease: 'expo.out',
+	// About section animation
+
+	// Portrait
+	gsap
+		.timeline({
+			scrollTrigger: {
+				trigger: '.home__about-me',
+				start: 'top 60%',
+				end: 'center center',
+				scrub: 1,
+				markers: { startColor: 'blue', endColor: 'purple', fontSize: '12px' },
+			},
+		})
+		.from('.about-me-portrait', {
+			height: '10px',
+		})
+		.from('.about-me-portrait', {
+			width: '10px',
 		})
 		.from(
-			'.titleFadeIn',
+			'.about-me-portrait img',
 			{
 				opacity: 0,
-				duration: 1,
 			},
-			'-=2',
+			'-=0.5',
 		);
 
-	// About section animation
+	// Text
 	gsap.from('.aboutAnim', {
 		opacity: 0,
 		x: '5%',
 		stagger: 0.2,
 		scrollTrigger: {
 			trigger: '.home__about-me',
-			start: 'top 65%',
-			end: 'bottom center',
+			start: 'top 60%',
+			end: 'center center',
 			scrub: 1,
-			markers: { startColor: 'blue', endColor: 'purple', fontSize: '12px' }, // Optional: for debugging
+			markers: { startColor: 'blue', endColor: 'purple', fontSize: '12px' },
 		},
 	});
 
