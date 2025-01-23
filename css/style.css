@@ -1164,7 +1164,7 @@ a {
   text-align: center;
 }
 .work-grid__item--border {
-  border: 0.1rem solid #423d3c;
+  border: 0.1rem solid #7d7270;
 }
 .work-grid__double {
   grid-column: 1/-1;
@@ -1304,6 +1304,7 @@ a {
 .imgGrid {
   grid-column: content-start/content-end;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 15rem);

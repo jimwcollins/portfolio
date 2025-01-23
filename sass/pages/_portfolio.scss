@@ -6,91 +6,91 @@
 ***************************/
 
 .portfolio {
-  // Specifiy CSS Grid row. Columns specified by standard grid
-  grid-template-rows: 100vh repeat(4, min-content);
+	// Specifiy CSS Grid row. Columns specified by standard grid
+	grid-template-rows: 100vh repeat(4, min-content);
 }
 
 .work-grid {
-  grid-column: content-start / content-end;
+	grid-column: content-start / content-end;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 48rem));
-  grid-gap: $column-gap-master;
-  justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 48rem));
+	grid-gap: $column-gap-master;
+	justify-content: center;
 
-  margin-top: 7rem;
-  margin-bottom: 5rem;
+	margin-top: 7rem;
+	margin-bottom: 5rem;
 
-  &__item {
-    height: 48rem;
-    cursor: pointer;
-    text-align: center;
+	&__item {
+		height: 48rem;
+		cursor: pointer;
+		text-align: center;
 
-    &--border {
-      @extend .work-grid__item;
-      border: 0.1rem solid $color-grey-dark;
-    }
-  }
+		&--border {
+			@extend .work-grid__item;
+			border: 0.1rem solid $color-grey-med;
+		}
+	}
 
-  &__double {
-    grid-column: 1 / -1;
-    align-self: center;
-  }
+	&__double {
+		grid-column: 1 / -1;
+		align-self: center;
+	}
 
-  &__link {
-    text-decoration: none;
-    color: inherit;
-  }
+	&__link {
+		text-decoration: none;
+		color: inherit;
+	}
 
-  &__img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: all 0.5s;
-  }
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		filter: grayscale(100%);
+		transition: all 0.5s;
+	}
 
-  &__cap {
-    font-size: 1.3rem;
-    font-weight: 500;
-    letter-spacing: 1.1;
-    text-transform: uppercase;
-    transform: translateY(-2rem);
-    opacity: 0;
-    transition: all 1s;
-  }
+	&__cap {
+		font-size: 1.3rem;
+		font-weight: 500;
+		letter-spacing: 1.1;
+		text-transform: uppercase;
+		transform: translateY(-2rem);
+		opacity: 0;
+		transition: all 1s;
+	}
 
-  &__item:hover > &__img {
-    filter: none;
-  }
+	&__item:hover > &__img {
+		filter: none;
+	}
 
-  &__item:hover > &__cap {
-    transform: translateY(0);
+	&__item:hover > &__cap {
+		transform: translateY(0);
 
-    opacity: 1;
-  }
+		opacity: 1;
+	}
 }
 
 // Tablet break-point for portfolio work grid
 @media only screen and (max-width: 800px) {
-  .work-grid {
-    margin-top: 5rem;
-    padding: 0 $mobile-border;
+	.work-grid {
+		margin-top: 5rem;
+		padding: 0 $mobile-border;
 
-    &__item {
-      height: 45rem;
-    }
-  }
+		&__item {
+			height: 45rem;
+		}
+	}
 }
 
 // Phone break-point for portfolio work grid
 @media only screen and (max-width: 600px) {
-  .work-grid {
-    margin-top: 4rem;
-    padding: 0 $mobile-border;
+	.work-grid {
+		margin-top: 4rem;
+		padding: 0 $mobile-border;
 
-    &__item {
-      height: 30rem;
-    }
-  }
+		&__item {
+			height: 30rem;
+		}
+	}
 }
