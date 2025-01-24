@@ -115,15 +115,15 @@
 
 	&__mac--main {
 		height: auto;
-		width: 35%;
+		width: 75%;
 		z-index: 1;
 	}
 
 	&__mac--sub {
 		height: auto;
-		width: 28%;
-		margin-left: -5rem;
-		margin-bottom: -3rem;
+		width: 60%;
+		margin-left: -20rem;
+		margin-bottom: -6rem;
 		z-index: 2;
 	}
 
@@ -141,21 +141,3 @@
 		z-index: 2;
 	}
 }
-
-// // Tablet break-point for image grid
-// @media only screen and (max-width: 800px) {
-// 	.imgGrid {
-// 		display: grid;
-// 		grid-template-columns: repeat(8, 1fr);
-// 		grid-template-rows: repeat(7, 10rem);
-// 	}
-// }
-
-// // Phone break-point for image grid
-// @media only screen and (max-width: 600px) {
-// 	.imgGrid {
-// 		display: grid;
-// 		grid-template-columns: repeat(8, 1fr);
-// 		grid-template-rows: repeat(7, 6rem);
-// 	}
-// }

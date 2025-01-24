@@ -1,7 +1,7 @@
 <!-------------------------
 
     JC Portfolio
-    Projects: The Iris
+    Projects: Tred
 
 -------------------------->
 
@@ -25,6 +25,7 @@
 		<script src="/js/components/header.js" defer></script>
 		<script src="/js/components/footer.js" defer></script>
 		<script src="/js/animation.js" defer></script>
+		<script src="https://kit.fontawesome.com/42515d2b0d.js" crossorigin="anonymous"></script>
 
 		<title>James Collins</title>
 	</head>
@@ -93,34 +94,31 @@
 		<section class="imgGrid">
 			<img
 				src="/img/Portfolio/Projects/Tred/Tred_Home.png"
-				alt="Title screen"
+				alt="Tred home screen"
 				class="imgGrid__phone--main animUp"
 			/>
 			<img
 				src="/img/Portfolio/Projects/Tred/Tred_Landing.png"
-				alt="Round screen"
+				alt="Tred landing screen"
 				class="imgGrid__phone--sub animUp"
 			/>
 		</section>
 
 		<section class="section spotlight">
 			<div class="spotlight__intro">
-				<h4 class="section__subhead">Design work</h4>
+				<h4 class="section__subhead">Design team</h4>
 				<p class="para">
-					As part of Tred’s design team, I also ensured our applications were user-friendly and
-					visually engaging. I enjoyed the freedom of first designing and prototyping in Figma,
-					then implementing those designs within the app.
+					I was also part of Tred’s design team. Drawing on my graphic design background, I
+					ensured our applications were not only functionally robust but also user-friendly and
+					visually engaging.
 				</p>
 				<p class="para">
 					My design background gives me a solid understanding of great UX / UI that has proved
-					extremely useful in my front-end work.
+					extremely useful in my front-end work. I used Figma extensively to create attractive,
+					user-focussed screen designs and prototypes that could be easily implemented by myself
+					or other developers.
 				</p>
 			</div>
-
-			<video width="100%" height="auto" loop class="video video__main animUp">
-				<source src="/img/Portfolio/Projects/Sticks/vids/Sticks_Night.mp4" type="video/mp4" />
-				Your browser does not support the video tag.
-			</video>
 		</section>
 
 		<!-- Section: Project Spotlight -->
@@ -131,80 +129,41 @@
 
 			<div class="spotlight">
 				<div class="spotlight__intro">
-					<h4 class="section__subhead">Intersection Observer</h4>
+					<h4 class="section__subhead">Home screen redesign</h4>
 					<p class="para">
-						I initially looked into event listeners to trigger the various animations, but found
-						them too resource-intensive. Instead I used Intersection Observer, an excellent API
-						that enabled me to observe elements on a page and trigger animated transitions
-						whenever they scrolled into the viewport.
+						This year, we commissioned two UX designers to gather feedback on the app from our
+						users. Based on this, I then led a complete redesign of the app home screen, from
+						concept to implementation.
 					</p>
-				</div>
-				<video width="100%" height="auto" loop class="video video__main animUp">
-					<source
-						src="/img/Portfolio/Projects/Portfolio/vids/Portfolio_Animation.mp4"
-						type="video/mp4"
-					/>
-					Your browser does not support the video tag.
-				</video>
-				<div class="spotlight__intro">
 					<p class="para">
-						Intersection Observer also allowed me to trigger the playing of videos only when they
-						scroll into the viewport, and to pause them when they leave.
+						The most common complaint was that the home screen was too busy and packed with
+						information users would not need to see upon app open. Listing open banking accounts
+						was deemed unnecessary clutter, as was the transactions panel which took up the entire
+						bottom half of the screen.
 					</p>
+					<p class="para">
+						Users also wanted quick access to important features like their PIN and account
+						details, and quick access to customer support.
+					</p>
+
+					<div class="spotlight__image__row">
+						<img
+							src="/img/Portfolio/Projects/Tred/Tred_Home_Orig.png"
+							alt="Original Tred home screen"
+							class="spotlight__image__item"
+						/>
+						<i class="fa-solid fa-arrow-right spotlight__icon"></i>
+						<img
+							src="/img/Portfolio/Projects/Tred/Tred_Home.png"
+							alt="Original Tred home screen"
+							class="spotlight__image__item"
+						/>
+					</div>
 				</div>
 			</div>
 
 			<div class="divider">
 				<p class="divider__symbol">{}</p>
-			</div>
-
-			<div class="spotlight">
-				<div class="spotlight__intro">
-					<h4 class="section__subhead">A modular approach</h4>
-					<p class="para">
-						One of the great benefits of React, of course, is how easy it makes building modular,
-						reusable components. To replicate this with standard HTML and JavaScript, I turned to
-						Web Components. Rather than replicate the nav code on every page, I instead
-						encapsulated both the HTML and JS logic inside a component that could be reused
-						throughout the site. This was also helpful for the header, footer, hero image and
-						‘contact me’ elements of the site.
-					</p>
-					<p class="para">
-						Additionally I used SCSS to modularise my CSS into a logical structure.
-					</p>
-				</div>
-			</div>
-
-			<div class="divider">
-				<p class="divider__symbol">{}</p>
-			</div>
-
-			<div class="spotlight">
-				<div class="spotlight__intro">
-					<h4 class="section__subhead">Nav menu</h4>
-					<p class="para">
-						One element I was particularly pleased with was the popup navigation menu. The
-						background animation was achieved by displaying a zero width and height circle in the
-						top right corner, which was then scaled to fill the screen when the menu icon was
-						clicked. Likewise the menu itself was a zero-width div on the left-hand side of the
-						page, transitioned to full-page width to give the appearance of it sliding into view.
-					</p>
-				</div>
-				<video width="100%" height="auto" loop class="video video__main animUp">
-					<source
-						src="/img/Portfolio/Projects/Portfolio/vids/Portfolio_Nav.mp4"
-						type="video/mp4"
-					/>
-					Your browser does not support the video tag.
-				</video>
-				<div class="spotlight__intro">
-					<p class="para">
-						The hover animation for individual menu items required the use of a background
-						gradient clipped to the text. The background appeared pale at first, but upon hover
-						was shifted to the right to reveal a more solid colour, providing an eye-catching
-						effect.
-					</p>
-				</div>
 			</div>
 		</section>
 
