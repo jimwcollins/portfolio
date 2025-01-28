@@ -132,21 +132,17 @@
 					<h4 class="section__subhead">Home screen redesign</h4>
 					<p class="para">
 						This year, we commissioned two UX designers to gather feedback on the app from our
-						users. Based on this, I then led a complete redesign of the app home screen, from
+						users. Based on their findings, I led a complete redesign of the app home screen, from
 						concept to implementation.
 					</p>
 					<p class="para">
 						The most common complaint was that the home screen was too busy and packed with
-						information users would not need to see upon app open. Listing open banking accounts
-						was deemed unnecessary clutter, as was the transactions panel which took up the entire
-						bottom half of the screen.
-					</p>
-					<p class="para">
-						Users also wanted quick access to important features like their PIN and account
-						details, and quick access to customer support.
+						information that wasn't required every time users opened the app. Listing open banking
+						accounts was deemed distracting, and users felt the always-open transaction panel took
+						up too much space.
 					</p>
 
-					<div class="spotlight__image__row">
+					<div class="spotlight__image__row animUp">
 						<img
 							src="/img/Portfolio/Projects/Tred/Tred_Home_Orig.png"
 							alt="Original Tred home screen"
@@ -159,11 +155,67 @@
 							class="spotlight__image__item"
 						/>
 					</div>
+
+					<p class="para">
+						The redesign displays information in a cleaner, less cluttered way. The balance is
+						displayed clearly at the top, and open banking accounts are tidied away into their own
+						menu that's easily accessible by tapping the account selector arrow.
+					</p>
+					<p class="para">
+						Meanwhile, only the most recent transactions are displayed, with a simple button to
+						bring up all transactions. Context-sensitive shortcut buttons also provide quick
+						access to the features our users deem most important, such as PIN and account details.
+						These shortcuts change depending on the type of account selected - Tred or open
+						banking.
+					</p>
+					<p class="para">
+						Finally this new home screen is designed to be modular. Additionally widgets can be
+						added as required - such as the 'Green Money' widget shown above - with the screen now
+						dynamically scrolling to accommodate this.
+					</p>
 				</div>
 			</div>
 
 			<div class="divider">
 				<p class="divider__symbol">{}</p>
+			</div>
+
+			<div class="spotlight">
+				<div class="spotlight__intro">
+					<h4 class="section__subhead">Animations</h4>
+					<p class="para">
+						The new app also features various animations implemented using a mixture of Rive,
+						React Native Reanimated and CSS.
+					</p>
+
+					<div class="video__row videoMulti animUp">
+						<video width="100%" height="auto" loop class="video__single">
+							<source src="/img/Portfolio/Projects/Tred/vids/App_Open.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+						<video width="100%" height="auto" loop class="video__single">
+							<source
+								src="/img/Portfolio/Projects/Tred/vids/App_Transactions.mp4"
+								type="video/mp4"
+							/>
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<p class="para">
+						The opening animation on the left was designed as a fun, on-brand alternative to a
+						loading spinner, where the trees grow gradually as the app fetches required data
+						during launch. I designed and implemented this animation using Rive, a library
+						allowing the creation of slick animations and their easy integration into frameworks
+						like React Native.
+					</p>
+					<p class="para">
+						On the right we have the header animation driven by the opening of the transaction
+						drawer. The transaction drawer uses React Native Reanimated for the drawer open
+						animation, which provides a precise Animated Value for the current open height of the
+						drawer. I used this to synchronise the header transition animation with the opening of
+						the drawer.
+					</p>
+				</div>
 			</div>
 		</section>
 
