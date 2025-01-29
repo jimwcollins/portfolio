@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		);
 
 	// Hero animation on scroll
-
 	gsap.to('.heroAnimUp', {
 		y: '-50%',
 		scrollTrigger: {
@@ -137,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Vid Collection
 	const allMultVids = document.querySelectorAll('.videoMulti');
 
+	console.log('allMultVids', allMultVids);
+
 	const handleMultiVids = ([entry]) => {
 		// Loop through all videos in collection and play/pause all
 		[...entry.target.children].forEach((childVid) => {
@@ -200,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const splitObserver = new IntersectionObserver(revealSplit, {
 		root: null,
-		threshold: 0.75,
+		threshold: window.matchMedia('(max-width: 600px)').matches ? 0.3 : 0.65,
 	});
 
 	if (!browserBtn) {

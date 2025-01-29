@@ -7,167 +7,151 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
 
-    <!-- Set width of website content to the device width, for responsive site -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Set width of website content to the device width, for responsive site -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="/css/style.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+		<link href="/css/style.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <script src="/js/index.js" defer></script>
-    <script src="/js/components/nav.js" defer></script>
-    <script src="/js/components/hero.js" defer></script>
-    <script src="/js/components/header.js" defer></script>
-    <script src="/js/components/footer.js" defer></script>
-    <script src="/js/animation.js" defer></script>
+		<script src="/js/index.js" defer></script>
+		<script src="/js/components/nav.js" defer></script>
+		<script src="/js/components/hero.js" defer></script>
+		<script src="/js/components/header.js" defer></script>
+		<script src="/js/components/footer.js" defer></script>
+		<script src="/js/animation.js" defer></script>
 
-    <title>James Collins</title>
-  </head>
+		<title>James Collins</title>
+	</head>
 
-  <body class="project grid">
-    <!-- Nav, Header and Hero components -->
-    <nav-comp class="nav"></nav-comp>
-    <header class="header">
-      <header-comp></header-comp>
-    </header>
-    <hero-comp
-      class="section__hero"
-      title="The Iris"
-      image="/img/Portfolio/Projects/Iris/Iris_Header.jpg"
-      imageAlt="The Iris"
-      page="project"
-    ></hero-comp>
+	<body class="project grid">
+		<!-- Nav, Header and Hero components -->
+		<nav-comp class="nav"></nav-comp>
+		<header class="header">
+			<header-comp></header-comp>
+		</header>
+		<hero-comp
+			class="section__hero"
+			title="The Iris"
+			image="/img/Portfolio/Projects/Iris/Iris_Header.jpg"
+			imageAlt="The Iris"
+			page="project"
+		></hero-comp>
 
-    <!-- Section: Intro -->
-    <section class="section project__intro grid section--first">
-      <h3 class="heading__section fadein">
-        Dev 04 <span class="heading__section--slash">/</span> The Iris
-      </h3>
+		<!-- Section: Intro -->
+		<section class="section project__intro grid section--first">
+			<h3 class="heading__section fadein">
+				Dev 05 <span class="heading__section--slash">/</span> The Iris
+			</h3>
 
-      <div class="section__split grid">
-        <div class="project__intro__details split__left">
-          <p class="project__intro__details--head">The project</p>
-          <p class="project__intro__details--copy">Full-stack news site</p>
-          <p class="project__intro__details--head">Disciplines</p>
-          <p class="project__intro__details--copy">
-            Web Design
-            <br />Front-end development <br />Back-end development
-          </p>
-          <p class="project__intro__details--head">Tech</p>
-          <p class="project__intro__details--copy">
-            React / JavaScript
-            <br />
-            Reach Router <br />HTML / CSS <br />Axios / Express <br />postgreSQL
-          </p>
-          <p class="project__intro__details--head">Visit</p>
-          <p class="project__intro__details--copy">
-            <a href="https://the-iris.netlify.app/" target="_blank">The Iris</a>
-            <br /><a
-              href="https://github.com/jimwcollins/iris-fe"
-              target="_blank"
-              >GitHub</a
-            >
-          </p>
-        </div>
+			<div class="section__split grid">
+				<div class="project__intro__details split__left">
+					<p class="project__intro__details--head">The project</p>
+					<p class="project__intro__details--copy">Full-stack news site</p>
+					<p class="project__intro__details--head">Disciplines</p>
+					<p class="project__intro__details--copy">
+						Web Design
+						<br />Front-end development <br />Back-end development
+					</p>
+					<p class="project__intro__details--head">Tech</p>
+					<p class="project__intro__details--copy">
+						React / JavaScript
+						<br />
+						Reach Router <br />HTML / CSS <br />Axios / Express <br />postgreSQL
+					</p>
+					<p class="project__intro__details--head">Visit</p>
+					<p class="project__intro__details--copy">
+						<a href="https://the-iris.netlify.app/" target="_blank">The Iris</a>
+						<br /><a href="https://github.com/jimwcollins/iris-fe" target="_blank">GitHub</a>
+					</p>
+				</div>
 
-        <div class="split__right">
-          <p class="project__intro__sell">
-            The Iris is a responsive, full-stack news site built with React. It
-            allows users to browse, comment and vote upon numerous topics and
-            articles, all within a clean, attractive design.
-          </p>
-          <p class="para">
-            The project was completed towards the end of my time at Northcoders
-            bootcamp. It had two stages: a back-end phase in which I set up the
-            database and back-end api; and a front-end phase in which I designed
-            and built a React app that made cals to this api and displayed the
-            results.
-          </p>
-          <p class="para">
-            This front-end is fully responsive, with specific UI elements and
-            menus for tablets and phones. The most popular articles appear in a
-            sidebar to drive site engagement, and articles can be sorted in
-            various ways.
-          </p>
-          <p class="para">
-            The back-end api was driven by Express server, which I accessed via
-            Axios calls from the front-end. I used Knex for database seeding,
-            migrations and queries, and postgreSQL for the database itself.
-          </p>
-        </div>
-      </div>
-    </section>
+				<div class="split__right">
+					<p class="project__intro__sell">
+						The Iris is a responsive, full-stack news site built with React. It allows users to
+						browse, comment and vote upon numerous topics and articles, all within a clean,
+						attractive design.
+					</p>
+					<p class="para">
+						The project was completed towards the end of my time at Northcoders bootcamp. It had
+						two stages: a back-end phase in which I set up the database and back-end api; and a
+						front-end phase in which I designed and built a React app that made cals to this api
+						and displayed the results.
+					</p>
+					<p class="para">
+						This front-end is fully responsive, with specific UI elements and menus for tablets
+						and phones. The most popular articles appear in a sidebar to drive site engagement,
+						and articles can be sorted in various ways.
+					</p>
+					<p class="para">
+						The back-end api was driven by Express server, which I accessed via Axios calls from
+						the front-end. I used Knex for database seeding, migrations and queries, and
+						postgreSQL for the database itself.
+					</p>
+				</div>
+			</div>
+		</section>
 
-    <!-- Section: Project Showcase 1 -->
-    <section class="imgGrid">
-      <img
-        src="/img/Portfolio/Projects/Iris/Iris_iMac_Home.png"
-        alt=""
-        class="animUp imgGrid__mac--main"
-      />
-      <img
-        src="/img/Portfolio/Projects/Iris/Iris_MacBook_Article.png"
-        alt=""
-        class="animUp imgGrid__mac--sub"
-      />
-    </section>
+		<!-- Section: Project Showcase 1 -->
+		<section class="imgGrid__mac">
+			<img
+				src="/img/Portfolio/Projects/Iris/Iris_iMac_Home.png"
+				alt=""
+				class="imgGrid__main-item animUp"
+			/>
+			<img
+				src="/img/Portfolio/Projects/Iris/Iris_MacBook_Article.png"
+				alt=""
+				class="imgGrid__sub-item animUp"
+			/>
+		</section>
 
-    <!-- Section: Project Spotlight -->
-    <section class="section--color--last grid">
-      <h3 class="heading__section fadein">
-        Project <span class="heading__section--slash">/</span> Spotlight
-      </h3>
+		<!-- Section: Project Spotlight -->
+		<section class="section--color--last grid">
+			<h3 class="heading__section fadein">
+				Project <span class="heading__section--slash">/</span> Spotlight
+			</h3>
 
-      <div class="spotlight">
-        <div class="spotlight__intro">
-          <h4 class="section__subhead">Topic search</h4>
-          <p class="para">
-            Users can perform a fuzzy search of topics, which will return any
-            appropriate matches. They can then display the articles solely for
-            one topic.
-          </p>
-        </div>
+			<div class="spotlight">
+				<div class="spotlight__intro">
+					<h4 class="section__subhead">Topic search</h4>
+					<p class="para">
+						Users can perform a fuzzy search of topics, which will return any appropriate matches.
+						They can then display the articles solely for one topic.
+					</p>
+				</div>
 
-        <video width="100%" height="auto" loop class="video video__main animUp">
-          <source
-            src="/img/Portfolio/Projects/Iris/vids/Iris_TopicVid.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+				<video width="100%" height="auto" loop class="video video__main animUp">
+					<source src="/img/Portfolio/Projects/Iris/vids/Iris_TopicVid.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+			</div>
 
-      <div class="divider">
-        <p class="divider__symbol">{}</p>
-      </div>
+			<div class="divider">
+				<p class="divider__symbol">{}</p>
+			</div>
 
-      <div class="spotlight">
-        <div class="spotlight__intro">
-          <h4 class="section__subhead">User login</h4>
-          <p class="para">
-            When users log in to the site, they gain access to buttons allowing
-            them to post a new article, delete their own articles, or comment on
-            existing articles.
-          </p>
-          <p class="para">
-            If no user is logged in, these buttons are not rendered.
-          </p>
-        </div>
-        <video width="100%" height="auto" loop class="video video__main animUp">
-          <source
-            src="/img/Portfolio/Projects/Iris/vids/Iris_LoginVid.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
+			<div class="spotlight">
+				<div class="spotlight__intro">
+					<h4 class="section__subhead">User login</h4>
+					<p class="para">
+						When users log in to the site, they gain access to buttons allowing them to post a new
+						article, delete their own articles, or comment on existing articles.
+					</p>
+					<p class="para">If no user is logged in, these buttons are not rendered.</p>
+				</div>
+				<video width="100%" height="auto" loop class="video video__main animUp">
+					<source src="/img/Portfolio/Projects/Iris/vids/Iris_LoginVid.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+			</div>
+		</section>
 
-    <footer-comp class="footer-comp"></footer-comp>
-  </body>
+		<footer-comp class="footer-comp"></footer-comp>
+	</body>
 </html>
