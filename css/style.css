@@ -359,8 +359,7 @@ a {
 
 @media only screen and (max-width: 600px) {
   .divider {
-    margin: 0 auto;
-    margin: 3rem 0;
+    margin: 3rem auto;
   }
 }
 /***************************
@@ -437,6 +436,12 @@ a {
   width: 25%;
   height: auto;
   margin: 0 5rem;
+}
+@media only screen and (max-width: 600px) {
+  .video__single {
+    width: 30%;
+    margin: 0rem 3rem;
+  }
 }
 .video__collection {
   display: grid;
@@ -971,6 +976,12 @@ a {
   width: 25%;
   height: auto;
   margin: 0rem 5rem;
+}
+@media only screen and (max-width: 600px) {
+  .spotlight__image__item {
+    width: 30%;
+    margin: 0rem 3rem;
+  }
 }
 .spotlight__logo {
   height: 8rem;
