@@ -360,7 +360,7 @@ a {
 @media only screen and (max-width: 600px) {
   .divider {
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
   }
 }
 /***************************
@@ -1332,37 +1332,54 @@ a {
   margin-bottom: 5rem;
 }
 
-.imgGrid {
+.imgGrid, .imgGrid__phone, .imgGrid__mac {
   grid-column: content-start/content-end;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  margin-bottom: 4rem;
 }
-.imgGrid__mac--main {
+.imgGrid__main-item, .imgGrid__phone .imgGrid__main-item, .imgGrid__mac .imgGrid__main-item {
   height: auto;
-  width: 75%;
   z-index: 1;
 }
-.imgGrid__mac--sub {
+.imgGrid__sub-item, .imgGrid__phone .imgGrid__sub-item, .imgGrid__mac .imgGrid__sub-item {
   height: auto;
+  z-index: 2;
+}
+.imgGrid__mac {
+  margin-bottom: 6rem;
+}
+.imgGrid__mac .imgGrid__main-item {
+  width: 75%;
+}
+@media only screen and (max-width: 600px) {
+  .imgGrid__mac .imgGrid__main-item {
+    width: 60%;
+  }
+}
+.imgGrid__mac .imgGrid__sub-item {
   width: 60%;
   margin-left: -20rem;
   margin-bottom: -6rem;
-  z-index: 2;
 }
-.imgGrid__phone--main {
-  height: auto;
+@media only screen and (max-width: 600px) {
+  .imgGrid__mac .imgGrid__sub-item {
+    width: 45%;
+    margin-left: -10rem;
+    margin-bottom: -3rem;
+  }
+}
+.imgGrid__phone {
+  margin-bottom: 4rem;
+}
+.imgGrid__phone .imgGrid__main-item {
   width: 35%;
-  z-index: 1;
 }
-.imgGrid__phone--sub {
-  height: auto;
+.imgGrid__phone .imgGrid__sub-item {
   width: 28%;
   margin-left: -5rem;
   margin-bottom: -3rem;
-  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
