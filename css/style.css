@@ -496,8 +496,7 @@ a {
 
 .footer {
   background-color: #2b2929;
-  padding-top: 0.2rem;
-  height: 7rem;
+  padding: 1.5rem 0;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-gap: 2rem;
@@ -548,9 +547,9 @@ a {
 
 @media only screen and (max-width: 800px) {
   .footer {
-    height: 11rem;
-    display: block;
-    padding-top: 1.25rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-gap: 0rem;
   }
   .footer__nav {
     justify-self: center;
