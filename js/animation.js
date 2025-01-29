@@ -101,7 +101,7 @@ const revealSplit = ([entry], observer) => {
 
 const splitObserver = new IntersectionObserver(revealSplit, {
 	root: null,
-	threshold: 0.75,
+	threshold: window.matchMedia('(max-width: 600px)').matches ? 0.3 : 0.65,
 });
 
 if (!browserBtn) {
