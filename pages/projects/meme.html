@@ -7,223 +7,194 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
 
-    <!-- Set width of website content to the device width, for responsive site -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Set width of website content to the device width, for responsive site -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="/css/style.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+		<link href="/css/style.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <script src="/js/index.js" defer></script>
-    <script src="/js/components/nav.js" defer></script>
-    <script src="/js/components/hero.js" defer></script>
-    <script src="/js/components/header.js" defer></script>
-    <script src="/js/components/footer.js" defer></script>
-    <script src="/js/animation.js" defer></script>
+		<script src="/js/index.js" defer></script>
+		<script src="/js/components/nav.js" defer></script>
+		<script src="/js/components/hero.js" defer></script>
+		<script src="/js/components/header.js" defer></script>
+		<script src="/js/components/footer.js" defer></script>
+		<script src="/js/animation.js" defer></script>
 
-    <title>James Collins</title>
-  </head>
+		<title>James Collins</title>
+	</head>
 
-  <body class="project grid">
-    <!-- Nav, Header and Hero components -->
-    <nav-comp class="nav"></nav-comp>
-    <header class="header">
-      <header-comp></header-comp>
-    </header>
-    <hero-comp
-      class="section__hero"
-      title="Meme What You Say"
-      image="/img/Portfolio/Projects/Meme/Meme_Header.jpg"
-      imageAlt="Meme What You Say"
-      page="project"
-    ></hero-comp>
+	<body class="project grid">
+		<!-- Nav, Header and Hero components -->
+		<nav-comp class="nav"></nav-comp>
+		<header class="header">
+			<header-comp></header-comp>
+		</header>
+		<hero-comp
+			class="section__hero"
+			title="Meme What You Say"
+			image="/img/Portfolio/Projects/Meme/Meme_Header.jpg"
+			imageAlt="Meme What You Say"
+			page="project"
+		></hero-comp>
 
-    <!-- Section: Intro -->
-    <section class="section project__intro grid section--first">
-      <h3 class="heading__section fadein">
-        Dev 03 <span class="heading__section--slash">/</span> Meme What You Say
-      </h3>
+		<!-- Section: Intro -->
+		<section class="section project__intro grid section--first">
+			<h3 class="heading__section fadein">
+				Dev 04 <span class="heading__section--slash">/</span> Meme What You Say
+			</h3>
 
-      <div class="section__split grid">
-        <div class="project__intro__details split__left">
-          <p class="project__intro__details--head">The project</p>
-          <p class="project__intro__details--copy">
-            Real-time, multiplayer <br />iOS game
-          </p>
-          <p class="project__intro__details--head">Disciplines</p>
-          <p class="project__intro__details--copy">
-            Mobile App Design
-            <br />Front-end development <br />Back-end development
-          </p>
-          <p class="project__intro__details--head">Tech</p>
-          <p class="project__intro__details--copy">
-            React Native / Expo
-            <br />JavaScript <br />Google Firebase <br />Cloud Firestore
-            database<br />Figma
-          </p>
-          <p class="project__intro__details--head">Visit</p>
-          <p class="project__intro__details--copy">
-            <a
-              href="https://www.youtube.com/watch?v=ES37JxdNiRE&t=356s"
-              target="_blank"
-              >YouTube</a
-            >
-            <br />
-            <a href="https://github.com/jimwcollins/meme-game" target="_blank"
-              >GitHub</a
-            >
-          </p>
-        </div>
+			<div class="section__split grid">
+				<div class="project__intro__details split__left">
+					<p class="project__intro__details--head">The project</p>
+					<p class="project__intro__details--copy">Real-time, multiplayer <br />iOS game</p>
+					<p class="project__intro__details--head">Disciplines</p>
+					<p class="project__intro__details--copy">
+						Mobile App Design
+						<br />Front-end development <br />Back-end development
+					</p>
+					<p class="project__intro__details--head">Tech</p>
+					<p class="project__intro__details--copy">
+						React Native / Expo
+						<br />JavaScript <br />Google Firebase <br />Cloud Firestore database<br />Figma
+					</p>
+					<p class="project__intro__details--head">Visit</p>
+					<p class="project__intro__details--copy">
+						<a href="https://www.youtube.com/watch?v=ES37JxdNiRE&t=356s" target="_blank"
+							>YouTube</a
+						>
+						<br />
+						<a href="https://github.com/jimwcollins/meme-game" target="_blank">GitHub</a>
+					</p>
+				</div>
 
-        <div class="split__right">
-          <p class="project__intro__sell">
-            Meme What You Say is a real-time, multiplayer iOS app that
-            challenges players to come up with the funniest captions for popular
-            memes.
-          </p>
+				<div class="split__right">
+					<p class="project__intro__sell">
+						Meme What You Say is a real-time, multiplayer iOS app that challenges players to come
+						up with the funniest captions for popular memes.
+					</p>
 
-          <p class="para">
-            Users can host or join private games, entering captions for a
-            randomly-generated series of pictures before voting on their
-            favourite ones. After each round they are taken to a leaderboard
-            showing them who supplied the best caption. The scores are added up
-            and an overall winner crowned at the end of the game.
-          </p>
-          <p class="para">
-            This was the final group project of the Northcoders bootcamp, and
-            was completed with my team-mates Rachel Caruso-Bryant, Bella Royle
-            and Tom Hogg. Throughout the project we used Agile practices such as
-            daily standups, kanban boards, mob programming and pair programming
-            to aid in the development of the app. We were also excited to
-            explore two new technologies: React Native and Google Firebase.
-          </p>
-        </div>
-      </div>
-    </section>
+					<p class="para">
+						Users can host or join private games, entering captions for a randomly-generated
+						series of pictures before voting on their favourite ones. After each round they are
+						taken to a leaderboard showing them who supplied the best caption. The scores are
+						added up and an overall winner crowned at the end of the game.
+					</p>
+					<p class="para">
+						This was the final group project of the Northcoders bootcamp, and was completed with
+						my team-mates Rachel Caruso-Bryant, Bella Royle and Tom Hogg. Throughout the project
+						we used Agile practices such as daily standups, kanban boards, mob programming and
+						pair programming to aid in the development of the app. We were also excited to explore
+						two new technologies: React Native and Google Firebase.
+					</p>
+				</div>
+			</div>
+		</section>
 
-    <!-- Section: Project Showcase 1 -->
-    <section class="imgGrid">
-      <img
-        src="/img/Portfolio/Projects/Meme/Meme_Flat_Title.png"
-        alt="Title screen"
-        class="imgGrid__phone--main animUp"
-      />
-      <img
-        src="/img/Portfolio/Projects/Meme/Meme_Flat_Const.png"
-        alt="Round screen"
-        class="imgGrid__phone--sub animUp"
-      />
-    </section>
+		<!-- Section: Project Showcase 1 -->
+		<section class="imgGrid__phone">
+			<img
+				src="/img/Portfolio/Projects/Meme/Meme_Flat_Title.png"
+				alt="Title screen"
+				class="imgGrid__main-item animUp"
+			/>
+			<img
+				src="/img/Portfolio/Projects/Meme/Meme_Flat_Const.png"
+				alt="Round screen"
+				class="imgGrid__sub-item animUp"
+			/>
+		</section>
 
-    <!-- Section: New Tech -->
-    <section class="section project__intro grid section--first">
-      <h3 class="heading__section fadein">
-        New <span class="heading__section--slash">/</span> Technology
-      </h3>
+		<!-- Section: New Tech -->
+		<section class="section project__intro grid section--first">
+			<h3 class="heading__section fadein">
+				New <span class="heading__section--slash">/</span> Technology
+			</h3>
 
-      <div class="section__split grid">
-        <div class="split__main">
-          <p class="para">
-            One of the greatest challenges on this project was also one of its
-            greatest draws: the use of exciting new technology. For the
-            front-end we used React Native. Whilst it differs from React for web
-            in significant ways, our existing familiarity with React made
-            learning React Native an achievable (and enjoyable) challenge.
-          </p>
-          <p class="para">
-            For the back end we used Google Firebase and its Cloud Firestore
-            database, enabling us to synchronise all of our users around a
-            common source of data. It also provided us with database listeners
-            that would prompt various real-time events, such as score updates
-            and screen progressions.
-          </p>
-        </div>
-        <div class="split__sub">
-          <img
-            src="/img/Portfolio/Projects/Meme/RNLogo.png"
-            alt="React Native Logo"
-            class="split__img animUp"
-            style="margin-left: 0.5rem; margin-top: 1rem"
-          />
-          <img
-            src="/img/Portfolio/Projects/Meme/FirebaseLogo.png"
-            alt="Firebase Logo"
-            class="split__img animUp"
-            style="margin-left: 7rem; margin-bottom: 2rem; width: 70%"
-          />
-        </div>
-      </div>
-    </section>
+			<div class="section__split grid">
+				<div class="split__main">
+					<p class="para">
+						One of the greatest challenges on this project was also one of its greatest draws: the
+						use of exciting new technology. For the front-end we used React Native. Whilst it
+						differs from React for web in significant ways, our existing familiarity with React
+						made learning React Native an achievable (and enjoyable) challenge.
+					</p>
+					<p class="para">
+						For the back end we used Google Firebase and its Cloud Firestore database, enabling us
+						to synchronise all of our users around a common source of data. It also provided us
+						with database listeners that would prompt various real-time events, such as score
+						updates and screen progressions.
+					</p>
+				</div>
+				<div class="split__sub">
+					<img
+						src="/img/Portfolio/Projects/Meme/RNLogo.png"
+						alt="React Native Logo"
+						class="split__img animUp"
+						style="margin-left: 0.5rem; margin-top: 1rem"
+					/>
+					<img
+						src="/img/Portfolio/Projects/Meme/FirebaseLogo.png"
+						alt="Firebase Logo"
+						class="split__img animUp"
+						style="margin-left: 7rem; margin-bottom: 2rem; width: 70%"
+					/>
+				</div>
+			</div>
+		</section>
 
-    <!-- Section: Project Spotlight -->
-    <section class="section--color--last grid">
-      <h3 class="heading__section fadein">
-        Project <span class="heading__section--slash">/</span> Spotlight
-      </h3>
+		<!-- Section: Project Spotlight -->
+		<section class="section--color--last grid">
+			<h3 class="heading__section fadein">
+				Project <span class="heading__section--slash">/</span> Spotlight
+			</h3>
 
-      <div class="spotlight">
-        <div class="spotlight__intro">
-          <h4 class="section__subhead">Realtime challenge</h4>
-          <p class="para">
-            Probably the greatest challenge of this project arose from the
-            realtime nature of the game and its need for numerous asynchronous
-            calls to the database. Both state and page rendering had to be
-            carefully managed to avoid loading issues, as did the storage of
-            information between rounds to ensure there were no conflicts. Moving
-            all players to the next screen in unison was another technical
-            hurdle, requiring the use of database listeners to manage navigation
-            centrally.
-          </p>
-        </div>
+			<div class="spotlight">
+				<div class="spotlight__intro">
+					<h4 class="section__subhead">Realtime challenge</h4>
+					<p class="para">
+						Probably the greatest challenge of this project arose from the realtime nature of the
+						game and its need for numerous asynchronous calls to the database. Both state and page
+						rendering had to be carefully managed to avoid loading issues, as did the storage of
+						information between rounds to ensure there were no conflicts. Moving all players to
+						the next screen in unison was another technical hurdle, requiring the use of database
+						listeners to manage navigation centrally.
+					</p>
+				</div>
 
-        <div class="videoMulti video__collection animUp">
-          <video width="100%" height="auto" loop class="video__collection__vid">
-            <source
-              src="/img/Portfolio/Projects/Meme/vids/Realtime_1.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-          <video
-            width="100%"
-            height="auto"
-            loop
-            class="video__collection__vid--main"
-          >
-            <source
-              src="/img/Portfolio/Projects/Meme/vids/Realtime_2.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-          <video width="100%" height="auto" loop class="video__collection__vid">
-            <source
-              src="/img/Portfolio/Projects/Meme/vids/Realtime_3.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+				<div class="videoMulti video__collection animUp">
+					<video width="100%" height="auto" loop class="video__collection__vid">
+						<source src="/img/Portfolio/Projects/Meme/vids/Realtime_1.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+					<video width="100%" height="auto" loop class="video__collection__vid--main">
+						<source src="/img/Portfolio/Projects/Meme/vids/Realtime_2.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+					<video width="100%" height="auto" loop class="video__collection__vid">
+						<source src="/img/Portfolio/Projects/Meme/vids/Realtime_3.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</div>
 
-        <div class="spotlight__intro">
-          <p class="para">
-            The above videos show the game lobby updating in real-time as a new
-            player joins. When the lobby gains the required minimum number of
-            players (3), a ‘Begin Round’ button appears for the host only. Upon
-            pressing this button, a flag is set in the database indicating we
-            can proceed to the next round. A database listener in each user’s
-            app will register this change, triggering a simultaneous transition
-            to the next screen for all players.
-          </p>
-        </div>
-      </div>
-    </section>
+				<div class="spotlight__intro">
+					<p class="para">
+						The above videos show the game lobby updating in real-time as a new player joins. When
+						the lobby gains the required minimum number of players (3), a ‘Begin Round’ button
+						appears for the host only. Upon pressing this button, a flag is set in the database
+						indicating we can proceed to the next round. A database listener in each user’s app
+						will register this change, triggering a simultaneous transition to the next screen for
+						all players.
+					</p>
+				</div>
+			</div>
+		</section>
 
-    <footer-comp class="footer-comp"></footer-comp>
-  </body>
+		<footer-comp class="footer-comp"></footer-comp>
+	</body>
 </html>

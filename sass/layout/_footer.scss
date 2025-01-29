@@ -6,97 +6,103 @@
 ***************************/
 
 .footer-comp {
-  grid-column: full-start / full-end;
+	grid-column: full-start / full-end;
 }
 
 .footer {
-  background-color: $color-background-dark;
-  padding-top: 0.2rem;
-  height: 7rem;
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  grid-gap: 2rem;
-  justify-content: center;
-  align-items: center;
+	background-color: $color-background-dark;
+	padding-top: 0.2rem;
+	height: 7rem;
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	grid-gap: 2rem;
+	justify-content: center;
+	align-items: center;
 
-  color: $color-white;
-  font-family: $font-body;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+	color: $color-white;
+	font-family: $font-body;
+	font-size: 1.5rem;
+	text-transform: uppercase;
 
-  &__nav {
-    justify-self: end;
+	&__nav {
+		justify-self: end;
 
-    display: grid;
-    grid-template-columns: repeat(4, min-content);
-    grid-gap: 2rem;
-    align-items: center;
+		display: grid;
+		grid-template-columns: repeat(4, min-content);
+		grid-gap: 2rem;
+		align-items: center;
 
-    list-style: none;
+		list-style: none;
 
-    &__item {
-      align-self: center;
-    }
+		&__item {
+			align-self: center;
+		}
 
-    &__link {
-      &:link,
-      &:visited {
-        color: $color-white;
-        text-decoration: none;
-        transition: color 0.5s;
-      }
+		&__link {
+			&:link,
+			&:visited {
+				color: $color-white;
+				text-decoration: none;
+				transition: color 0.5s;
+			}
 
-      &:hover {
-        color: $color-primary;
-      }
-    }
-  }
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
 
-  &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    background-color: $color-primary;
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 4rem;
+		width: 4rem;
+		border-radius: 50%;
+		background-color: $color-primary;
 
-    &__symbol {
-      font-family: $font-display;
-      font-size: 2rem;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: $color-white;
-      padding-top: 0.2rem;
-    }
-  }
+		&__symbol {
+			font-family: $font-display;
+			font-size: 2rem;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: $color-white;
+			padding-top: 0.2rem;
+		}
+	}
 }
 
 // Tablet break-point for footer
 @media only screen and (max-width: 800px) {
-  .footer {
-    height: 11rem;
-    display: block;
-    padding-top: 1.25rem;
+	.footer {
+		height: 11rem;
+		display: block;
+		padding-top: 1.25rem;
 
-    &__nav {
-      justify-content: center;
-    }
+		&__nav {
+			justify-self: center;
+		}
 
-    &__text {
-      text-align: center;
-      text-transform: none;
-    }
+		&__text {
+			text-align: center;
+			text-transform: none;
+		}
 
-    &__logo {
-      height: 3rem;
-      width: 3rem;
-      margin: 0.5rem auto 0.75rem auto;
+		&__logo {
+			height: 3rem;
+			width: 3rem;
+			margin: 0.5rem auto 0.75rem auto;
 
-      &__symbol {
-        font-size: 1.5rem;
-      }
-    }
-  }
+			&__symbol {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.footer {
+		font-size: 1.25rem;
+	}
 }

@@ -1,0 +1,223 @@
+<!-------------------------
+
+    JC Portfolio
+    Projects: Tred
+
+-------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<!-- Set width of website content to the device width, for responsive site -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href="/css/style.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="/js/index.js" defer></script>
+		<script src="/js/components/nav.js" defer></script>
+		<script src="/js/components/hero.js" defer></script>
+		<script src="/js/components/header.js" defer></script>
+		<script src="/js/components/footer.js" defer></script>
+		<script src="/js/animation.js" defer></script>
+		<script src="https://kit.fontawesome.com/42515d2b0d.js" crossorigin="anonymous"></script>
+
+		<title>James Collins</title>
+	</head>
+
+	<body class="project grid">
+		<!-- Nav, Header and Hero components -->
+		<nav-comp class="nav"></nav-comp>
+		<header class="header">
+			<header-comp></header-comp>
+		</header>
+		<hero-comp
+			class="section__hero"
+			title="Tred"
+			image="/img/Portfolio/Projects/Tred/Tred_Header.png"
+			imageAlt="Tred"
+			page="project"
+		></hero-comp>
+
+		<!-- Section: Intro -->
+		<section class="section project__intro grid section--first">
+			<h3 class="heading__section fadein">
+				Dev 01 <span class="heading__section--slash">/</span> Tred
+			</h3>
+
+			<div class="section__split grid">
+				<div class="project__intro__details split__left">
+					<p class="project__intro__details--head">The project</p>
+					<p class="project__intro__details--copy">Mobile banking app and web portal</p>
+
+					<p class="project__intro__details--head">Disciplines</p>
+					<p class="project__intro__details--copy">Full Stack Development<br />Web Design</p>
+					<p class="project__intro__details--head">Tech</p>
+					<p class="project__intro__details--copy">
+						TypeScript<br />
+						React Native
+						<br />React <br />Next.js <br />HTML / CSS <br />Amazon Web Services<br />Figma
+					</p>
+					<p class="project__intro__details--head">Visit</p>
+					<p class="project__intro__details--copy">
+						<a href="https://tred.earth" target="_blank">Tred website</a>
+					</p>
+				</div>
+
+				<div class="split__right">
+					<p class="project__intro__sell">
+						Tred were a pioneering fintech, empowering businesses to track their spending and
+						carbon footprint through a debit card and mobile app. Before the company's unfortunate
+						closure, I gained over three years of experience in commercial app development,
+						working in a small, talented Agile team.
+					</p>
+					<p class="para">
+						I played a key role in shaping our digital experiences across mobile, web, and
+						back-end systems. Leveraging React Native and TypeScript, I helped build a dynamic,
+						robust and feature-packed mobile banking app for both iOS and Android. I was also
+						working on extending the functionality of our web portal using React and Next.js.
+					</p>
+					<p class="para">
+						On the back-end, I worked extensively with Amazon Web Services. The primary language
+						was again TypeScript, and we deployed to AWS using the Serverless framework and an
+						Infrastructure-As-Code approach.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Section: Project Showcase 1 -->
+		<section class="imgGrid__phone">
+			<img
+				src="/img/Portfolio/Projects/Tred/Tred_Home.png"
+				alt="Tred home screen"
+				class="imgGrid__main-item animUp"
+			/>
+			<img
+				src="/img/Portfolio/Projects/Tred/Tred_Landing.png"
+				alt="Tred landing screen"
+				class="imgGrid__sub-item animUp"
+			/>
+		</section>
+
+		<section class="section spotlight">
+			<div class="spotlight__intro">
+				<h4 class="section__subhead">Design</h4>
+				<p class="para">
+					I was also part of Tred’s design team. My design background gives me an invaluable
+					insight into great UX / UI, skills I drew on to ensure our applications were not only
+					functionally robust but also user-friendly and visually engaging.
+				</p>
+				<p class="para">
+					I used Figma extensively to create attractive, user-focussed screen designs and
+					prototypes that could be easily implemented by myself or other developers.
+				</p>
+			</div>
+		</section>
+
+		<!-- Section: Project Spotlight -->
+		<section class="section--color--last grid">
+			<h3 class="heading__section fadein">
+				Project <span class="heading__section--slash">/</span> Spotlight
+			</h3>
+
+			<div class="spotlight">
+				<div class="spotlight__intro">
+					<h4 class="section__subhead">Home screen redesign</h4>
+					<p class="para">
+						This year, we commissioned two UX designers to gather feedback on the app from our
+						users. Based on their findings, I led a complete redesign of the app home screen, from
+						concept to implementation.
+					</p>
+					<p class="para">
+						The most common complaint was that the home screen was too busy and packed with
+						information that wasn't required every time users opened the app. Listing open banking
+						accounts was deemed distracting, and users felt the always-open transaction panel took
+						up too much space.
+					</p>
+
+					<div class="spotlight__image__row animUp">
+						<img
+							src="/img/Portfolio/Projects/Tred/Tred_Home_Orig.png"
+							alt="Original Tred home screen"
+							class="spotlight__image__item"
+						/>
+						<i class="fa-solid fa-arrow-right spotlight__icon"></i>
+						<img
+							src="/img/Portfolio/Projects/Tred/Tred_Home.png"
+							alt="Original Tred home screen"
+							class="spotlight__image__item"
+						/>
+					</div>
+
+					<p class="para">
+						The redesign displays information in a cleaner, less cluttered way. The balance is
+						displayed clearly at the top, and open banking accounts are tidied away into their own
+						menu that's easily accessible by tapping the account selector arrow.
+					</p>
+					<p class="para">
+						Meanwhile, only the most recent transactions are displayed, with a simple button to
+						bring up all transactions. Context-sensitive shortcut buttons also provide quick
+						access to the features our users deem most important, such as PIN and account details.
+						These shortcuts change depending on the type of account selected - Tred or open
+						banking.
+					</p>
+					<p class="para">
+						Finally this new home screen is designed to be modular. Additionally widgets can be
+						added as required - such as the 'Green Money' widget shown above - with the screen now
+						dynamically scrolling to accommodate this.
+					</p>
+				</div>
+			</div>
+
+			<div class="divider">
+				<p class="divider__symbol">{}</p>
+			</div>
+
+			<div class="spotlight">
+				<div class="spotlight__intro">
+					<h4 class="section__subhead">Animations</h4>
+					<p class="para">
+						The new app also features various animations I implemented using a mixture of Rive,
+						React Native Reanimated and CSS.
+					</p>
+
+					<div class="video__row videoMulti animUp">
+						<video width="100%" height="auto" loop class="video__single">
+							<source src="/img/Portfolio/Projects/Tred/vids/App_Open.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+						<video width="100%" height="auto" loop class="video__single">
+							<source
+								src="/img/Portfolio/Projects/Tred/vids/App_Transactions.mp4"
+								type="video/mp4"
+							/>
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<p class="para">
+						The opening animation on the left was designed as a fun, on-brand alternative to a
+						loading spinner. The trees grow gradually as the app fetches required data during
+						launch. I designed and implemented this animation using Rive, a tool that allows the
+						creation of slick animations and their easy integration into frameworks like React
+						Native.
+					</p>
+					<p class="para">
+						On the right, we have the header animation driven by the opening of the transaction
+						drawer. The transaction drawer uses React Native Reanimated for the drawer open
+						animation, which provides a precise Animated Value for the current open height of the
+						drawer. I used this to synchronise the header transition animation with the opening of
+						the drawer.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<footer-comp class="footer-comp"></footer-comp>
+	</body>
+</html>

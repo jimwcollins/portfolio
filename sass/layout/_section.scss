@@ -190,9 +190,27 @@
 		margin-bottom: 2rem;
 	}
 
+	&__image__row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 4rem 0;
+	}
+
+	&__image__item {
+		width: 25%;
+		height: auto;
+		margin: 0rem 5rem;
+	}
+
 	&__logo {
 		height: 8rem;
 		margin-top: 2rem;
+	}
+
+	&__icon {
+		color: $color-primary;
+		font-size: 4rem;
 	}
 }
 
