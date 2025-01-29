@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const upImgObserver = new IntersectionObserver(revealUpImg, {
 		root: null,
-		threshold: 0.3,
+		threshold: window.matchMedia('(max-width: 600px)').matches ? 0.2 : 0.3,
 	});
 
 	if (!browserBtn) {

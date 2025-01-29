@@ -217,6 +217,11 @@
 		width: 25%;
 		height: auto;
 		margin: 0rem 5rem;
+
+		@media only screen and (max-width: 600px) {
+			width: 30%;
+			margin: 0rem 3rem;
+		}
 	}
 
 	&__logo {

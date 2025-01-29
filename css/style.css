@@ -385,8 +385,7 @@ a {
 
 @media only screen and (max-width: 600px) {
   .divider {
-    margin: 0 auto;
-    margin: 3rem 0;
+    margin: 3rem auto;
   }
 }
 /***************************
@@ -464,6 +463,12 @@ a {
   height: auto;
   margin: 0 5rem;
 }
+@media only screen and (max-width: 600px) {
+  .video__single {
+    width: 30%;
+    margin: 0rem 3rem;
+  }
+}
 .video__collection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -517,8 +522,7 @@ a {
 
 .footer {
   background-color: #2b2929;
-  padding-top: 0.2rem;
-  height: 7rem;
+  padding: 1.5rem 0;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-gap: 2rem;
@@ -569,9 +573,9 @@ a {
 
 @media only screen and (max-width: 800px) {
   .footer {
-    height: 11rem;
-    display: block;
-    padding-top: 1.25rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-gap: 0rem;
   }
   .footer__nav {
     justify-self: center;
@@ -1011,6 +1015,12 @@ a {
   width: 25%;
   height: auto;
   margin: 0rem 5rem;
+}
+@media only screen and (max-width: 600px) {
+  .spotlight__image__item {
+    width: 30%;
+    margin: 0rem 3rem;
+  }
 }
 .spotlight__logo {
   height: 8rem;
