@@ -6,6 +6,8 @@ The site was initially wire-framed and designed using UXPin, allowing me to nail
 
 The site began life before I learned React. There was the obvious temptation to redevelop it, but instead I saw it as an excellent opportunity to hone my HTML, CSS and JavaScript without relying on frameworks.
 
+I am now working on adding animations using GSAP.
+
 The hosted site can be found here: https://james-collins.netlify.app/
 
 &nbsp;
